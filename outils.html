@@ -64,7 +64,7 @@
 
       <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
         <ul>
-          <li><a href="templates" class="is-active">Templates</a></li>
+          <li><a href="templates">Templates</a></li>
           <li class="nav-dropdown">
             <a href="outils" class="nav-dropdown-trigger is-active">Outils <span aria-hidden="true">⌄</span></a>
             <ul class="nav-submenu">
@@ -127,13 +127,16 @@
 <script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
 <script>
   if (window.QRCode) {
-    new QRCode(document.getElementById("promo-qrcode"), {
+    const promoQr = document.getElementById("promo-qrcode");
+    new QRCode(promoQr, {
       text: "https://giotech-digital.fr/outils",
       width: 128,
       height: 128,
       colorDark: "#10151f",
       colorLight: "#ffffff",
     });
+    const promoQrImage = promoQr.querySelector("img");
+    if (promoQrImage) promoQrImage.alt = "QR Code pour ouvrir les outils GioTech";
   }
 </script>
 
