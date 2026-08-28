@@ -338,7 +338,10 @@ if (document.readyState === 'loading') {
 
 // Some browsers restore form values after DOMContentLoaded. Reapply the URL state
 // on pageshow so the visible query always matches the filtered catalogue.
-window.addEventListener('pageshow', applyMarketplaceQuery);
+window.addEventListener('pageshow', () => {
+  applyMarketplaceQuery();
+  window.setTimeout(applyMarketplaceQuery, 200);
+});
 
 /* ---------- Aperçus en direct : mise à l'échelle dynamique (couvre toujours toute la zone, quelle que soit la taille de la carte) ---------- */
 (() => {
