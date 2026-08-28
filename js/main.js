@@ -322,6 +322,8 @@ function applyMarketplaceQuery() {
   const q = new URLSearchParams(location.search).get('q');
   if (!field || !q) return;
 
+  field.defaultValue = q;
+  field.setAttribute('value', q);
   field.value = q;
   field.dispatchEvent(new Event('input', { bubbles: true }));
 
