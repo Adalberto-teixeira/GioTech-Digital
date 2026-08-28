@@ -317,7 +317,28 @@
 })();
 
 // Marketplace query parameter -> catalogue search
-document.addEventListener('DOMContentLoaded',()=>{const field=document.querySelector('#template-search');if(field){const q=new URLSearchParams(location.search).get('q');if(q){field.value=q;field.dispatchEvent(new Event('input',{bubbles:true}));field.scrollIntoView({behavior:'smooth',block:'center'});}}});
+function applyMarketplaceQuery() {
+  const field = document.querySelector('#template-search');
+  const q = new URLSearchParams(location.search).get('q');
+  if (!field || !q) return;
+
+  field.value = q;
+  field.dispatchEvent(new Event('input', { bubbles: true }));
+
+  if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    field.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+}
+
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', applyMarketplaceQuery, { once: true });
+} else {
+  applyMarketplaceQuery();
+}
+
+// Some browsers restore form values after DOMContentLoaded. Reapply the URL state
+// on pageshow so the visible query always matches the filtered catalogue.
+window.addEventListener('pageshow', applyMarketplaceQuery);
 
 /* ---------- Aperçus en direct : mise à l'échelle dynamique (couvre toujours toute la zone, quelle que soit la taille de la carte) ---------- */
 (() => {
