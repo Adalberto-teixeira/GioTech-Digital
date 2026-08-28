@@ -325,6 +325,7 @@ function applyMarketplaceQuery() {
   field.defaultValue = q;
   field.setAttribute('value', q);
   field.value = q;
+  field.placeholder = `Filtre actif : ${q}`;
   field.dispatchEvent(new Event('input', { bubbles: true }));
 
   if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
