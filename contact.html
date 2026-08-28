@@ -162,12 +162,12 @@
             <h2>Demander un devis</h2>
             <form id="contact-form" novalidate>
               <div class="form-row">
-                <div class="form-field"><label for="c-nom">Nom</label><input id="c-nom" name="nom" type="text" placeholder="Votre nom" required /></div>
-                <div class="form-field"><label for="c-entreprise">Entreprise</label><input id="c-entreprise" name="entreprise" type="text" placeholder="Nom de votre entreprise (optionnel)" /></div>
+                <div class="form-field"><label for="c-nom">Nom</label><input id="c-nom" name="nom" type="text" placeholder="Votre nom" autocomplete="name" required /></div>
+                <div class="form-field"><label for="c-entreprise">Entreprise</label><input id="c-entreprise" name="entreprise" type="text" placeholder="Nom de votre entreprise (optionnel)" autocomplete="organization" /></div>
               </div>
               <div class="form-row">
-                <div class="form-field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" placeholder="vous@exemple.fr" required /></div>
-                <div class="form-field"><label for="c-tel">Téléphone</label><input id="c-tel" name="tel" type="tel" placeholder="06 00 00 00 00" /></div>
+                <div class="form-field"><label for="c-email">Email</label><input id="c-email" name="email" type="email" placeholder="vous@exemple.fr" autocomplete="email" required /></div>
+                <div class="form-field"><label for="c-tel">Téléphone</label><input id="c-tel" name="tel" type="tel" placeholder="06 00 00 00 00" autocomplete="tel" /></div>
               </div>
               <div class="form-field">
                 <label for="c-type">Type de projet</label>
@@ -185,7 +185,7 @@
                 <label for="c-website">Ne pas remplir</label>
                 <input id="c-website" name="website" type="text" tabindex="-1" autocomplete="off" />
               </div>
-              <div id="contact-form-feedback" role="status" style="display:none; margin-bottom:1rem; padding:0.9rem 1.1rem; border-radius:10px; font-size:0.9rem;"></div>
+              <div id="contact-form-feedback" role="status" aria-live="polite" aria-atomic="true" style="display:none; margin-bottom:1rem; padding:0.9rem 1.1rem; border-radius:10px; font-size:0.9rem;"></div>
               <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Envoyer la demande</button>
             </form>
 
