@@ -1,0 +1,379 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiNjNmYyNGUiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPk5GPC90ZXh0Pjwvc3ZnPg==">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="NOIRFOLIO — portfolio créatif de designer, développeur et freelance.">
+  <meta name="theme-color" content="#0b0b0d">
+  <title>NOIRFOLIO — Creative Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<header class="site-header">
+  <a class="brand" href="#home">
+    <span>NF</span>
+    <div><b>NOIRFOLIO</b><small>CREATIVE PORTFOLIO</small></div>
+  </a>
+
+  <nav class="desktop-nav">
+    <a href="#work">Projets</a>
+    <a href="#about">À propos</a>
+    <a href="#skills">Compétences</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-actions">
+    <a class="availability" href="#contact"><i data-lucide="circle-dot"></i> Disponible</a>
+    <button class="icon-button" id="themeToggle" aria-label="Changer le thème"><i data-lucide="sun"></i></button>
+    <button class="icon-button menu-toggle" id="menuOpen" aria-label="Menu"><i data-lucide="menu"></i></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button id="menuClose"><i data-lucide="x"></i></button>
+  <span>NOIRFOLIO / MENU</span>
+  <a href="#work">Projets <i data-lucide="arrow-up-right"></i></a>
+  <a href="#about">À propos <i data-lucide="arrow-up-right"></i></a>
+  <a href="#skills">Compétences <i data-lucide="arrow-up-right"></i></a>
+  <a href="#contact">Contact <i data-lucide="arrow-up-right"></i></a>
+</div>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-copy" data-reveal>
+    <span>DESIGNER · DÉVELOPPEUR · FREELANCE</span>
+    <h1>JE CRÉE<br>DES EXPÉRIENCES<br><em>QUI RESTENT.</em></h1>
+    <p>Identités digitales, interfaces, sites web et expériences interactives pensées pour être utiles, belles et mémorables.</p>
+
+    <div class="hero-actions">
+      <a href="#work" class="primary">Voir mes projets <i data-lucide="arrow-down-right"></i></a>
+      <a href="#contact" class="secondary">Travaillons ensemble <i data-lucide="arrow-up-right"></i></a>
+    </div>
+
+    <div class="hero-meta">
+      <div><b>12+</b><span>projets récents</span></div>
+      <div><b>4 ans</b><span>expérience digitale</span></div>
+      <div><b>FR / PT</b><span>langues de travail</span></div>
+    </div>
+  </div>
+
+  <div class="hero-visual" data-reveal>
+    <div class="portrait-card">
+      <div class="portrait-noise"></div>
+      <div class="portrait-shape shape-a"></div>
+      <div class="portrait-shape shape-b"></div>
+      <div class="portrait-initials">NF</div>
+      <div class="portrait-footer"><span>CREATIVE / DIGITAL</span><b>2026</b></div>
+    </div>
+
+    <div class="floating-card fc-a"><i data-lucide="code-2"></i><span>Front-end</span></div>
+    <div class="floating-card fc-b"><i data-lucide="palette"></i><span>UI / UX</span></div>
+    <div class="floating-card fc-c"><i data-lucide="sparkles"></i><span>Motion</span></div>
+  </div>
+</section>
+
+<section class="ticker">
+  <div data-marquee-track>
+    WEB DESIGN ✦ UI / UX ✦ FRONT-END ✦ CREATIVE DIRECTION ✦ MOTION ✦ BRANDING ✦ WEB DESIGN ✦ UI / UX ✦ FRONT-END ✦
+  </div>
+</section>
+
+<section id="work" class="section work-section">
+  <div class="section-head" data-reveal>
+    <div>
+      <span>01 / SELECTED WORK</span>
+      <h2>Quelques projets<br><em>qui me ressemblent.</em></h2>
+    </div>
+    <p>Une sélection fictive de projets pour montrer la structure et l'interaction du portfolio.</p>
+  </div>
+
+  <div class="project-filters">
+    <button class="active" data-filter="all">Tous</button>
+    <button data-filter="web">Web</button>
+    <button data-filter="ui">UI / UX</button>
+    <button data-filter="branding">Branding</button>
+    <button data-filter="motion">Motion</button>
+  </div>
+
+  <div class="projects-grid" id="projectsGrid" data-stagger>
+    <article class="project-card project-large" data-project="1" data-category="web">
+      <div class="project-cover cover-one">
+        <div class="cover-grid"></div>
+        <span class="project-number">01</span>
+        <div class="cover-title">AURORA</div>
+      </div>
+      <div class="project-info">
+        <div><span>WEB / HOSPITALITY</span><h3>Aurora Hotel</h3></div>
+        <p>Site premium pour hôtel boutique.</p>
+        <button class="project-open" data-project-open="1"><i data-lucide="arrow-up-right"></i></button>
+      </div>
+    </article>
+
+    <article class="project-card" data-project="2" data-category="ui">
+      <div class="project-cover cover-two">
+        <span class="project-number">02</span>
+        <div class="cover-phone"><span></span><b>FLOW</b></div>
+      </div>
+      <div class="project-info">
+        <div><span>UI / MOBILE</span><h3>Flow Finance</h3></div>
+        <p>Application de gestion personnelle.</p>
+        <button class="project-open" data-project-open="2"><i data-lucide="arrow-up-right"></i></button>
+      </div>
+    </article>
+
+    <article class="project-card" data-project="3" data-category="branding">
+      <div class="project-cover cover-three">
+        <span class="project-number">03</span>
+        <div class="cover-logo">MØ</div>
+      </div>
+      <div class="project-info">
+        <div><span>BRANDING</span><h3>Maison Ø</h3></div>
+        <p>Identité de marque minimaliste.</p>
+        <button class="project-open" data-project-open="3"><i data-lucide="arrow-up-right"></i></button>
+      </div>
+    </article>
+
+    <article class="project-card project-wide" data-project="4" data-category="motion">
+      <div class="project-cover cover-four">
+        <span class="project-number">04</span>
+        <div class="motion-ring r1"></div>
+        <div class="motion-ring r2"></div>
+        <div class="cover-title">KINETIC</div>
+      </div>
+      <div class="project-info">
+        <div><span>MOTION / WEB</span><h3>Kinetic Studio</h3></div>
+        <p>Portfolio expérimental avec motion design.</p>
+        <button class="project-open" data-project-open="4"><i data-lucide="arrow-up-right"></i></button>
+      </div>
+    </article>
+
+    <article class="project-card" data-project="5" data-category="web">
+      <div class="project-cover cover-five">
+        <span class="project-number">05</span>
+        <div class="cover-ui"><i></i><i></i><i></i></div>
+      </div>
+      <div class="project-info">
+        <div><span>WEB / E-COMMERCE</span><h3>Mono Store</h3></div>
+        <p>Boutique mode minimaliste.</p>
+        <button class="project-open" data-project-open="5"><i data-lucide="arrow-up-right"></i></button>
+      </div>
+    </article>
+
+    <article class="project-card" data-project="6" data-category="ui">
+      <div class="project-cover cover-six">
+        <span class="project-number">06</span>
+        <div class="cover-dashboard"><span></span><i></i><i></i><i></i></div>
+      </div>
+      <div class="project-info">
+        <div><span>UI / DASHBOARD</span><h3>Control Panel</h3></div>
+        <p>Dashboard de suivi opérationnel.</p>
+        <button class="project-open" data-project-open="6"><i data-lucide="arrow-up-right"></i></button>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="about" class="about-section">
+  <div class="about-left" data-reveal>
+    <span>02 / À PROPOS</span>
+    <h2>Je combine<br><em>logique & esthétique.</em></h2>
+    <p>Je conçois des interfaces et des sites qui cherchent l'équilibre entre simplicité, personnalité et performance.</p>
+    <a href="#contact">Parler de votre projet <i data-lucide="arrow-up-right"></i></a>
+  </div>
+
+  <div class="about-right" data-stagger>
+    <div class="about-stat"><b data-counter="12">0</b><span>projets réalisés</span></div>
+    <div class="about-stat"><b data-counter="8">0</b><span>secteurs explorés</span></div>
+    <div class="about-stat"><b data-counter="4">0</b><span>années de pratique</span></div>
+    <div class="about-stat"><b data-counter="100">0</b><span>% curiosité</span></div>
+  </div>
+</section>
+
+<section id="skills" class="skills-section">
+  <div class="skills-head" data-reveal>
+    <span>03 / COMPÉTENCES</span>
+    <h2>Ce que j'utilise<br><em>pour donner vie aux idées.</em></h2>
+  </div>
+
+  <div class="skills-grid" data-stagger>
+    <article><i data-lucide="layout-template"></i><span>01</span><h3>Web Design</h3><p>Structure, hiérarchie, direction visuelle et responsive.</p></article>
+    <article><i data-lucide="figma"></i><span>02</span><h3>UI / UX</h3><p>Wireframes, flows, prototypes et design systems.</p></article>
+    <article><i data-lucide="code-2"></i><span>03</span><h3>Front-end</h3><p>HTML, CSS, JavaScript, React et intégration responsive.</p></article>
+    <article><i data-lucide="wand-sparkles"></i><span>04</span><h3>Motion</h3><p>GSAP, microinteractions et transitions contextuelles.</p></article>
+    <article><i data-lucide="badge-check"></i><span>05</span><h3>Branding</h3><p>Identité digitale, cohérence et langage visuel.</p></article>
+    <article><i data-lucide="gauge"></i><span>06</span><h3>Performance</h3><p>SEO technique, accessibilité et optimisation.</p></article>
+  </div>
+</section>
+
+<section class="timeline-section">
+  <div class="timeline-head" data-reveal>
+    <span>04 / PARCOURS</span>
+    <h2>Quelques étapes<br><em>du chemin.</em></h2>
+  </div>
+
+  <div class="timeline">
+    <article><span>2026</span><div><b>Freelance Digital</b><p>Création de sites, templates et expériences interactives.</p></div><i data-lucide="arrow-up-right"></i></article>
+    <article><span>2025</span><div><b>Front-end & UI</b><p>Approfondissement JavaScript, React, animations et responsive.</p></div><i data-lucide="arrow-up-right"></i></article>
+    <article><span>2024</span><div><b>Web Design</b><p>Projets de sites vitrines, landing pages et identités visuelles.</p></div><i data-lucide="arrow-up-right"></i></article>
+    <article><span>2023</span><div><b>Premiers projets</b><p>HTML, CSS, outils graphiques et premiers prototypes.</p></div><i data-lucide="arrow-up-right"></i></article>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <div data-reveal>
+    <i data-lucide="quote"></i>
+    <blockquote>“Une approche très visuelle, mais toujours centrée sur l'expérience et la simplicité.”</blockquote>
+    <span>— Témoignage fictif · client digital</span>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="contact-copy" data-reveal>
+    <span>05 / CONTACT</span>
+    <h2>Vous avez<br>une idée ?<br><em>On la construit.</em></h2>
+    <p>Décrivez votre projet en quelques lignes et créons quelque chose de solide ensemble.</p>
+  </div>
+
+  <form class="contact-form" id="contactForm">
+    <label>Nom<input required placeholder="Votre nom"></label>
+    <label>Email<input required type="email" placeholder="vous@email.fr"></label>
+    <label>Type de projet
+      <select>
+        <option>Site vitrine</option>
+        <option>E-commerce</option>
+        <option>Portfolio</option>
+        <option>Application / UI</option>
+        <option>Autre</option>
+      </select>
+    </label>
+    <label>Budget
+      <select>
+        <option>À définir</option>
+        <option>500 — 1 000 €</option>
+        <option>1 000 — 2 500 €</option>
+        <option>2 500 € +</option>
+      </select>
+    </label>
+    <label class="wide">Votre projet<textarea rows="5" placeholder="Objectif, délais, fonctionnalités..."></textarea></label>
+    <button>Envoyer le projet <i data-lucide="send"></i></button>
+    <small id="contactStatus">Formulaire de démonstration.</small>
+  </form>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-brand"><span>NF</span><div><b>NOIRFOLIO</b><small>CREATIVE PORTFOLIO</small></div></div>
+  <div><b>Navigation</b><a href="#work">Projets</a><a href="#about">À propos</a><a href="#skills">Compétences</a></div>
+  <div><b>Contact</b><span>hello@noirfolio.dev</span><span>France · Disponible à distance</span></div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div>
+</footer>
+
+<div class="project-modal" id="projectModal">
+  <div class="project-modal-panel">
+    <button id="projectClose"><i data-lucide="x"></i></button>
+    <div class="modal-cover" id="modalCover"></div>
+    <div class="modal-content">
+      <span id="modalCategory">—</span>
+      <h2 id="modalTitle">—</h2>
+      <p id="modalDescription">—</p>
+
+      <div class="modal-meta">
+        <div><span>Rôle</span><b id="modalRole">—</b></div>
+        <div><span>Année</span><b id="modalYear">—</b></div>
+        <div><span>Stack</span><b id="modalStack">—</b></div>
+      </div>
+
+      <div class="modal-actions">
+        <button>Voir le projet <i data-lucide="arrow-up-right"></i></button>
+        <button>Case study <i data-lucide="book-open"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/noirfolio/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo Noirfolio · GioTech Digital</div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>

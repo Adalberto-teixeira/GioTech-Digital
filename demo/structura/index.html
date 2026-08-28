@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiNjMTUzMWYiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPlM8L3RleHQ+PC9zdmc+">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Structura — Bâtiment, rénovation &amp; extension</title>
+  <meta name="description" content="Structura accompagne vos projets de construction et rénovation, du gros œuvre à la finition, avec un suivi de chantier transparent." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="brand">Structura<span>.</span></a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#chantiers">Chantiers</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#avis">Avis</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <button class="mobile-nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="#contact" class="btn btn-primary">Demander un devis</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO ================= -->
+    <section class="hero" id="accueil">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Bâtiment &amp; rénovation — depuis 2011</span>
+            <h1>Vos projets de construction, sans mauvaise surprise.</h1>
+            <p class="lead">Gros œuvre, rénovation complète, extension : nous pilotons votre chantier de A à Z, avec un devis clair et un suivi transparent à chaque étape.</p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Demander un devis</a>
+              <a href="#chantiers" class="btn btn-outline">Voir nos chantiers</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <svg viewBox="0 0 400 320" preserveAspectRatio="xMidYMid slice">
+              <rect width="400" height="320" fill="#1c1f24"/>
+              <polygon points="0,320 60,180 130,320" fill="#2a2f36"/>
+              <polygon points="90,320 180,120 270,320" fill="#333944"/>
+              <polygon points="230,320 320,160 400,320" fill="#2a2f36"/>
+              <g stroke="#d9541f" stroke-width="2" opacity="0.85">
+                <line x1="180" y1="120" x2="180" y2="320"/>
+                <line x1="130" y1="200" x2="230" y2="200"/>
+                <line x1="150" y1="250" x2="210" y2="250"/>
+              </g>
+              <circle cx="330" cy="60" r="26" fill="#ffb37a" opacity="0.9"/>
+            </svg>
+            <span class="tag">Extension — Structure bois</span>
+          </div>
+        </div>
+
+        <div class="stats-strip">
+          <div class="stat"><strong>120+</strong><span>Chantiers livrés</span></div>
+          <div class="stat"><strong>13 ans</strong><span>D'expérience</span></div>
+          <div class="stat"><strong>98%</strong><span>Clients satisfaits</span></div>
+          <div class="stat"><strong>7 j/7</strong><span>Suivi de chantier</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SERVICES ================= -->
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Nos savoir-faire</span>
+          <h2>Un métier, plusieurs expertises.</h2>
+          <p>De la fondation à la toiture, une seule équipe suit votre projet — sans multiplier les intermédiaires.</p>
+        </div>
+
+        <div class="services-grid">
+          <div class="service-card">
+            <span class="service-num">01</span>
+            <h3>Gros œuvre</h3>
+            <p>Fondations, maçonnerie et structure porteuse, réalisées selon les normes en vigueur.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-num">02</span>
+            <h3>Rénovation complète</h3>
+            <p>Remise à neuf intérieure et extérieure, de la démolition à la finition.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-num">03</span>
+            <h3>Extension &amp; surélévation</h3>
+            <p>Agrandissez sans déménager : extension bois, véranda ou étage supplémentaire.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-num">04</span>
+            <h3>Charpente &amp; toiture</h3>
+            <p>Charpente traditionnelle ou industrielle, couverture et isolation thermique.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-num">05</span>
+            <h3>Maçonnerie générale</h3>
+            <p>Murs, dallages, terrasses et ouvrages extérieurs sur-mesure.</p>
+          </div>
+          <div class="service-card">
+            <span class="service-num">06</span>
+            <h3>Suivi de chantier</h3>
+            <p>Un interlocuteur unique et des points d'étape réguliers, jusqu'à la réception des travaux.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CHANTIERS ================= -->
+    <section class="section" id="chantiers">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Réalisations</span>
+          <h2>Quelques chantiers récents.</h2>
+          <p>Chaque chantier est unique — voici un aperçu de la diversité de nos réalisations.</p>
+        </div>
+
+        <div class="gallery-grid">
+          <a href="#" class="gallery-card">
+            <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#3a3126"/><polygon points="0,220 90,90 180,220" fill="#4a3f30"/><polygon points="120,220 210,60 300,220" fill="#544736"/><rect x="140" y="150" width="30" height="70" fill="#d9541f" opacity="0.8"/></svg>
+            <div class="gallery-info"><span>Rénovation — Lyon</span><h3>Maison de ville, années 1930</h3></div>
+          </a>
+          <a href="#" class="gallery-card">
+            <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#242b33"/><rect x="40" y="70" width="220" height="150" fill="#2f3843"/><rect x="70" y="100" width="60" height="60" fill="#d9541f" opacity="0.75"/><rect x="170" y="100" width="60" height="60" fill="#ffb37a" opacity="0.5"/></svg>
+            <div class="gallery-info"><span>Extension — Toulouse</span><h3>Extension bois de 32 m²</h3></div>
+          </a>
+          <a href="#" class="gallery-card">
+            <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#33291f"/><polygon points="0,140 300,140 300,220 0,220" fill="#443626"/><polygon points="20,140 150,40 280,140" fill="#5a4a34"/><rect x="130" y="90" width="40" height="50" fill="#d9541f" opacity="0.8"/></svg>
+            <div class="gallery-info"><span>Construction — Bordeaux</span><h3>Maison individuelle 110 m²</h3></div>
+          </a>
+          <a href="#" class="gallery-card">
+            <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#26303a"/><rect x="20" y="40" width="260" height="140" fill="#31404d"/><rect x="45" y="65" width="90" height="90" fill="#ffb37a" opacity="0.55"/><rect x="160" y="65" width="90" height="90" fill="#d9541f" opacity="0.7"/></svg>
+            <div class="gallery-info"><span>Rénovation — Nantes</span><h3>Local commercial → loft</h3></div>
+          </a>
+          <a href="#" class="gallery-card">
+            <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#2c241c"/><polygon points="0,220 150,60 300,220" fill="#3d3225"/><circle cx="150" cy="120" r="34" fill="#d9541f" opacity="0.75"/></svg>
+            <div class="gallery-info"><span>Toiture — Angers</span><h3>Réfection complète, charpente</h3></div>
+          </a>
+          <a href="#" class="gallery-card">
+            <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#20242a"/><rect x="0" y="150" width="300" height="70" fill="#2b3138"/><rect x="30" y="100" width="60" height="120" fill="#ffb37a" opacity="0.5"/><rect x="110" y="70" width="60" height="150" fill="#d9541f" opacity="0.7"/><rect x="190" y="120" width="60" height="100" fill="#3a4753"/></svg>
+            <div class="gallery-info"><span>Surélévation — Rennes</span><h3>Ajout d'un étage complet</h3></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROCESS ================= -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Méthode</span>
+          <h2>Comment se déroule votre chantier.</h2>
+        </div>
+        <div class="process-grid">
+          <div class="process-step"><span class="num">01</span><h3>Visite &amp; devis</h3><p>Étude gratuite sur place et devis détaillé sous 5 jours.</p></div>
+          <div class="process-step"><span class="num">02</span><h3>Planification</h3><p>Calendrier précis, choix des matériaux et démarches administratives.</p></div>
+          <div class="process-step"><span class="num">03</span><h3>Réalisation</h3><p>Exécution des travaux avec points d'étape réguliers.</p></div>
+          <div class="process-step"><span class="num">04</span><h3>Réception</h3><p>Visite finale, levée des réserves et garanties décennales.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= AVIS ================= -->
+    <section class="section" id="avis">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Avis clients</span>
+          <h2>Ce qu'en disent nos clients.</h2>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">Chantier livré dans les temps, équipe très professionnelle et à l'écoute de nos contraintes.</p>
+            <div class="author">— C. Marchand, rénovation à Lyon</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">Un vrai suivi du début à la fin, on savait toujours où en était le chantier.</p>
+            <div class="author">— H. Belkacem, extension à Toulouse</div>
+          </div>
+          <div class="testimonial-card">
+            <div class="stars">★★★★★</div>
+            <p class="quote">Devis clair, aucune surprise sur la facture finale. Nous recommandons.</p>
+            <div class="author">— S. Lefèvre, construction à Bordeaux</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT ================= -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="eyebrow">Contact</span>
+            <h2>Un projet ? Parlons-en.</h2>
+            <p>Décrivez votre projet, nous revenons vers vous sous 48h avec un premier avis et un rendez-vous sur site si nécessaire.</p>
+            <ul class="contact-list">
+              <li><span class="label">Téléphone</span><a href="tel:+33500000000">+33 5 00 00 00 00</a></li>
+              <li><span class="label">Email</span><a href="mailto:contact@structura-demo.fr">contact@structura-demo.fr</a></li>
+              <li><span class="label">Zone d'intervention</span><strong>France entière</strong></li>
+            </ul>
+          </div>
+
+          <form class="contact-form" onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-field"><label for="s-nom">Nom</label><input id="s-nom" type="text" placeholder="Votre nom" /></div>
+              <div class="form-field"><label for="s-tel">Téléphone</label><input id="s-tel" type="tel" placeholder="06 00 00 00 00" /></div>
+            </div>
+            <div class="form-field"><label for="s-type">Type de projet</label>
+              <select id="s-type">
+                <option>Rénovation</option>
+                <option>Extension</option>
+                <option>Construction neuve</option>
+                <option>Toiture</option>
+                <option>Autre</option>
+              </select>
+            </div>
+            <div class="form-field"><label for="s-msg">Message</label><textarea id="s-msg" placeholder="Décrivez votre projet en quelques mots"></textarea></div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Envoyer la demande</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="s-year">2026</span> Structura — Démo de template.</p>
+      <p>Ceci est un site de démonstration, non une entreprise réelle.</p>
+    </div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div></footer>
+
+  <!-- ================= RIBBON DÉMO (retour GioTech) ================= -->
+  <script>
+    document.getElementById("s-year").textContent = new Date().getFullYear();
+    var reveals = document.querySelectorAll("[data-reveal]");
+    if ("IntersectionObserver" in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add("is-visible"); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(function (el) { obs.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+
+    /* ---------- GSAP : mouvement (https://gsap.com — via CDN) ---------- */
+    if (window.gsap) {
+      gsap.registerPlugin(ScrollTrigger);
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!reduceMotion) {
+        var heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        heroTl
+          .from(".hero-copy .eyebrow", { opacity: 0, y: 16, duration: 0.55 })
+          .from(".hero-copy h1", { opacity: 0, y: 26, duration: 0.65 }, "-=0.3")
+          .from(".hero-copy .lead", { opacity: 0, y: 16, duration: 0.5 }, "-=0.35")
+          .from(".hero-copy .hero-actions .btn", { opacity: 0, y: 12, stagger: 0.1, duration: 0.5 }, "-=0.25")
+          .from(".hero-visual", { opacity: 0, x: 30, duration: 0.8, ease: "power2.out" }, "-=0.5")
+          .from(".stats-strip .stat", { opacity: 0, y: 16, stagger: 0.08, duration: 0.5 }, "-=0.3");
+
+        gsap.utils.toArray(".section-head").forEach(function (head) {
+          gsap.from(head.children, {
+            opacity: 0, y: 20, stagger: 0.08, duration: 0.55, ease: "power2.out",
+            scrollTrigger: { trigger: head, start: "top 90%" }
+          });
+        });
+
+        [".services-grid .service-card", ".gallery-grid .gallery-card", ".process-grid .process-step", ".testimonial-grid .testimonial-card"].forEach(function (sel) {
+          gsap.utils.toArray(sel).forEach(function (card, i) {
+            gsap.from(card, {
+              opacity: 0, y: 32, duration: 0.6, ease: "power2.out", delay: (i % 3) * 0.08,
+              scrollTrigger: { trigger: card, start: "top 90%" }
+            });
+          });
+        });
+
+        gsap.from(".contact-grid > *", {
+          opacity: 0, y: 26, stagger: 0.12, duration: 0.6, ease: "power2.out",
+          scrollTrigger: { trigger: ".contact-grid", start: "top 85%" }
+        });
+      }
+    }
+  </script>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.mobile-nav-toggle');
+  var nav=document.querySelector('.main-nav');
+  if(!toggle||!nav)return;
+  toggle.addEventListener('click',function(){
+    var isOpen=nav.classList.toggle('is-open');
+    toggle.classList.toggle('is-open',isOpen);
+    toggle.setAttribute('aria-expanded',String(isOpen));
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded','false');
+    });
+  });
+})();
+</script>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/structura/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo Structura · GioTech Digital</div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>

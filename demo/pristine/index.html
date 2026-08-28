@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxYWE1YTAiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPlA8L3RleHQ+PC9zdmc+">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pristine — Services de nettoyage professionnel</title>
+  <meta name="description" content="Pristine propose des services de nettoyage résidentiel et professionnel, fiables et soignés." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="brand"><span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></span>Pristine</a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#chantiers">Réalisations</a></li>
+          <li><a href="#avis">Avis</a></li>
+          <li><a href="#contact">Devis</a></li>
+        <li><a href="#contact" class="nav-cta">Devis gratuit</a></li>
+      </ul>
+      </nav>
+      <button class="mobile-nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="#contact" class="btn btn-primary">Devis gratuit</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <div class="hero-blob b1" aria-hidden="true"></div>
+      <div class="hero-blob b2" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Nettoyage professionnel</span>
+            <h1>Un intérieur impeccable, sans y penser.</h1>
+            <p class="lead">Pristine s'occupe du nettoyage de votre maison ou de vos bureaux avec une équipe formée, assurée, et des produits respectueux de l'environnement.</p>
+            <div class="hero-actions">
+              <a href="#contact" class="btn btn-primary">Demander un devis</a>
+              <a href="#services" class="btn btn-outline">Voir les services</a>
+            </div>
+            <div class="hero-badge-row">
+              <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Équipe assurée</div>
+              <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Produits écologiques</div>
+              <div class="hero-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Satisfait ou repassé</div>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-visual-panel"></div>
+            <div class="float-stack-card card-a">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></div>
+              <div><strong>Nettoyage terminé</strong><span>Aujourd'hui à 14:30</span></div>
+            </div>
+            <div class="float-stack-card card-b">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 9 9l-7 3 7 3 3 7 3-7 7-3-7-3-3-7Z"/></svg></div>
+              <div><strong>4.9/5</strong><span>Note moyenne</span></div>
+            </div>
+            <div class="float-stack-card card-c">
+              <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg></div>
+              <div><strong>Équipe en route</strong><span>Arrivée dans 12 min</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pristine-marquee" aria-hidden="true">
+      <div class="pristine-marquee-track">
+        <span>Nettoyage résidentiel</span><span>Bureaux</span><span>Fin de bail</span><span>Vitres &amp; façades</span><span>Nettoyage en profondeur</span><span>Abonnement régulier</span><span>Nettoyage résidentiel</span><span>Bureaux</span><span>Fin de bail</span><span>Vitres &amp; façades</span><span>Nettoyage en profondeur</span><span>Abonnement régulier</span>
+      </div>
+    </div>
+
+    <section class="section" style="padding-bottom:0;">
+      <div class="container">
+        <div class="pristine-stats">
+          <div class="pristine-stat"><strong data-count="4200">0</strong><span>Nettoyages réalisés</span></div>
+          <div class="pristine-stat"><strong data-count="98">0</strong><span>% clients satisfaits</span></div>
+          <div class="pristine-stat"><strong data-count="35">0</strong><span>Équipes actives</span></div>
+          <div class="pristine-stat"><strong data-count="12">0</strong><span>Ans d'expérience</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Nos services</span>
+          <h2>Un service pour chaque besoin.</h2>
+          <p>Ponctuel ou régulier, résidentiel ou professionnel — nous adaptons la formule à votre rythme.</p>
+        </div>
+        <div class="services-grid" data-reveal>
+          <div class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 9.5 12 3l9 6.5V21H3V9.5Z"/></svg></div>
+            <h3>Nettoyage résidentiel</h3>
+            <p>Entretien régulier de votre maison ou appartement, du sol au plafond.</p>
+            <span class="price">Dès 29€/heure</span>
+          </div>
+          <div class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V7l8-4 8 4v14M9 21v-6h6v6"/></svg></div>
+            <h3>Nettoyage de bureaux</h3>
+            <p>Espaces de travail propres et sains, avant ou après les heures d'ouverture.</p>
+            <span class="price">Sur devis</span>
+          </div>
+          <div class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg></div>
+            <h3>Nettoyage en profondeur</h3>
+            <p>Un grand nettoyage complet, idéal avant un événement ou après des travaux.</p>
+            <span class="price">Dès 149€</span>
+          </div>
+          <div class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a4 4 0 0 1 8 0v2"/></svg></div>
+            <h3>Fin de bail</h3>
+            <p>Un logement impeccable pour récupérer votre caution sans discussion.</p>
+            <span class="price">Dès 179€</span>
+          </div>
+          <div class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z"/></svg></div>
+            <h3>Vitres &amp; façades</h3>
+            <p>Vitres, baies vitrées et façades nettoyées sans traces, en toute sécurité.</p>
+            <span class="price">Dès 39€</span>
+          </div>
+          <div class="service-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div>
+            <h3>Abonnement régulier</h3>
+            <p>Hebdomadaire, bimensuel ou mensuel — la même équipe, à chaque passage.</p>
+            <span class="price">Dès 99€/mois</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="eyebrow">Méthode</span>
+          <h2>Réservez en 4 étapes simples.</h2>
+        </div>
+        <div class="process-row">
+          <div class="process-step"><span class="num">1</span><h3>Demandez un devis</h3><p>En ligne ou par téléphone, en 2 minutes.</p></div>
+          <div class="process-step"><span class="num">2</span><h3>Choisissez un créneau</h3><p>La date et l'heure qui vous conviennent.</p></div>
+          <div class="process-step"><span class="num">3</span><h3>On s'occupe de tout</h3><p>Notre équipe intervient avec son propre matériel.</p></div>
+          <div class="process-step"><span class="num">4</span><h3>Vous profitez</h3><p>Un espace impeccable, sans lever le petit doigt.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chantiers">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Réalisations</span>
+          <h2>Avant / après.</h2>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-card"><svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#e6f7f4"/><rect x="40" y="60" width="220" height="120" rx="10" fill="#bdeee2"/></svg><span class="tag">Cuisine</span></div>
+          <div class="gallery-card"><svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#e6f2fb"/><circle cx="150" cy="110" r="70" fill="#bcdcf5"/></svg><span class="tag">Salle de bain</span></div>
+          <div class="gallery-card"><svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#eefaf0"/><rect x="30" y="40" width="240" height="140" rx="12" fill="#c9f0d1"/></svg><span class="tag">Bureaux</span></div>
+          <div class="gallery-card"><svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#f0f7fb"/><polygon points="30,180 150,60 270,180" fill="#c7e6f5"/></svg><span class="tag">Salon</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="avis">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="eyebrow">Avis clients</span>
+          <h2>Ce qu'en pensent nos clients.</h2>
+        </div>
+        <div class="testimonial-grid">
+          <div class="testimonial-card"><div class="stars">★★★★★</div><p class="quote">Ponctuels, efficaces, et un résultat impeccable à chaque passage.</p><div class="author">— Marc T., abonnement mensuel</div></div>
+          <div class="testimonial-card"><div class="stars">★★★★★</div><p class="quote">J'ai récupéré toute ma caution grâce au nettoyage de fin de bail. Merci !</p><div class="author">— Inès K., fin de bail</div></div>
+          <div class="testimonial-card"><div class="stars">★★★★★</div><p class="quote">Nos bureaux n'ont jamais été aussi propres. Service fiable et discret.</p><div class="author">— Cabinet Lefort, nettoyage de bureaux</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info">
+            <span class="eyebrow">Devis gratuit</span>
+            <h2>Recevez votre devis en 24h.</h2>
+            <p>Décrivez votre besoin ci-contre, ou contactez-nous directement.</p>
+            <ul class="contact-list">
+              <li><span class="label">Téléphone</span><a href="tel:+33600000000">+33 6 00 00 00 00</a></li>
+              <li><span class="label">Email</span><a href="mailto:contact@pristine-demo.fr">contact@pristine-demo.fr</a></li>
+              <li><span class="label">Zone d'intervention</span><strong>Marseille et alentours</strong></li>
+            </ul>
+          </div>
+
+          <form class="contact-form" onsubmit="return false;">
+            <div class="form-row">
+              <div class="form-field"><label for="pr-nom">Nom</label><input id="pr-nom" type="text" placeholder="Votre nom" /></div>
+              <div class="form-field"><label for="pr-tel">Téléphone</label><input id="pr-tel" type="tel" placeholder="06 00 00 00 00" /></div>
+            </div>
+            <div class="form-field"><label for="pr-type">Type de nettoyage</label>
+              <select id="pr-type">
+                <option>Résidentiel</option>
+                <option>Bureaux</option>
+                <option>Nettoyage en profondeur</option>
+                <option>Fin de bail</option>
+                <option>Abonnement régulier</option>
+              </select>
+            </div>
+            <div class="form-field"><label for="pr-msg">Détails</label><textarea id="pr-msg" placeholder="Surface, nombre de pièces, fréquence souhaitée…"></textarea></div>
+            <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">Demander mon devis</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="pr-year">2026</span> Pristine — Démo de template.</p>
+      <p>Ceci est un site de démonstration, non une entreprise réelle.</p>
+    </div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div></footer>
+
+  <script>
+    document.getElementById("pr-year").textContent = new Date().getFullYear();
+
+    /* Compteurs animés */
+    function animateCount(el) {
+      var target = parseInt(el.dataset.count, 10);
+      var duration = 1400;
+      var start = null;
+      function step(ts) {
+        if (!start) start = ts;
+        var progress = Math.min((ts - start) / duration, 1);
+        var eased = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.round(eased * target);
+        if (progress < 1) requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+    var countEls = document.querySelectorAll("[data-count]");
+    if ("IntersectionObserver" in window && countEls.length) {
+      var countObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { animateCount(entry.target); countObs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.4 });
+      countEls.forEach(function (el) { countObs.observe(el); });
+    }
+
+    var reveals = document.querySelectorAll("[data-reveal]");
+    if ("IntersectionObserver" in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add("is-visible"); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(function (el) { obs.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+
+    /* ---------- GSAP : mouvement (https://gsap.com — via CDN) ---------- */
+    if (window.gsap) {
+      gsap.registerPlugin(ScrollTrigger);
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!reduceMotion) {
+        var heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        heroTl
+          .from(".hero-copy .eyebrow", { opacity: 0, y: 14, duration: 0.5 })
+          .from(".hero-copy h1", { opacity: 0, y: 26, duration: 0.65 }, "-=0.3")
+          .from(".hero-copy .lead", { opacity: 0, y: 16, duration: 0.5 }, "-=0.35")
+          .from(".hero-copy .hero-actions .btn", { opacity: 0, y: 12, stagger: 0.1, duration: 0.5 }, "-=0.25")
+          .from(".hero-badge-row .hero-badge", { opacity: 0, y: 12, stagger: 0.08, duration: 0.45 }, "-=0.2")
+          .from(".float-stack-card", { opacity: 0, y: 30, stagger: 0.12, duration: 0.6, ease: "back.out(1.3)" }, "-=0.5");
+
+        gsap.utils.toArray(".section-head").forEach(function (head) {
+          gsap.from(head.children, {
+            opacity: 0, y: 20, stagger: 0.08, duration: 0.55, ease: "power2.out",
+            scrollTrigger: { trigger: head, start: "top 90%" }
+          });
+        });
+
+        gsap.from(".pristine-stats .pristine-stat", {
+          opacity: 0, y: 22, stagger: 0.08, duration: 0.55, ease: "power2.out",
+          scrollTrigger: { trigger: ".pristine-stats", start: "top 90%" }
+        });
+
+        [".process-row .process-step", ".gallery-grid .gallery-card", ".testimonial-grid .testimonial-card"].forEach(function (sel) {
+          gsap.utils.toArray(sel).forEach(function (card, i) {
+            gsap.from(card, {
+              opacity: 0, y: 30, duration: 0.6, ease: "power2.out", delay: (i % 4) * 0.07,
+              scrollTrigger: { trigger: card, start: "top 90%" }
+            });
+          });
+        });
+
+        gsap.from(".contact-grid > *", {
+          opacity: 0, y: 24, stagger: 0.12, duration: 0.6, ease: "power2.out",
+          scrollTrigger: { trigger: ".contact-grid", start: "top 85%" }
+        });
+      }
+    }
+  </script>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.mobile-nav-toggle');
+  var nav=document.querySelector('.main-nav');
+  if(!toggle||!nav)return;
+  toggle.addEventListener('click',function(){
+    var isOpen=nav.classList.toggle('is-open');
+    toggle.classList.toggle('is-open',isOpen);
+    toggle.setAttribute('aria-expanded',String(isOpen));
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded','false');
+    });
+  });
+})();
+</script>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/pristine/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo Pristine · GioTech Digital</div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>

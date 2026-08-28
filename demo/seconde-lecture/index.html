@@ -1,0 +1,497 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxNzNmMzUiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPlNMPC90ZXh0Pjwvc3ZnPg==">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="SECONDE LECTURE — librairie en ligne de livres d'occasion. Des livres déjà aimés, prêts à vivre une nouvelle histoire.">
+  <meta name="theme-color" content="#173f35">
+  <title>SECONDE LECTURE — Livres d'occasion</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#home" class="brand">
+    <span>SL</span>
+    <div><b>SECONDE LECTURE</b><small>LIBRAIRIE D'OCCASION</small></div>
+  </a>
+
+  <nav class="desktop-nav">
+    <a href="#catalogue">Catalogue</a>
+    <a href="#story">Notre idée</a>
+    <a href="#impact">Impact</a>
+    <a href="#sell">Vendre un livre</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="icon-button" id="searchOpen" aria-label="Rechercher"><i data-lucide="search"></i></button>
+    <button class="icon-button" id="wishOpen" aria-label="Favoris"><i data-lucide="heart"></i><span id="wishCount">0</span></button>
+    <button class="cart-button" id="cartOpen"><i data-lucide="shopping-bag"></i><span>Panier</span><b id="cartCount">0</b></button>
+    <button class="icon-button menu-toggle" id="menuOpen"><i data-lucide="menu"></i></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button id="menuClose"><i data-lucide="x"></i></button>
+  <span>SECONDE LECTURE / MENU</span>
+  <a href="#catalogue">Catalogue <i data-lucide="arrow-up-right"></i></a>
+  <a href="#story">Notre idée <i data-lucide="arrow-up-right"></i></a>
+  <a href="#impact">Impact <i data-lucide="arrow-up-right"></i></a>
+  <a href="#sell">Vendre un livre <i data-lucide="arrow-up-right"></i></a>
+</div>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy" data-reveal>
+    <span>LIVRES D'OCCASION · SÉLECTIONNÉS AVEC SOIN</span>
+    <h1>UN BON LIVRE<br>NE DEVRAIT PAS<br><em>N'AVOIR QU'UNE VIE.</em></h1>
+    <p>Romans, essais, littérature, jeunesse et beaux livres déjà lus, vérifiés et prêts à être aimés une nouvelle fois.</p>
+
+    <div class="hero-actions">
+      <a href="#catalogue" class="primary">Explorer la librairie <i data-lucide="arrow-down-right"></i></a>
+      <a href="#sell" class="secondary">Donner une seconde vie à mes livres <i data-lucide="book-heart"></i></a>
+    </div>
+
+    <div class="hero-note">
+      <i data-lucide="leaf"></i>
+      <p><b>Lire mieux, consommer autrement.</b><br>Chaque livre d'occasion évite qu'un nouvel exemplaire soit produit inutilement.</p>
+    </div>
+  </div>
+
+  <div class="hero-visual" data-reveal>
+    <div class="book-stack">
+      <article class="book book-a">
+        <div class="book-spine"><span>ALBERT CAMUS</span><b>L'ÉTRANGER</b><small>FOLIO</small></div>
+      </article>
+      <article class="book book-b">
+        <div class="book-spine"><span>MARGUERITE DURAS</span><b>L'AMANT</b><small>MINUIT</small></div>
+      </article>
+      <article class="book book-c">
+        <div class="book-spine"><span>GEORGE ORWELL</span><b>1984</b><small>GALLIMARD</small></div>
+      </article>
+      <article class="book book-d">
+        <div class="book-spine"><span>HARUKI MURAKAMI</span><b>KAFKA SUR LE RIVAGE</b><small>10/18</small></div>
+      </article>
+    </div>
+
+    <div class="hero-sticker">LUS<br>MAIS PAS<br>FINIS.</div>
+    <div class="hero-price">dès <b>3,90 €</b></div>
+  </div>
+</section>
+
+<section class="benefits">
+  <div><i data-lucide="badge-check"></i><span><b>État vérifié</b><small>Chaque exemplaire est contrôlé</small></span></div>
+  <div><i data-lucide="package-check"></i><span><b>Envoi soigné</b><small>Emballage adapté aux livres</small></span></div>
+  <div><i data-lucide="recycle"></i><span><b>Seconde vie</b><small>Moins de gaspillage, plus de lecture</small></span></div>
+  <div><i data-lucide="shield-check"></i><span><b>Achat serein</b><small>Checkout de démonstration</small></span></div>
+</section>
+
+<section id="catalogue" class="section catalogue-section">
+  <div class="section-head" data-reveal>
+    <div>
+      <span>01 / LA SÉLECTION</span>
+      <h2>Déjà lus.<br><em>Encore pleins d'histoires.</em></h2>
+    </div>
+    <p>Chaque livre a son état, son prix et sa petite histoire. Certains portent quelques traces de lecture — c'est aussi ce qui les rend uniques.</p>
+  </div>
+
+  <div class="catalogue-toolbar">
+    <div class="filters">
+      <button class="active" data-genre="all">Tous</button>
+      <button data-genre="roman">Romans</button>
+      <button data-genre="classique">Classiques</button>
+      <button data-genre="essai">Essais</button>
+      <button data-genre="jeunesse">Jeunesse</button>
+      <button data-genre="art">Beaux livres</button>
+    </div>
+
+    <div class="toolbar-right">
+      <select id="conditionFilter">
+        <option value="all">Tous les états</option>
+        <option value="comme-neuf">Comme neuf</option>
+        <option value="tres-bon">Très bon</option>
+        <option value="bon">Bon</option>
+      </select>
+      <select id="sortSelect">
+        <option value="default">Trier par</option>
+        <option value="asc">Prix croissant</option>
+        <option value="desc">Prix décroissant</option>
+        <option value="saving">Meilleure économie</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="books-grid" id="booksGrid" data-stagger>
+
+    <article class="book-card" data-id="1" data-genre="classique" data-condition="tres-bon" data-price="4.90" data-newprice="9.20">
+      <div class="cover-wrap cover-camus">
+        <div class="cover-inner"><span>ALBERT CAMUS</span><h3>L'ÉTRANGER</h3><small>FOLIO</small></div>
+        <button class="wish-btn" data-wish="1"><i data-lucide="heart"></i></button>
+        <span class="condition-badge">TRÈS BON</span>
+      </div>
+      <div class="book-info">
+        <span>CLASSIQUE · POCHE</span><h3>L'Étranger</h3><p>Albert Camus</p>
+        <div class="condition-line"><i data-lucide="scan-line"></i><span>Quelques marques légères sur la couverture</span></div>
+        <div class="price-line"><div><b>4,90 €</b><s>9,20 € neuf</s></div><span>-47%</span></div>
+        <div class="card-actions"><button class="quick-btn" data-quick="1">Voir le livre</button><button class="add-btn" data-add="1"><i data-lucide="plus"></i></button></div>
+      </div>
+    </article>
+
+    <article class="book-card" data-id="2" data-genre="roman" data-condition="comme-neuf" data-price="7.90" data-newprice="11.40">
+      <div class="cover-wrap cover-duras">
+        <div class="cover-inner"><span>MARGUERITE DURAS</span><h3>L'AMANT</h3><small>ÉDITIONS DE MINUIT</small></div>
+        <button class="wish-btn" data-wish="2"><i data-lucide="heart"></i></button>
+        <span class="condition-badge">COMME NEUF</span>
+      </div>
+      <div class="book-info">
+        <span>ROMAN · POCHE</span><h3>L'Amant</h3><p>Marguerite Duras</p>
+        <div class="condition-line"><i data-lucide="sparkles"></i><span>Exemplaire presque intact</span></div>
+        <div class="price-line"><div><b>7,90 €</b><s>11,40 € neuf</s></div><span>-31%</span></div>
+        <div class="card-actions"><button class="quick-btn" data-quick="2">Voir le livre</button><button class="add-btn" data-add="2"><i data-lucide="plus"></i></button></div>
+      </div>
+    </article>
+
+    <article class="book-card" data-id="3" data-genre="classique" data-condition="bon" data-price="5.40" data-newprice="10.10">
+      <div class="cover-wrap cover-orwell">
+        <div class="cover-inner"><span>GEORGE ORWELL</span><h3>1984</h3><small>FOLIO</small></div>
+        <button class="wish-btn" data-wish="3"><i data-lucide="heart"></i></button>
+        <span class="condition-badge">BON</span>
+      </div>
+      <div class="book-info">
+        <span>CLASSIQUE · DYSTOPIE</span><h3>1984</h3><p>George Orwell</p>
+        <div class="condition-line"><i data-lucide="book-open-check"></i><span>Dos légèrement marqué, intérieur propre</span></div>
+        <div class="price-line"><div><b>5,40 €</b><s>10,10 € neuf</s></div><span>-47%</span></div>
+        <div class="card-actions"><button class="quick-btn" data-quick="3">Voir le livre</button><button class="add-btn" data-add="3"><i data-lucide="plus"></i></button></div>
+      </div>
+    </article>
+
+    <article class="book-card" data-id="4" data-genre="roman" data-condition="tres-bon" data-price="8.60" data-newprice="12.50">
+      <div class="cover-wrap cover-murakami">
+        <div class="cover-inner"><span>HARUKI MURAKAMI</span><h3>KAFKA SUR LE RIVAGE</h3><small>10/18</small></div>
+        <button class="wish-btn" data-wish="4"><i data-lucide="heart"></i></button>
+        <span class="condition-badge">TRÈS BON</span>
+      </div>
+      <div class="book-info">
+        <span>ROMAN · CONTEMPORAIN</span><h3>Kafka sur le rivage</h3><p>Haruki Murakami</p>
+        <div class="condition-line"><i data-lucide="scan-line"></i><span>Coins très légèrement frottés</span></div>
+        <div class="price-line"><div><b>8,60 €</b><s>12,50 € neuf</s></div><span>-31%</span></div>
+        <div class="card-actions"><button class="quick-btn" data-quick="4">Voir le livre</button><button class="add-btn" data-add="4"><i data-lucide="plus"></i></button></div>
+      </div>
+    </article>
+
+    <article class="book-card" data-id="5" data-genre="essai" data-condition="comme-neuf" data-price="10.90" data-newprice="18.00">
+      <div class="cover-wrap cover-sapiens">
+        <div class="cover-inner"><span>YUVAL NOAH HARARI</span><h3>SAPIENS</h3><small>ALBIN MICHEL</small></div>
+        <button class="wish-btn" data-wish="5"><i data-lucide="heart"></i></button>
+        <span class="condition-badge">COMME NEUF</span>
+      </div>
+      <div class="book-info">
+        <span>ESSAI · HISTOIRE</span><h3>Sapiens</h3><p>Yuval Noah Harari</p>
+        <div class="condition-line"><i data-lucide="sparkles"></i><span>Très peu lu, intérieur impeccable</span></div>
+        <div class="price-line"><div><b>10,90 €</b><s>18,00 € neuf</s></div><span>-39%</span></div>
+        <div class="card-actions"><button class="quick-btn" data-quick="5">Voir le livre</button><button class="add-btn" data-add="5"><i data-lucide="plus"></i></button></div>
+      </div>
+    </article>
+
+    <article class="book-card" data-id="6" data-genre="jeunesse" data-condition="bon" data-price="3.90" data-newprice="7.90">
+      <div class="cover-wrap cover-prince">
+        <div class="cover-inner"><span>ANTOINE DE SAINT-EXUPÉRY</span><h3>LE PETIT PRINCE</h3><small>FOLIO JUNIOR</small></div>
+        <button class="wish-btn" data-wish="6"><i data-lucide="heart"></i></button>
+        <span class="condition-badge">BON</span>
+      </div>
+      <div class="book-info">
+        <span>JEUNESSE · CLASSIQUE</span><h3>Le Petit Prince</h3><p>Antoine de Saint-Exupéry</p>
+        <div class="condition-line"><i data-lucide="book-heart"></i><span>Lu avec amour, couverture légèrement patinée</span></div>
+        <div class="price-line"><div><b>3,90 €</b><s>7,90 € neuf</s></div><span>-51%</span></div>
+        <div class="card-actions"><button class="quick-btn" data-quick="6">Voir le livre</button><button class="add-btn" data-add="6"><i data-lucide="plus"></i></button></div>
+      </div>
+    </article>
+
+    <article class="book-card" data-id="7" data-genre="art" data-condition="tres-bon" data-price="16.90" data-newprice="29.90">
+      <div class="cover-wrap cover-bauhaus">
+        <div class="cover-inner"><span>DESIGN / ARCHITECTURE</span><h3>BAUHAUS</h3><small>TASCHEN</small></div>
+        <button class="wish-btn" data-wish="7"><i data-lucide="heart"></i></button>
+        <span class="condition-badge">TRÈS BON</span>
+      </div>
+      <div class="book-info">
+        <span>BEAU LIVRE · DESIGN</span><h3>Bauhaus</h3><p>Collectif</p>
+        <div class="condition-line"><i data-lucide="scan-line"></i><span>Jaquette légèrement marquée</span></div>
+        <div class="price-line"><div><b>16,90 €</b><s>29,90 € neuf</s></div><span>-43%</span></div>
+        <div class="card-actions"><button class="quick-btn" data-quick="7">Voir le livre</button><button class="add-btn" data-add="7"><i data-lucide="plus"></i></button></div>
+      </div>
+    </article>
+
+    <article class="book-card" data-id="8" data-genre="roman" data-condition="tres-bon" data-price="6.50" data-newprice="10.50">
+      <div class="cover-wrap cover-ishiguro">
+        <div class="cover-inner"><span>KAZUO ISHIGURO</span><h3>LES VESTIGES DU JOUR</h3><small>FOLIO</small></div>
+        <button class="wish-btn" data-wish="8"><i data-lucide="heart"></i></button>
+        <span class="condition-badge">TRÈS BON</span>
+      </div>
+      <div class="book-info">
+        <span>ROMAN · LITTÉRATURE</span><h3>Les Vestiges du jour</h3><p>Kazuo Ishiguro</p>
+        <div class="condition-line"><i data-lucide="book-open-check"></i><span>Pages propres, couverture très correcte</span></div>
+        <div class="price-line"><div><b>6,50 €</b><s>10,50 € neuf</s></div><span>-38%</span></div>
+        <div class="card-actions"><button class="quick-btn" data-quick="8">Voir le livre</button><button class="add-btn" data-add="8"><i data-lucide="plus"></i></button></div>
+      </div>
+    </article>
+  </div>
+
+  <div id="noResults" class="no-results"><i data-lucide="book-x"></i><b>Aucun livre trouvé.</b><span>Essayez un autre filtre ou une autre recherche.</span></div>
+</section>
+
+<section id="story" class="story-section">
+  <div class="story-visual">
+    <div class="old-book">
+      <span>EXEMPLAIRE Nº 0248</span>
+      <h3>“Ce livre a déjà<br>été lu deux fois.”</h3>
+      <p>Une petite pliure. Une date écrite au crayon. Quelques pages qui ont vécu. Rien qui empêche une nouvelle histoire.</p>
+      <div class="stamp">SECONDE<br>LECTURE</div>
+    </div>
+  </div>
+
+  <div class="story-copy" data-reveal>
+    <span>02 / NOTRE IDÉE</span>
+    <h2>Les traces du temps<br><em>font partie du livre.</em></h2>
+    <p>Nous ne cherchons pas à faire passer un livre d'occasion pour un livre neuf. Nous décrivons son état clairement, afin que chaque lecteur sache exactement ce qu'il achète.</p>
+
+    <div class="state-list">
+      <div><i data-lucide="sparkles"></i><span><b>Comme neuf</b><small>Presque aucune trace d'utilisation</small></span></div>
+      <div><i data-lucide="book-open-check"></i><span><b>Très bon état</b><small>Quelques marques légères, lecture confortable</small></span></div>
+      <div><i data-lucide="book-marked"></i><span><b>Bon état</b><small>Le livre a vécu, mais reste parfaitement lisible</small></span></div>
+    </div>
+  </div>
+</section>
+
+<section id="impact" class="impact-section">
+  <div class="impact-head" data-reveal>
+    <span>03 / LIRE CIRCULAIRE</span>
+    <h2>Un livre qui circule<br><em>est un livre qui continue.</em></h2>
+  </div>
+
+  <div class="impact-grid">
+    <div><i data-lucide="book-copy"></i><b data-counter="1284">0</b><span>livres remis en circulation</span></div>
+    <div><i data-lucide="leaf"></i><b data-counter="642">0</b><span>kg de papier évités*</span></div>
+    <div><i data-lucide="users"></i><b data-counter="817">0</b><span>nouveaux lecteurs</span></div>
+    <div><i data-lucide="piggy-bank"></i><b data-counter="41">0</b><span>% d'économie moyenne</span></div>
+  </div>
+  <small>*Chiffres fictifs utilisés uniquement pour la démonstration du template.</small>
+</section>
+
+<section class="recommend-section">
+  <div class="recommend-copy" data-reveal>
+    <span>04 / SI VOUS AVEZ AIMÉ…</span>
+    <h2>Des livres qui<br><em>se répondent.</em></h2>
+    <p>Une section éditoriale qui peut être reliée plus tard à un vrai moteur de recommandations.</p>
+  </div>
+
+  <div class="recommend-row">
+    <div class="mini-book mb1"><span>CAMUS</span><b>LA PESTE</b></div>
+    <i data-lucide="arrow-right"></i>
+    <div class="mini-book mb2"><span>SARTRE</span><b>LA NAUSÉE</b></div>
+    <i data-lucide="arrow-right"></i>
+    <div class="mini-book mb3"><span>ORWELL</span><b>LA FERME DES ANIMAUX</b></div>
+  </div>
+</section>
+
+<section id="sell" class="sell-section">
+  <div class="sell-copy" data-reveal>
+    <span>05 / VOS LIVRES AUSSI</span>
+    <h2>Votre bibliothèque<br><em>dort un peu trop ?</em></h2>
+    <p>Proposez les livres que vous ne lisez plus. Cette démo simule une estimation simple avant reprise.</p>
+  </div>
+
+  <form id="sellForm" class="sell-form">
+    <label>Titre du livre<input required id="sellTitle" placeholder="Ex. L'Étranger"></label>
+    <label>Auteur<input required placeholder="Nom de l'auteur"></label>
+    <label>État
+      <select id="sellCondition">
+        <option value="0.55">Comme neuf</option>
+        <option value="0.42">Très bon état</option>
+        <option value="0.30">Bon état</option>
+      </select>
+    </label>
+    <label>Prix neuf approximatif<input required id="sellNewPrice" type="number" min="1" step="0.1" placeholder="12.90"></label>
+    <button type="button" id="estimateButton">Estimer mon livre <i data-lucide="calculator"></i></button>
+    <div class="estimate-result" id="estimateResult"><span>Estimation indicative</span><b>—</b><small>La reprise réelle demanderait une vérification physique du livre.</small></div>
+  </form>
+</section>
+
+<section class="newsletter">
+  <div><i data-lucide="mail-open"></i><span>NOUVEAUX ARRIVAGES / 1 FOIS PAR SEMAINE</span><h2>Les bons livres<br>partent vite.</h2></div>
+  <form id="newsletterForm"><input required type="email" placeholder="Votre email"><button>S'inscrire <i data-lucide="arrow-right"></i></button></form>
+</section>
+</main>
+
+<footer>
+  <div class="footer-brand"><span>SL</span><div><b>SECONDE LECTURE</b><small>LIBRAIRIE D'OCCASION</small></div></div>
+  <div><b>Explorer</b><a href="#catalogue">Catalogue</a><a href="#story">Notre idée</a><a href="#sell">Vendre un livre</a></div>
+  <div><b>Informations</b><span>Livraison France</span><span>Retours sous conditions</span><span>Paiement fictif dans cette démo</span></div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div>
+</footer>
+
+<div class="search-overlay" id="searchOverlay">
+  <button id="searchClose"><i data-lucide="x"></i></button>
+  <div class="search-box">
+    <span>RECHERCHER DANS LA LIBRAIRIE</span>
+    <div><i data-lucide="search"></i><input id="searchInput" autofocus placeholder="Titre, auteur, genre..."></div>
+    <small>Essayez “Camus”, “roman”, “1984”…</small>
+  </div>
+</div>
+
+<div class="drawer" id="wishDrawer">
+  <div class="drawer-panel">
+    <header><div><span>MA LISTE</span><h2>Favoris.</h2></div><button id="wishClose"><i data-lucide="x"></i></button></header>
+    <div id="wishList"></div>
+  </div>
+</div>
+
+<div class="drawer" id="cartDrawer">
+  <div class="drawer-panel">
+    <header><div><span>VOTRE PANIER</span><h2>À lire bientôt.</h2></div><button id="cartClose"><i data-lucide="x"></i></button></header>
+    <div id="cartItems"></div>
+    <footer class="cart-footer">
+      <div><span>Sous-total</span><b id="cartTotal">0,00 €</b></div>
+      <small>Livraison calculée à l'étape suivante.</small>
+      <button id="checkoutOpen">Passer au paiement <i data-lucide="arrow-right"></i></button>
+    </footer>
+  </div>
+</div>
+
+<div class="modal" id="quickModal">
+  <div class="modal-panel quick-panel">
+    <button class="modal-close" id="quickClose"><i data-lucide="x"></i></button>
+    <div class="quick-cover" id="quickCover"></div>
+    <div class="quick-copy">
+      <span id="quickGenre">—</span>
+      <h2 id="quickTitle">—</h2>
+      <p id="quickAuthor">—</p>
+      <div class="quick-condition"><i data-lucide="badge-check"></i><span id="quickCondition">—</span></div>
+      <div class="history-note"><span>HISTOIRE DE CET EXEMPLAIRE</span><p id="quickStory">—</p></div>
+      <div class="quick-price"><b id="quickPrice">—</b><s id="quickNewPrice">—</s></div>
+      <button id="quickAdd">Ajouter au panier <i data-lucide="shopping-bag"></i></button>
+    </div>
+  </div>
+</div>
+
+<div class="modal" id="checkoutModal">
+  <div class="modal-panel checkout-panel">
+    <button class="modal-close" id="checkoutClose"><i data-lucide="x"></i></button>
+    <span>CHECKOUT / DEMO</span><h2>Finaliser la commande.</h2>
+    <form id="checkoutForm">
+      <label>Nom<input required placeholder="Votre nom"></label>
+      <label>Email<input required type="email" placeholder="vous@email.fr"></label>
+      <label>Adresse<input required placeholder="Votre adresse"></label>
+      <label>Code postal<input required placeholder="13500"></label>
+      <label>Ville<input required placeholder="Martigues"></label>
+      <label>Mode de paiement<select><option>Carte bancaire (démo)</option><option>PayPal (démo)</option></select></label>
+      <div class="checkout-summary" id="checkoutSummary"></div>
+      <button>Confirmer la commande <i data-lucide="lock-keyhole"></i></button>
+      <p id="checkoutStatus"></p>
+    </form>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/seconde-lecture/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo Seconde Lecture · GioTech Digital</div>
+</div>
+<!-- ===== Menu inférieur fixe façon Amazon (mobile) ===== -->
+<nav class="amazon-bottom-nav" aria-label="Navigation principale mobile">
+  <a href="#home" class="is-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg><span>Accueil</span></a>
+  <button type="button" id="amazon-bottom-categories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Catalogue</span></button>
+  <button type="button" id="amazon-bottom-cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12L5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg><span>Panier</span><b class="amazon-bottom-badge" id="amazon-bottom-badge" style="display:none;">0</b></button>
+  <button type="button" id="amazon-bottom-account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg><span>Compte</span></button>
+</nav>
+<script>
+(function(){
+  document.getElementById('amazon-bottom-categories').addEventListener('click',function(){document.getElementById('menuOpen').click();});
+  document.getElementById('amazon-bottom-cart').addEventListener('click',function(){document.getElementById('cartOpen').click();});
+  document.getElementById('amazon-bottom-account').addEventListener('click',function(){alert('Compte client — fonctionnalité de démonstration.');});
+  var headerBadge=document.getElementById('cartCount');
+  var footBadge=document.getElementById('amazon-bottom-badge');
+  if(headerBadge && footBadge && window.MutationObserver){
+    new MutationObserver(function(){
+      footBadge.textContent=headerBadge.textContent;
+      footBadge.style.display=headerBadge.textContent==='0'?'none':'flex';
+    }).observe(headerBadge,{childList:true,characterData:true,subtree:true});
+  }
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>

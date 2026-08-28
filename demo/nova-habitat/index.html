@@ -1,0 +1,475 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiNjNmYyNGUiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPk5IPC90ZXh0Pjwvc3ZnPg==">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="NOVA Habitat — maisons, villas et appartements à vendre.">
+  <meta name="theme-color" content="#10211e">
+  <title>NOVA Habitat — Immobilier Premium</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#home">
+    <span>NH</span>
+    <div><b>NOVA HABITAT</b><small>IMMOBILIER · VENTE</small></div>
+  </a>
+
+  <nav class="desktop-nav">
+    <a href="#properties">Biens</a>
+    <a href="#services">Services</a>
+    <a href="#about">Agence</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="icon-button" id="favOpen" aria-label="Favoris">
+      <i data-lucide="heart"></i>
+      <span id="favCount">0</span>
+    </button>
+    <a class="estimate-button" href="#contact">Estimer mon bien <i data-lucide="arrow-up-right"></i></a>
+    <button class="icon-button menu-toggle" id="menuOpen" aria-label="Menu">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button id="menuClose" aria-label="Fermer"><i data-lucide="x"></i></button>
+  <span>NOVA HABITAT / MENU</span>
+  <a href="#properties">Biens <i data-lucide="arrow-up-right"></i></a>
+  <a href="#services">Services <i data-lucide="arrow-up-right"></i></a>
+  <a href="#about">Agence <i data-lucide="arrow-up-right"></i></a>
+  <a href="#contact">Contact <i data-lucide="arrow-up-right"></i></a>
+</div>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2200&q=88" alt="Villa moderne">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-content" data-reveal>
+    <span>IMMOBILIER / SUD DE LA FRANCE</span>
+    <h1>TROUVEZ<br>LE LIEU<br><em>QUI VOUS RESSEMBLE.</em></h1>
+    <p>Maisons, villas et appartements sélectionnés avec soin. Recherche, visite et accompagnement jusqu'à la signature.</p>
+
+    <div class="hero-actions">
+      <a class="primary" href="#properties">Voir les biens <i data-lucide="arrow-down"></i></a>
+      <a class="secondary" href="#contact">Parler à un conseiller <i data-lucide="phone"></i></a>
+    </div>
+  </div>
+
+  <div class="hero-search" data-reveal>
+    <div class="search-field">
+      <i data-lucide="map-pin"></i>
+      <label>Localisation
+        <select id="heroLocation">
+          <option value="all">Toutes les villes</option>
+          <option>Martigues</option>
+          <option>Marseille</option>
+          <option>Aix-en-Provence</option>
+          <option>Carry-le-Rouet</option>
+        </select>
+      </label>
+    </div>
+    <div class="search-field">
+      <i data-lucide="home"></i>
+      <label>Type
+        <select id="heroType">
+          <option value="all">Tous les biens</option>
+          <option value="villa">Villa</option>
+          <option value="maison">Maison</option>
+          <option value="appartement">Appartement</option>
+        </select>
+      </label>
+    </div>
+    <div class="search-field">
+      <i data-lucide="badge-euro"></i>
+      <label>Budget max
+        <select id="heroBudget">
+          <option value="9999999">Sans limite</option>
+          <option value="300000">300 000 €</option>
+          <option value="500000">500 000 €</option>
+          <option value="750000">750 000 €</option>
+          <option value="1000000">1 000 000 €</option>
+        </select>
+      </label>
+    </div>
+    <button id="heroSearchButton">Rechercher <i data-lucide="search"></i></button>
+  </div>
+</section>
+
+<section class="stats">
+  <div><strong data-counter="84">0</strong><span>biens disponibles</span></div>
+  <div><strong data-counter="12">0</strong><span>villes couvertes</span></div>
+  <div><strong data-counter="96">0</strong><span>% de satisfaction</span></div>
+  <div><strong data-counter="18">0</strong><span>ans d'expérience</span></div>
+</section>
+
+<section id="properties" class="section properties-section">
+  <div class="section-head" data-reveal>
+    <div>
+      <span>01 / SÉLECTION</span>
+      <h2>Des biens choisis<br><em>pour leur caractère.</em></h2>
+    </div>
+    <p>Une sélection de propriétés fictives pour la démonstration du template.</p>
+  </div>
+
+  <div class="property-toolbar">
+    <div class="filter-buttons">
+      <button class="active" data-filter="all">Tous</button>
+      <button data-filter="villa">Villas</button>
+      <button data-filter="maison">Maisons</button>
+      <button data-filter="appartement">Appartements</button>
+    </div>
+    <select id="sortSelect">
+      <option value="default">Trier par</option>
+      <option value="asc">Prix croissant</option>
+      <option value="desc">Prix décroissant</option>
+    </select>
+  </div>
+
+  <div class="properties-grid" id="propertiesGrid" data-stagger>
+    <article class="property-card" data-id="1" data-type="villa" data-city="Carry-le-Rouet" data-price="895000">
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=88" alt="Villa Azur">
+        <span class="property-tag">EXCLUSIVITÉ</span>
+        <button class="fav-button" data-fav="1" aria-label="Ajouter aux favoris"><i data-lucide="heart"></i></button>
+      </div>
+      <div class="property-body">
+        <div class="property-location"><i data-lucide="map-pin"></i> Carry-le-Rouet</div>
+        <h3>Villa Azur</h3>
+        <p>Villa contemporaine avec piscine, terrasse et vue dégagée.</p>
+        <div class="property-specs">
+          <span><i data-lucide="bed-double"></i> 4</span>
+          <span><i data-lucide="bath"></i> 3</span>
+          <span><i data-lucide="ruler"></i> 210 m²</span>
+        </div>
+        <div class="property-bottom"><b>895 000 €</b><button class="details-button" data-details="1">Voir le bien <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </article>
+
+    <article class="property-card" data-id="2" data-type="appartement" data-city="Marseille" data-price="465000">
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?auto=format&fit=crop&w=1200&q=88" alt="Appartement Prado">
+        <span class="property-tag">NOUVEAU</span>
+        <button class="fav-button" data-fav="2"><i data-lucide="heart"></i></button>
+      </div>
+      <div class="property-body">
+        <div class="property-location"><i data-lucide="map-pin"></i> Marseille 8e</div>
+        <h3>Appartement Prado</h3>
+        <p>Appartement lumineux, terrasse plein sud et résidence sécurisée.</p>
+        <div class="property-specs">
+          <span><i data-lucide="bed-double"></i> 3</span>
+          <span><i data-lucide="bath"></i> 2</span>
+          <span><i data-lucide="ruler"></i> 112 m²</span>
+        </div>
+        <div class="property-bottom"><b>465 000 €</b><button class="details-button" data-details="2">Voir le bien <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </article>
+
+    <article class="property-card" data-id="3" data-type="maison" data-city="Martigues" data-price="395000">
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=1200&q=88" alt="Maison des Étangs">
+        <span class="property-tag">COUP DE CŒUR</span>
+        <button class="fav-button" data-fav="3"><i data-lucide="heart"></i></button>
+      </div>
+      <div class="property-body">
+        <div class="property-location"><i data-lucide="map-pin"></i> Martigues</div>
+        <h3>Maison des Étangs</h3>
+        <p>Maison familiale rénovée avec jardin et espace bureau indépendant.</p>
+        <div class="property-specs">
+          <span><i data-lucide="bed-double"></i> 4</span>
+          <span><i data-lucide="bath"></i> 2</span>
+          <span><i data-lucide="ruler"></i> 148 m²</span>
+        </div>
+        <div class="property-bottom"><b>395 000 €</b><button class="details-button" data-details="3">Voir le bien <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </article>
+
+    <article class="property-card" data-id="4" data-type="villa" data-city="Aix-en-Provence" data-price="1250000">
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=88" alt="Villa Cézanne">
+        <span class="property-tag">PREMIUM</span>
+        <button class="fav-button" data-fav="4"><i data-lucide="heart"></i></button>
+      </div>
+      <div class="property-body">
+        <div class="property-location"><i data-lucide="map-pin"></i> Aix-en-Provence</div>
+        <h3>Villa Cézanne</h3>
+        <p>Propriété d'architecte avec piscine et parc paysager.</p>
+        <div class="property-specs">
+          <span><i data-lucide="bed-double"></i> 5</span>
+          <span><i data-lucide="bath"></i> 4</span>
+          <span><i data-lucide="ruler"></i> 285 m²</span>
+        </div>
+        <div class="property-bottom"><b>1 250 000 €</b><button class="details-button" data-details="4">Voir le bien <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </article>
+
+    <article class="property-card" data-id="5" data-type="appartement" data-city="Martigues" data-price="279000">
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=88" alt="Loft Ferrières">
+        <span class="property-tag">CENTRE</span>
+        <button class="fav-button" data-fav="5"><i data-lucide="heart"></i></button>
+      </div>
+      <div class="property-body">
+        <div class="property-location"><i data-lucide="map-pin"></i> Martigues</div>
+        <h3>Loft Ferrières</h3>
+        <p>Loft moderne avec grande pièce de vie et prestations soignées.</p>
+        <div class="property-specs">
+          <span><i data-lucide="bed-double"></i> 2</span>
+          <span><i data-lucide="bath"></i> 1</span>
+          <span><i data-lucide="ruler"></i> 86 m²</span>
+        </div>
+        <div class="property-bottom"><b>279 000 €</b><button class="details-button" data-details="5">Voir le bien <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </article>
+
+    <article class="property-card" data-id="6" data-type="maison" data-city="Marseille" data-price="540000">
+      <div class="property-image">
+        <img src="https://images.unsplash.com/photo-1570129477492-45c003edd2be?auto=format&fit=crop&w=1200&q=88" alt="Maison Borely">
+        <span class="property-tag">FAMILLE</span>
+        <button class="fav-button" data-fav="6"><i data-lucide="heart"></i></button>
+      </div>
+      <div class="property-body">
+        <div class="property-location"><i data-lucide="map-pin"></i> Marseille</div>
+        <h3>Maison Borély</h3>
+        <p>Maison avec jardin, garage et accès rapide aux écoles.</p>
+        <div class="property-specs">
+          <span><i data-lucide="bed-double"></i> 4</span>
+          <span><i data-lucide="bath"></i> 2</span>
+          <span><i data-lucide="ruler"></i> 165 m²</span>
+        </div>
+        <div class="property-bottom"><b>540 000 €</b><button class="details-button" data-details="6">Voir le bien <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="no-results" id="noResults"><i data-lucide="search-x"></i><b>Aucun bien trouvé.</b><span>Essayez de modifier vos critères.</span></div>
+</section>
+
+<section id="services" class="services-section">
+  <div class="services-intro" data-reveal>
+    <span>02 / ACCOMPAGNEMENT</span>
+    <h2>Plus qu'une visite.<br><em>Un accompagnement complet.</em></h2>
+    <p>Du premier contact à la signature, chaque étape est expliquée clairement.</p>
+  </div>
+
+  <div class="services-grid" data-stagger>
+    <article><i data-lucide="search-check"></i><span>01</span><h3>Recherche ciblée</h3><p>Nous affinons les critères et sélectionnons les biens adaptés.</p></article>
+    <article><i data-lucide="calendar-check"></i><span>02</span><h3>Visites organisées</h3><p>Planification simple avec créneaux selon vos disponibilités.</p></article>
+    <article><i data-lucide="file-signature"></i><span>03</span><h3>Négociation</h3><p>Conseils sur le prix, l'offre et les documents nécessaires.</p></article>
+    <article><i data-lucide="key-round"></i><span>04</span><h3>Jusqu'aux clés</h3><p>Suivi du dossier jusqu'à la signature et la remise des clés.</p></article>
+  </div>
+</section>
+
+<section class="finance-section">
+  <div class="finance-copy" data-reveal>
+    <span>03 / SIMULATION</span>
+    <h2>Votre projet.<br><em>Votre mensualité.</em></h2>
+    <p>Simulateur simple de démonstration pour estimer une mensualité.</p>
+  </div>
+
+  <div class="finance-card">
+    <label>Prix du bien
+      <div class="input-icon"><i data-lucide="badge-euro"></i><input id="financePrice" type="number" value="395000"></div>
+    </label>
+    <label>Apport
+      <div class="input-icon"><i data-lucide="wallet"></i><input id="financeDeposit" type="number" value="50000"></div>
+    </label>
+    <label>Durée
+      <select id="financeYears"><option value="15">15 ans</option><option value="20" selected>20 ans</option><option value="25">25 ans</option></select>
+    </label>
+    <label>Taux annuel
+      <div class="input-icon"><i data-lucide="percent"></i><input id="financeRate" type="number" step="0.1" value="3.5"></div>
+    </label>
+
+    <div class="finance-result">
+      <span>Mensualité estimée</span>
+      <b id="monthlyResult">—</b>
+      <small>Simulation indicative, hors assurance et frais.</small>
+    </div>
+  </div>
+</section>
+
+<section id="about" class="about-section">
+  <div class="about-image">
+    <img data-image-shift src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=1600&q=88" alt="Agence immobilière">
+  </div>
+  <div class="about-copy" data-reveal>
+    <span>04 / L'AGENCE</span>
+    <h2>Locale.<br><em>Disponible.</em><br>Exigeante.</h2>
+    <p>NOVA Habitat est une agence fictive créée pour cette démonstration. Le template convient à une agence immobilière, mandataire, promoteur ou réseau local.</p>
+    <div class="about-points">
+      <div><i data-lucide="map"></i><span>Connaissance locale</span></div>
+      <div><i data-lucide="shield-check"></i><span>Dossiers vérifiés</span></div>
+      <div><i data-lucide="messages-square"></i><span>Suivi personnalisé</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="testimonial-section">
+  <div data-reveal>
+    <i data-lucide="quote"></i>
+    <blockquote>“Nous avons trouvé notre maison en trois semaines, avec un suivi clair à chaque étape.”</blockquote>
+    <span>— Sophie & Julien · témoignage fictif</span>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="contact-copy" data-reveal>
+    <span>05 / PARLONS DE VOTRE PROJET</span>
+    <h2>Acheter ?<br>Vendre ?<br><em>On commence ici.</em></h2>
+    <p>Expliquez-nous votre projet et nous vous recontactons.</p>
+  </div>
+
+  <form id="contactForm" class="contact-form">
+    <label>Nom<input required placeholder="Votre nom"></label>
+    <label>Email<input required type="email" placeholder="vous@email.fr"></label>
+    <label>Téléphone<input placeholder="06 00 00 00 00"></label>
+    <label>Votre projet
+      <select>
+        <option>Acheter un bien</option>
+        <option>Vendre un bien</option>
+        <option>Faire estimer un bien</option>
+      </select>
+    </label>
+    <label class="wide">Message<textarea rows="4" placeholder="Ville, budget, type de bien..."></textarea></label>
+    <button type="submit">Envoyer ma demande <i data-lucide="send"></i></button>
+    <small id="contactStatus">Formulaire de démonstration.</small>
+  </form>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-brand">
+    <span>NH</span>
+    <div><b>NOVA HABITAT</b><small>IMMOBILIER · VENTE</small></div>
+  </div>
+  <div><b>Navigation</b><a href="#properties">Biens</a><a href="#services">Services</a><a href="#about">Agence</a></div>
+  <div><b>Contact</b><span>Martigues · France</span><span>07 00 00 00 00</span><span>contact@novahabitat.fr</span></div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div>
+</footer>
+
+<div class="drawer" id="favDrawer">
+  <div class="drawer-panel">
+    <header><div><span>VOS FAVORIS</span><h2>Ma sélection.</h2></div><button id="favClose"><i data-lucide="x"></i></button></header>
+    <div id="favList"></div>
+  </div>
+</div>
+
+<div class="property-modal" id="propertyModal">
+  <div class="property-modal-panel">
+    <button id="propertyClose"><i data-lucide="x"></i></button>
+    <div class="modal-image"><img id="modalImage" src="" alt=""></div>
+    <div class="modal-content">
+      <span id="modalCity">—</span>
+      <h2 id="modalTitle">—</h2>
+      <p id="modalDescription">—</p>
+      <div class="modal-specs" id="modalSpecs"></div>
+      <div class="modal-bottom"><b id="modalPrice">—</b><button id="visitOpen">Planifier une visite <i data-lucide="calendar-plus"></i></button></div>
+    </div>
+  </div>
+</div>
+
+<div class="visit-modal" id="visitModal">
+  <div class="visit-panel">
+    <button id="visitClose"><i data-lucide="x"></i></button>
+    <span>VISITE / DEMO</span>
+    <h2>Choisir un créneau.</h2>
+    <form id="visitForm">
+      <label>Nom<input required placeholder="Votre nom"></label>
+      <label>Email<input required type="email" placeholder="vous@email.fr"></label>
+      <label>Date<input required type="date"></label>
+      <label>Heure<select><option>09:30</option><option>11:00</option><option>14:00</option><option>16:30</option></select></label>
+      <button>Confirmer la visite <i data-lucide="calendar-check"></i></button>
+      <p id="visitStatus"></p>
+    </form>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/nova-habitat/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo Nova Habitat · GioTech Digital</div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>
