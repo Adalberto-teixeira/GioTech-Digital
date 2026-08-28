@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Link in Bio — Template gratuit GioTech Digital</title>
+  <meta name="description" content="Mini-page personnelle pour Instagram, TikTok ou réseaux sociaux : profil, liens et réseaux." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { padding-bottom: 0; }
+    .standalone-wrap { padding: clamp(2.5rem, 6vw, 5rem) 0; }
+    .page-view { display: block !important; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="container standalone-wrap">
+    <div class="linkbio-wrap">
+              <div class="linkbio-avatar"></div>
+              <h1 style="font-size:1.3rem;">@votremarque</h1>
+              <p style="margin-top:0.4rem;">Créatrice de contenu &amp; artisane — tout est ici 👇</p>
+              <div class="linkbio-links">
+                <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18"/></svg> Ma boutique en ligne</a>
+                <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 2 7l10 5 10-5-10-5Z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg> Nouvelle vidéo YouTube</a>
+                <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg> Prendre rendez-vous</a>
+                <a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4zM4 4l8 8 8-8"/></svg> Me contacter</a>
+              </div>
+              <div class="linkbio-socials">
+                <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></svg></a>
+                <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 2h3.2c.3 1.8 1.5 3.2 3.8 3.4v3.2c-1.4 0-2.7-.4-3.8-1.2v6.4a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.3a2.4 2.4 0 1 0 1.7 2.3V2Z"/></svg></a>
+                <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0ZM3.4 8.75h3.08V21H3.4V8.75Z"/></svg></a>
+              </div>
+            </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+  <script>
+    document.getElementById("le-year") && (document.getElementById("le-year").textContent = new Date().getFullYear());
+    var target = new Date(Date.now() + (14 * 86400000) + (6 * 3600000));
+    function tick() {
+      var diff = target - new Date(); if (diff < 0) diff = 0;
+      var d=document.getElementById("sc-days"), h=document.getElementById("sc-hours"), m=document.getElementById("sc-min"), s=document.getElementById("sc-sec");
+      if (d) d.textContent = Math.floor(diff / 86400000);
+      if (h) h.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, "0");
+      if (m) m.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
+      if (s) s.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
+    }
+    tick(); setInterval(tick, 1000);
+    var soonForm = document.getElementById("soon-form");
+    if (soonForm) soonForm.addEventListener("submit", function (e) { e.preventDefault(); document.getElementById("soon-success").classList.add("is-shown"); soonForm.reset(); });
+    document.getElementById("order-date") && (document.getElementById("order-date").textContent = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }));
+  </script>
+</body>
+</html>

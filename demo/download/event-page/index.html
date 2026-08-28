@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page événement — Template gratuit GioTech Digital</title>
+  <meta name="description" content="Landing page événementielle : programme, billetterie, invités et compte à rebours." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { padding-bottom: 0; }
+    .standalone-wrap { padding: clamp(2.5rem, 6vw, 5rem) 0; }
+    .page-view { display: block !important; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="container standalone-wrap">
+    <div class="page-icon icon-event"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M8 2v4M16 2v4M3 10h18"/></svg></div>
+            <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);">Soirée de lancement</h1>
+            <p>Jeudi 12 novembre — 19h00 — La Halle, Marseille</p>
+
+            <div class="ev-countdown">
+              <div><span id="sc-days">–</span><small>Jours</small></div>
+              <div><span id="sc-hours">–</span><small>Heures</small></div>
+              <div><span id="sc-min">–</span><small>Min</small></div>
+              <div><span id="sc-sec">–</span><small>Sec</small></div>
+            </div>
+
+            <div class="page-actions"><button type="button" class="btn btn-primary" id="ev-open-register">Réserver ma place</button><a href="#" class="btn btn-outline" id="ev-add-calendar">Ajouter au calendrier</a></div>
+
+            <div class="ev-program">
+              <h2>Programme</h2>
+              <div class="ev-program-list">
+                <div class="ev-program-row"><span class="ev-time">19h00</span><span>Accueil &amp; cocktail</span></div>
+                <div class="ev-program-row"><span class="ev-time">19h45</span><span>Présentation &amp; démonstrations</span></div>
+                <div class="ev-program-row"><span class="ev-time">20h30</span><span>Rencontres &amp; échanges libres</span></div>
+                <div class="ev-program-row"><span class="ev-time">22h00</span><span>Fin de soirée</span></div>
+              </div>
+            </div>
+
+            <div class="ev-tickets">
+              <h2>Billetterie</h2>
+              <div class="ev-tickets-grid">
+                <div class="ev-ticket">
+                  <h3>Standard</h3>
+                  <div class="ev-price">Gratuit</div>
+                  <ul><li>Accès à la soirée</li><li>Cocktail de bienvenue</li></ul>
+                  <button type="button" class="btn btn-outline ev-ticket-btn" data-ticket="Standard">Choisir</button>
+                </div>
+                <div class="ev-ticket is-featured">
+                  <span class="ev-ticket-badge">Populaire</span>
+                  <h3>Duo</h3>
+                  <div class="ev-price">15 €</div>
+                  <ul><li>2 places</li><li>Accès prioritaire</li><li>Cocktail de bienvenue</li></ul>
+                  <button type="button" class="btn btn-primary ev-ticket-btn" data-ticket="Duo">Choisir</button>
+                </div>
+                <div class="ev-ticket">
+                  <h3>VIP</h3>
+                  <div class="ev-price">35 €</div>
+                  <ul><li>Accès prioritaire</li><li>Rencontre avec les intervenants</li></ul>
+                  <button type="button" class="btn btn-outline ev-ticket-btn" data-ticket="VIP">Choisir</button>
+                </div>
+              </div>
+            </div>
+  </main>
+
+  <!-- Modal d'inscription -->
+  <div class="ev-modal-overlay" id="ev-overlay"></div>
+  <div class="ev-modal" id="ev-modal">
+    <button type="button" class="ev-modal-close" id="ev-modal-close" aria-label="Fermer">✕</button>
+    <div id="ev-modal-form-wrap">
+      <h3>Réserver ma place</h3>
+      <p class="ev-modal-ticket" id="ev-modal-ticket-label">Formule Standard — Gratuit</p>
+      <form id="ev-register-form">
+        <label>Nom complet<input type="text" required placeholder="Jean Dupont" /></label>
+        <label>Email<input type="email" required placeholder="vous@exemple.fr" /></label>
+        <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center;margin-top:0.8rem;">Confirmer ma réservation</button>
+      </form>
+    </div>
+    <div id="ev-modal-success" style="display:none;text-align:center;">
+      <div class="ev-success-icon">✓</div>
+      <h3>Réservation confirmée !</h3>
+      <p>Un email de confirmation démo aurait été envoyé. À bientôt le 12 novembre !</p>
+      <button type="button" class="btn btn-outline" id="ev-modal-done">Fermer</button>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+  <script>
+    document.getElementById("le-year") && (document.getElementById("le-year").textContent = new Date().getFullYear());
+    var target = new Date(Date.now() + (14 * 86400000) + (6 * 3600000));
+    function tick() {
+      var diff = target - new Date(); if (diff < 0) diff = 0;
+      var d=document.getElementById("sc-days"), h=document.getElementById("sc-hours"), m=document.getElementById("sc-min"), s=document.getElementById("sc-sec");
+      if (d) d.textContent = Math.floor(diff / 86400000);
+      if (h) h.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, "0");
+      if (m) m.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
+      if (s) s.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
+    }
+    tick(); setInterval(tick, 1000);
+    var soonForm = document.getElementById("soon-form");
+    if (soonForm) soonForm.addEventListener("submit", function (e) { e.preventDefault(); document.getElementById("soon-success").classList.add("is-shown"); soonForm.reset(); });
+    document.getElementById("order-date") && (document.getElementById("order-date").textContent = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }));
+
+    /* ---------- Modal de réservation ---------- */
+    var evOverlay = document.getElementById("ev-overlay");
+    var evModal = document.getElementById("ev-modal");
+    var evTicketLabel = document.getElementById("ev-modal-ticket-label");
+    var evPrices = { "Standard": "Gratuit", "Duo": "15 €", "VIP": "35 €" };
+    var selectedTicket = "Standard";
+
+    function openEvModal(ticket) {
+      selectedTicket = ticket || "Standard";
+      evTicketLabel.textContent = "Formule " + selectedTicket + " — " + evPrices[selectedTicket];
+      document.getElementById("ev-modal-form-wrap").style.display = "block";
+      document.getElementById("ev-modal-success").style.display = "none";
+      evOverlay.classList.add("is-open");
+      evModal.classList.add("is-open");
+    }
+    function closeEvModal() { evOverlay.classList.remove("is-open"); evModal.classList.remove("is-open"); }
+
+    document.getElementById("ev-open-register").addEventListener("click", function () { openEvModal("Standard"); });
+    document.querySelectorAll(".ev-ticket-btn").forEach(function (btn) {
+      btn.addEventListener("click", function () { openEvModal(btn.dataset.ticket); });
+    });
+    document.getElementById("ev-modal-close").addEventListener("click", closeEvModal);
+    evOverlay.addEventListener("click", closeEvModal);
+    document.getElementById("ev-modal-done").addEventListener("click", closeEvModal);
+
+    document.getElementById("ev-register-form").addEventListener("submit", function (e) {
+      e.preventDefault();
+      document.getElementById("ev-modal-form-wrap").style.display = "none";
+      document.getElementById("ev-modal-success").style.display = "block";
+    });
+
+    /* ---------- Ajouter au calendrier (fichier .ics réel) ---------- */
+    document.getElementById("ev-add-calendar").addEventListener("click", function (e) {
+      e.preventDefault();
+      var ics = "BEGIN:VCALENDAR\nVERSION:2.0\nBEGIN:VEVENT\nSUMMARY:Soirée de lancement\nLOCATION:La Halle, Marseille\nDTSTART:20261112T190000\nDTEND:20261112T220000\nDESCRIPTION:Soirée de lancement — GioTech Digital\nEND:VEVENT\nEND:VCALENDAR";
+      var blob = new Blob([ics], { type: "text/calendar" });
+      var a = document.createElement("a");
+      a.href = URL.createObjectURL(blob);
+      a.download = "soiree-lancement.ics";
+      a.click();
+    });
+  </script>
+</body>
+</html>

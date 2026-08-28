@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMwYjBiMGUiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPkU8L3RleHQ+PC9zdmc+">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encre — Application de réservation pour studio de tatouage</title>
+  <meta name="description" content="Encre est un template d'application mobile pour tatoueurs : réservation en ligne, portfolio de réalisations et profil artiste." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="brand"><span class="dot"></span>Encre</a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#fonctionnalites">Fonctionnalités</a></li>
+          <li><a href="#avis">Avis</a></li>
+        <li><a href="#telecharger" class="nav-cta">Télécharger l'app</a></li>
+      </ul>
+      </nav>
+      <button class="mobile-nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="#telecharger" class="btn btn-primary">Télécharger l'app</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <div class="hero-copy">
+            <span class="eyebrow">Application mobile — Studio de tatouage</span>
+            <h1>Réservez votre<br />prochain tatouage.</h1>
+            <p class="lead">Encre permet à un studio de tatouage de gérer ses réservations, présenter son portfolio et rester en contact avec ses clients — directement depuis leur téléphone.</p>
+            <div class="hero-actions">
+              <div class="store-badges">
+                <span class="store-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 12.3c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.9 1.2 1.9 2.6 3.3 2.6 1.3-.1 1.8-.9 3.4-.9s2 .9 3.4.8c1.4 0 2.3-1.3 3.1-2.5.7-1 1.2-2.1 1.5-3.2-1.7-.7-2.9-2.3-2.9-4.5ZM15 4.5c.7-.8 1.1-1.9 1-3-1 .1-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.5 2.8-1.4Z"/></svg><div><span class="small">Disponible sur</span><span class="big">App Store</span></div></span>
+                <span class="store-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m3.6 2.6 10 10-10 10c-.4-.2-.6-.6-.6-1.1V3.7c0-.5.2-.9.6-1.1Zm12 10 3-1.7c.9-.5.9-1.7 0-2.2l-3-1.7-2.4 2.8 2.4 2.8Zm-1.4 1.6-8.9 8.4 10.5-6-1.6-2.4Zm0-3.2 1.6-2.4-10.5-6 8.9 8.4Z"/></svg><div><span class="small">Disponible sur</span><span class="big">Google Play</span></div></span>
+              </div>
+            </div>
+            <div class="hero-stats" data-reveal>
+              <div><strong>2 400+</strong><span>Réservations prises</span></div>
+              <div><strong>4.9/5</strong><span>Note moyenne</span></div>
+              <div><strong>60+</strong><span>Studios utilisateurs</span></div>
+            </div>
+          </div>
+
+          <div class="hero-phone-col">
+            <div class="phone-frame">
+              <div class="phone-notch"></div>
+              <div class="phone-screen">
+                <div class="app-views">
+
+                  <!-- Vue Accueil -->
+                  <div class="app-view is-active" data-view="accueil">
+                    <div class="app-avatar-row">
+                      <div class="app-avatar"></div>
+                      <div class="app-hello"><span>Bonjour</span><strong>Léa</strong></div>
+                    </div>
+                    <div class="app-title">Studio Encre</div>
+                    <div class="app-sub">Tatouage fine line &amp; blackwork — Marseille</div>
+                    <button class="app-cta-mini" type="button" data-goto="reserver">Réserver une séance</button>
+                    <div class="app-mini-stats">
+                      <div class="app-mini-stat"><strong>4.9★</strong><span>Note</span></div>
+                      <div class="app-mini-stat"><strong>320+</strong><span>Tatouages</span></div>
+                      <div class="app-mini-stat"><strong>6 ans</strong><span>Expérience</span></div>
+                    </div>
+                    <div class="app-sub" style="margin-top:16px;">Dernières réalisations</div>
+                    <div class="app-work-row">
+                      <div class="app-work-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.4" fill="currentColor" stroke="none"/></svg></div>
+                      <div class="app-work-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 3v18M3 12h18M6 6l12 12M18 6 6 18"/></svg></div>
+                      <div class="app-work-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 12c2-4 6-6 8-6s6 2 8 6c-2 4-6 6-8 6s-6-2-8-6Z"/><circle cx="12" cy="12" r="2"/></svg></div>
+                    </div>
+                  </div>
+
+                  <!-- Vue Réserver -->
+                  <div class="app-view" data-view="reserver">
+                    <div class="app-title" style="font-size:1.2rem;">Réserver</div>
+                    <div class="app-sub">Choisissez un style</div>
+                    <div class="app-pill-row" id="app-styles">
+                      <button class="app-pill is-selected" type="button">Fine line</button>
+                      <button class="app-pill" type="button">Blackwork</button>
+                      <button class="app-pill" type="button">Old school</button>
+                      <button class="app-pill" type="button">Japonais</button>
+                    </div>
+                    <div class="app-sub" style="margin-top:14px;">Choisissez un jour</div>
+                    <div class="app-day-row" id="app-days">
+                      <button class="app-day is-selected" type="button"><span>Lun</span><strong>14</strong></button>
+                      <button class="app-day" type="button"><span>Mar</span><strong>15</strong></button>
+                      <button class="app-day" type="button"><span>Mer</span><strong>16</strong></button>
+                      <button class="app-day" type="button"><span>Jeu</span><strong>17</strong></button>
+                      <button class="app-day" type="button"><span>Ven</span><strong>18</strong></button>
+                    </div>
+                    <div class="app-sub" style="margin-top:12px;">Choisissez un créneau</div>
+                    <div class="app-time-row" id="app-times">
+                      <button class="app-time is-selected" type="button">10:00</button>
+                      <button class="app-time" type="button">13:30</button>
+                      <button class="app-time" type="button">15:00</button>
+                      <button class="app-time" type="button">17:30</button>
+                    </div>
+
+                    <div class="app-confirm-box" id="app-summary">
+                      <div class="row"><span>Style</span><span id="sum-style">Fine line</span></div>
+                      <div class="row"><span>Date</span><span id="sum-day">Lun 14</span></div>
+                      <div class="row"><span>Heure</span><span id="sum-time">10:00</span></div>
+                    </div>
+                    <button class="app-cta-mini" type="button" id="app-confirm-btn" style="margin-top:12px;">Confirmer la réservation</button>
+
+                    <div class="app-success" id="app-success">
+                      <div class="check"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg></div>
+                      <strong>Réservation confirmée !</strong>
+                      <span>Un rappel vous sera envoyé la veille.</span>
+                      <button class="app-cta-mini" type="button" id="app-reset-btn" style="margin-top:16px; background:transparent; border:1px solid var(--line-strong); color:var(--ink);">Nouvelle réservation</button>
+                    </div>
+                  </div>
+
+                  <!-- Vue Réalisations -->
+                  <div class="app-view" data-view="realisations">
+                    <div class="app-title" style="font-size:1.2rem;">Réalisations</div>
+                    <div class="app-sub">Portfolio du studio</div>
+                    <div class="app-grid-3">
+                      <div class="app-work-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/></svg></div>
+                      <div class="app-work-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M12 2v20M2 12h20"/></svg></div>
+                      <div class="app-work-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 12c2-4 6-6 8-6s6 2 8 6c-2 4-6 6-8 6s-6-2-8-6Z"/></svg></div>
+                      <div class="app-work-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="m12 2 2.5 7h7.5l-6 5 2.5 7-6-4.5L6.5 21 9 14l-6-5h7.5Z"/></svg></div>
+                      <div class="app-work-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M6 3v18M18 3v18M6 12h12"/></svg></div>
+                      <div class="app-work-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="4" y="4" width="16" height="16" rx="3"/><path d="M9 9h6v6H9z"/></svg></div>
+                      <div class="app-work-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M3 12h18M12 3v18"/><circle cx="12" cy="12" r="8"/></svg></div>
+                      <div class="app-work-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M4 4 20 20M20 4 4 20"/></svg></div>
+                      <div class="app-work-thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg></div>
+                    </div>
+                  </div>
+
+                  <!-- Vue Profil -->
+                  <div class="app-view" data-view="profil">
+                    <div class="app-profile-head">
+                      <div class="app-avatar"></div>
+                      <strong>Léa Duval</strong>
+                      <span>Tatoueuse — Studio Encre</span>
+                    </div>
+                    <div class="app-profile-list">
+                      <div class="app-profile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12 12 3l9 9M5 10v10h14V10"/></svg><span>12 rue des Artistes, Marseille</span></div>
+                      <div class="app-profile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9Z"/></svg><span>Rappels de rendez-vous activés</span></div>
+                      <div class="app-profile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg><span>Acompte sécurisé à la réservation</span></div>
+                      <div class="app-profile-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg><span>@studio.encre</span></div>
+                    </div>
+                  </div>
+
+                </div>
+
+                <nav class="app-tabbar">
+                  <button class="app-tab is-active" type="button" data-tab="accueil">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg>
+                    <span>Accueil</span>
+                  </button>
+                  <button class="app-tab" type="button" data-tab="reserver">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>
+                    <span>Réserver</span>
+                  </button>
+                  <button class="app-tab" type="button" data-tab="realisations">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+                    <span>Travaux</span>
+                  </button>
+                  <button class="app-tab" type="button" data-tab="profil">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+                    <span>Profil</span>
+                  </button>
+                </nav>
+              </div>
+            </div>
+
+            <div class="hero-phone-caption">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 3 18 18M11 5a10 10 0 0 1 8 4M8 8a6 6 0 0 1 5 2M5 12a10 10 0 0 1 2-3"/></svg>
+              Cliquez dans l'écran — c'est une vraie application, pas une vidéo.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="fonctionnalites">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Fonctionnalités</span>
+          <h2>Pensée pour les studios de tatouage.</h2>
+        </div>
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/></svg></div>
+            <h3>Réservation en ligne</h3>
+            <p>Vos clients choisissent le style, le jour et l'heure — 24h/24, sans appel.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></div>
+            <h3>Portfolio à jour</h3>
+            <p>Vos dernières réalisations toujours visibles, classées par style.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9Z"/></svg></div>
+            <h3>Rappels automatiques</h3>
+            <p>Moins d'absences grâce aux rappels envoyés avant chaque rendez-vous.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg></div>
+            <h3>Acompte sécurisé</h3>
+            <p>Un acompte à la réservation pour limiter les rendez-vous manqués.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2"/></svg></div>
+            <h3>Style personnalisé</h3>
+            <p>L'app s'adapte à l'identité visuelle de chaque studio.</p>
+          </div>
+          <div class="feature-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z"/></svg></div>
+            <h3>Avis vérifiés</h3>
+            <p>Seuls les clients ayant réservé peuvent laisser un avis.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="avis">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Avis</span>
+          <h2>Ce que disent les studios.</h2>
+        </div>
+        <div class="review-grid">
+          <div class="review-card"><div class="stars">★★★★★</div><p class="quote">"Depuis Encre, on a divisé par deux les rendez-vous manqués grâce à l'acompte et aux rappels."</p><div class="author">Studio Noir & Or, Lyon</div></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p class="quote">"Mes clients adorent pouvoir réserver sans m'appeler. Ça a changé mon quotidien."</p><div class="author">Léa Duval, tatoueuse</div></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p class="quote">"Le portfolio intégré a clairement augmenté nos demandes de devis."</p><div class="author">Studio Encre & Sel, Bordeaux</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="telecharger">
+      <div class="container">
+        <div class="download-panel">
+          <span class="eyebrow">Télécharger</span>
+          <h2>Essayez Encre gratuitement.</h2>
+          <p>Disponible pour iOS et Android — configuration de votre studio en moins de 10 minutes.</p>
+          <div class="store-badges">
+            <span class="store-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.6 12.3c0-2.6 2.1-3.8 2.2-3.9-1.2-1.8-3.1-2-3.7-2-1.6-.2-3.1.9-3.9.9-.8 0-2-.9-3.3-.9-1.7 0-3.3 1-4.1 2.5-1.8 3.1-.5 7.6 1.3 10.1.9 1.2 1.9 2.6 3.3 2.6 1.3-.1 1.8-.9 3.4-.9s2 .9 3.4.8c1.4 0 2.3-1.3 3.1-2.5.7-1 1.2-2.1 1.5-3.2-1.7-.7-2.9-2.3-2.9-4.5ZM15 4.5c.7-.8 1.1-1.9 1-3-1 .1-2.1.7-2.8 1.5-.6.7-1.2 1.8-1 2.9 1.1.1 2.2-.5 2.8-1.4Z"/></svg><div><span class="small">Disponible sur</span><span class="big">App Store</span></div></span>
+            <span class="store-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="m3.6 2.6 10 10-10 10c-.4-.2-.6-.6-.6-1.1V3.7c0-.5.2-.9.6-1.1Zm12 10 3-1.7c.9-.5.9-1.7 0-2.2l-3-1.7-2.4 2.8 2.4 2.8Zm-1.4 1.6-8.9 8.4 10.5-6-1.6-2.4Zm0-3.2 1.6-2.4-10.5-6 8.9 8.4Z"/></svg><div><span class="small">Disponible sur</span><span class="big">Google Play</span></div></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="en-year">2026</span> Encre — Démo de template.</p>
+      <p>Ceci est un site de démonstration, non un studio réel.</p>
+    </div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div></footer>
+
+  <script>
+    document.getElementById("en-year").textContent = new Date().getFullYear();
+
+    /* ---------- Navigation par onglets (vraie appli cliquable) ---------- */
+    var tabs = document.querySelectorAll(".app-tab");
+    var views = document.querySelectorAll(".app-view");
+
+    function showView(name) {
+      views.forEach(function (v) { v.classList.toggle("is-active", v.dataset.view === name); });
+      tabs.forEach(function (t) { t.classList.toggle("is-active", t.dataset.tab === name); });
+    }
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () { showView(tab.dataset.tab); });
+    });
+    document.querySelectorAll("[data-goto]").forEach(function (btn) {
+      btn.addEventListener("click", function () { showView(btn.dataset.goto); });
+    });
+
+    /* ---------- Sélecteurs de réservation ---------- */
+    function wireSelectGroup(selector, summaryId) {
+      var group = document.querySelectorAll(selector);
+      group.forEach(function (el) {
+        el.addEventListener("click", function () {
+          group.forEach(function (e) { e.classList.remove("is-selected"); });
+          el.classList.add("is-selected");
+          if (summaryId) {
+            document.getElementById(summaryId).textContent = el.textContent.trim();
+          }
+        });
+      });
+    }
+    wireSelectGroup("#app-styles .app-pill", "sum-style");
+    wireSelectGroup("#app-times .app-time", "sum-time");
+
+    document.querySelectorAll("#app-days .app-day").forEach(function (el) {
+      el.addEventListener("click", function () {
+        document.querySelectorAll("#app-days .app-day").forEach(function (e) { e.classList.remove("is-selected"); });
+        el.classList.add("is-selected");
+        var day = el.querySelector("span").textContent + " " + el.querySelector("strong").textContent;
+        document.getElementById("sum-day").textContent = day;
+      });
+    });
+
+    /* ---------- Confirmation de réservation ---------- */
+    var confirmBtn = document.getElementById("app-confirm-btn");
+    var summaryBox = document.getElementById("app-summary");
+    var successBox = document.getElementById("app-success");
+    confirmBtn.addEventListener("click", function () {
+      summaryBox.style.display = "none";
+      confirmBtn.style.display = "none";
+      successBox.classList.add("is-shown");
+    });
+    document.getElementById("app-reset-btn").addEventListener("click", function () {
+      successBox.classList.remove("is-shown");
+      summaryBox.style.display = "";
+      confirmBtn.style.display = "";
+    });
+
+    /* ---------- Apparitions au scroll ---------- */
+    var reveals = document.querySelectorAll("[data-reveal]");
+    if ("IntersectionObserver" in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add("is-visible"); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(function (el) { obs.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+
+    /* ---------- GSAP : mouvement (https://gsap.com — via CDN) ---------- */
+    if (window.gsap) {
+      gsap.registerPlugin(ScrollTrigger);
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!reduceMotion) {
+        /* Entrée de la hero : copy en cascade + téléphone qui "atterrit" */
+        var heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        heroTl
+          .from(".hero-copy .eyebrow", { opacity: 0, y: 16, duration: 0.6 })
+          .from(".hero-copy h1", { opacity: 0, y: 26, duration: 0.7 }, "-=0.35")
+          .from(".hero-copy .lead", { opacity: 0, y: 18, duration: 0.6 }, "-=0.4")
+          .from(".hero-actions .store-badge", { opacity: 0, y: 14, stagger: 0.08, duration: 0.5 }, "-=0.3")
+          .from(".phone-frame", { opacity: 0, y: 40, scale: 0.9, rotate: -4, duration: 0.9, ease: "back.out(1.4)" }, "-=0.55")
+          .from(".hero-phone-caption", { opacity: 0, y: 10, duration: 0.5 }, "-=0.3");
+
+        /* Halo du hero : pulsation douce continue */
+        gsap.to(".hero-glow", { scale: 1.15, opacity: 0.7, duration: 3.4, ease: "sine.inOut", yoyo: true, repeat: -1 });
+
+        /* Cartes de fonctionnalités : entrée en cascade au scroll */
+        gsap.utils.toArray(".features-grid .feature-card").forEach(function (card, i) {
+          gsap.from(card, {
+            opacity: 0, y: 34, duration: 0.6, ease: "power2.out",
+            delay: (i % 3) * 0.08,
+            scrollTrigger: { trigger: card, start: "top 88%" }
+          });
+        });
+
+        /* Avis : légère rotation + fondu */
+        gsap.utils.toArray(".review-grid .review-card").forEach(function (card, i) {
+          gsap.from(card, {
+            opacity: 0, y: 28, rotate: i % 2 === 0 ? -1.5 : 1.5, duration: 0.6, ease: "power2.out",
+            delay: i * 0.06,
+            scrollTrigger: { trigger: card, start: "top 88%" }
+          });
+        });
+
+        /* Titres de section : légère montée synchronisée au scroll */
+        gsap.utils.toArray(".section-head").forEach(function (head) {
+          gsap.from(head.children, {
+            opacity: 0, y: 22, stagger: 0.08, duration: 0.6, ease: "power2.out",
+            scrollTrigger: { trigger: head, start: "top 90%" }
+          });
+        });
+
+        /* Panneau de téléchargement : zoom doux à l'arrivée */
+        gsap.from(".download-panel", {
+          opacity: 0, scale: 0.96, duration: 0.7, ease: "power2.out",
+          scrollTrigger: { trigger: ".download-panel", start: "top 85%" }
+        });
+      }
+    }
+  </script>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.mobile-nav-toggle');
+  var nav=document.querySelector('.main-nav');
+  if(!toggle||!nav)return;
+  toggle.addEventListener('click',function(){
+    var isOpen=nav.classList.toggle('is-open');
+    toggle.classList.toggle('is-open',isOpen);
+    toggle.setAttribute('aria-expanded',String(isOpen));
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded','false');
+    });
+  });
+})();
+</script>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/encre/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo Encre · GioTech Digital</div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>

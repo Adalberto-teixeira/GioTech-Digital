@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxNzNmMmUiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPkE8L3RleHQ+PC9zdmc+">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora — Hôtel &amp; réservation</title>
+  <meta name="description" content="Aurora est un template pour hôtels et resorts, avec recherche de séjour, chambres et réservation en ligne." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@400;500;600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="brand">Aurora<span>.</span></a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#chambres">Chambres</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Réserver</a></li>
+        <li><a href="#contact" class="nav-cta">Réserver un séjour</a></li>
+      </ul>
+      </nav>
+      <button class="mobile-nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="#contact" class="btn btn-primary">Réserver un séjour</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <div class="container">
+        <div class="hero-media">
+          <svg viewBox="0 0 1200 500" preserveAspectRatio="xMidYMid slice">
+            <rect width="1200" height="500" fill="#0f3d34"/>
+            <polygon points="0,500 250,220 500,500" fill="#123f36"/>
+            <polygon points="350,500 650,150 950,500" fill="#164539"/>
+            <polygon points="750,500 1000,260 1200,500" fill="#123f36"/>
+            <circle cx="980" cy="120" r="46" fill="#e4cb8c" opacity="0.85"/>
+            <rect x="0" y="440" width="1200" height="60" fill="#0a2b25"/>
+          </svg>
+          <div class="hero-media-copy">
+            <span class="eyebrow">Hôtel &amp; resort</span>
+            <h1>Un séjour qui ressemble à des vacances.</h1>
+            <p>Aurora réunit des chambres pensées pour se reposer vraiment, un service attentif et des adresses choisies avec soin.</p>
+            <div class="hero-actions">
+              <a href="#chambres" class="btn btn-gold">Voir les chambres</a>
+              <a href="#contact" class="btn btn-outline" style="border-color:rgba(255,255,255,0.4); color:#fff;">Réserver</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="search-bar" id="search-bar">
+          <div class="search-field"><label for="au-dest">Destination</label><input id="au-dest" type="text" placeholder="Où partez-vous ?" /></div>
+          <div class="search-field"><label for="au-in">Arrivée</label><input id="au-in" type="date" /></div>
+          <div class="search-field"><label for="au-out">Départ</label><input id="au-out" type="date" /></div>
+          <div class="search-field"><label for="au-guests">Voyageurs</label><select id="au-guests"><option>2 adultes</option><option>1 adulte</option><option>2 adultes, 1 enfant</option><option>4 adultes</option></select></div>
+          <button class="btn btn-primary" type="button">Rechercher</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="chambres" style="padding-top:5rem;">
+      <div class="container">
+        <div class="section-top-row">
+          <div class="section-head">
+            <span class="eyebrow">Chambres &amp; suites</span>
+            <h2>Choisissez votre séjour.</h2>
+            <p>Chaque chambre est pensée dans le détail, du linge de lit à la vue.</p>
+          </div>
+        </div>
+
+        <div class="rooms-grid">
+          <a href="#" class="room-card">
+            <div class="room-media">
+              <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#e9e3d3"/><rect x="30" y="60" width="240" height="130" rx="10" fill="#d8cfb4"/><rect x="60" y="90" width="90" height="60" rx="6" fill="#0f3d34" opacity="0.75"/></svg>
+              <span class="price-tag">Dès 189€/nuit</span>
+            </div>
+            <div class="room-body"><h3>Chambre Deluxe</h3><div class="loc">Vue jardin — 28 m²</div><div class="room-specs"><span>2 pers.</span><span>Lit king</span><span>Balcon</span></div></div>
+          </a>
+          <a href="#" class="room-card">
+            <div class="room-media">
+              <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#e2ece8"/><polygon points="0,220 150,80 300,220" fill="#c3d6cd"/><circle cx="150" cy="140" r="20" fill="#c9a24b" opacity="0.7"/></svg>
+              <span class="price-tag">Dès 260€/nuit</span>
+            </div>
+            <div class="room-body"><h3>Suite Vue Mer</h3><div class="loc">Vue mer — 42 m²</div><div class="room-specs"><span>2 pers.</span><span>Terrasse</span><span>Jacuzzi</span></div></div>
+          </a>
+          <a href="#" class="room-card">
+            <div class="room-media">
+              <svg viewBox="0 0 300 220" preserveAspectRatio="xMidYMid slice"><rect width="300" height="220" fill="#efe8da"/><rect x="40" y="40" width="220" height="140" rx="12" fill="#dccdaa"/><rect x="70" y="70" width="160" height="14" rx="7" fill="#0f3d34" opacity="0.6"/><rect x="70" y="95" width="110" height="14" rx="7" fill="#0f3d34" opacity="0.4"/></svg>
+              <span class="price-tag">Dès 420€/nuit</span>
+            </div>
+            <div class="room-body"><h3>Villa Privée</h3><div class="loc">Jardin privé — 85 m²</div><div class="room-specs"><span>4 pers.</span><span>Piscine privée</span><span>Cuisine</span></div></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="services">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="eyebrow">Services</span>
+          <h2>Tout est déjà prévu.</h2>
+        </div>
+        <div class="amenities-grid">
+          <div class="amenity-card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 17h20M4 17V9a2 2 0 0 1 2-2h3v10M9 7h6a2 2 0 0 1 2 2v8"/></svg></div><h3>Spa &amp; bien-être</h3><p>Soins et sauna, ouverts toute l'année.</p></div>
+          <div class="amenity-card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 12c2-4 6-6 8-6s6 2 8 6c-2 4-6 6-8 6s-6-2-8-6Z"/><circle cx="12" cy="12" r="2"/></svg></div><h3>Piscine extérieure</h3><p>Chauffée, ouverte du printemps à l'automne.</p></div>
+          <div class="amenity-card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2v8a2 2 0 0 0 2 2v10M6 2v20M18 2v20M18 2c-2 0-3 2-3 5s1 5 3 5"/></svg></div><h3>Restaurant gastronomique</h3><p>Cuisine locale et de saison, sur place.</p></div>
+          <div class="amenity-card"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="11" width="18" height="7" rx="2"/><path d="M5 11V8a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v3M5 21v-1M19 21v-1"/></svg></div><h3>Voiturier &amp; navette</h3><p>Transferts depuis l'aéroport sur demande.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="testimonial-strip">
+          <div class="stars">★★★★★</div>
+          <p class="quote">"Le genre d'endroit où on arrive fatigué et on repart complètement apaisé. Le service est discret mais toujours là quand il faut."</p>
+          <div class="author">— Camille &amp; Julien, séjour de 4 nuits</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <div class="booking-panel">
+          <div>
+            <span class="eyebrow">Réservation</span>
+            <h2>Réservez votre prochain séjour.</h2>
+            <p>Meilleur tarif garanti en réservant directement, sans intermédiaire.</p>
+          </div>
+          <div class="actions">
+            <a href="#search-bar" class="btn btn-gold">Vérifier les disponibilités</a>
+            <a href="tel:+33400000001" class="btn btn-outline" style="border-color:rgba(255,255,255,0.4); color:#fff;">Appeler l'hôtel</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="au-year">2026</span> Aurora — Démo de template.</p>
+      <p>Ceci est un site de démonstration, non un hôtel réel.</p>
+    </div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div></footer>
+
+  <script>
+    document.getElementById("au-year").textContent = new Date().getFullYear();
+
+    var reveals = document.querySelectorAll("[data-reveal]");
+    if ("IntersectionObserver" in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add("is-visible"); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(function (el) { obs.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+
+    /* ---------- GSAP : mouvement (https://gsap.com — via CDN) ---------- */
+    if (window.gsap) {
+      gsap.registerPlugin(ScrollTrigger);
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!reduceMotion) {
+        var heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        heroTl
+          .from(".hero-media", { opacity: 0, scale: 1.06, duration: 1 })
+          .from(".hero-media-copy .eyebrow", { opacity: 0, y: 14, duration: 0.5 }, "-=0.5")
+          .from(".hero-media-copy h1", { opacity: 0, y: 22, duration: 0.6 }, "-=0.3")
+          .from(".hero-media-copy p", { opacity: 0, y: 16, duration: 0.5 }, "-=0.35")
+          .from(".hero-media-copy .hero-actions .btn", { opacity: 0, y: 12, stagger: 0.1, duration: 0.5 }, "-=0.3")
+          .from(".search-bar", { opacity: 0, y: 30, duration: 0.7, ease: "back.out(1.3)" }, "-=0.35");
+
+        gsap.utils.toArray(".room-card").forEach(function (card, i) {
+          gsap.from(card, {
+            opacity: 0, y: 40, duration: 0.65, ease: "power2.out", delay: i * 0.08,
+            scrollTrigger: { trigger: card, start: "top 88%" }
+          });
+        });
+
+        gsap.utils.toArray(".amenity-card").forEach(function (card, i) {
+          gsap.from(card, {
+            opacity: 0, y: 26, scale: 0.94, duration: 0.55, ease: "power2.out", delay: (i % 4) * 0.07,
+            scrollTrigger: { trigger: card, start: "top 90%" }
+          });
+        });
+
+        gsap.from(".testimonial-strip > *", {
+          opacity: 0, y: 20, stagger: 0.1, duration: 0.6, ease: "power2.out",
+          scrollTrigger: { trigger: ".testimonial-strip", start: "top 85%" }
+        });
+
+        gsap.from(".booking-panel > div", {
+          opacity: 0, y: 24, stagger: 0.12, duration: 0.6, ease: "power2.out",
+          scrollTrigger: { trigger: ".booking-panel", start: "top 85%" }
+        });
+
+        gsap.utils.toArray(".section-head").forEach(function (head) {
+          gsap.from(head.children, {
+            opacity: 0, y: 20, stagger: 0.08, duration: 0.55, ease: "power2.out",
+            scrollTrigger: { trigger: head, start: "top 90%" }
+          });
+        });
+      }
+    }
+  </script>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.mobile-nav-toggle');
+  var nav=document.querySelector('.main-nav');
+  if(!toggle||!nav)return;
+  toggle.addEventListener('click',function(){
+    var isOpen=nav.classList.toggle('is-open');
+    toggle.classList.toggle('is-open',isOpen);
+    toggle.setAttribute('aria-expanded',String(isOpen));
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded','false');
+    });
+  });
+})();
+</script>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/aurora/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo Aurora · GioTech Digital</div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>

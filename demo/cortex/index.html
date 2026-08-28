@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiM0ZjZkZjUiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPkM8L3RleHQ+PC9zdmc+">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cortex — Portfolio interactif style IA</title>
+  <meta name="description" content="Cortex est un template de portfolio personnel présenté comme une conversation avec une IA — cliquez sur une question pour découvrir le profil, les compétences et les projets." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/SplitText.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrambleTextPlugin.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/TextPlugin.min.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <div class="brand">
+        <span class="status-dot"></span>
+        Cortex
+      </div>
+      <div class="status"><span class="status-dot"></span> En ligne — répond en quelques secondes</div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="container">
+        <div class="boot-log" id="boot-log">&nbsp;</div>
+
+        <h1 id="hero-title">Bonjour, je suis <span class="accent">Cortex</span>.</h1>
+        <p class="lead">Le portfolio interactif de Maya Chen, designer produit &amp; développeuse front-end. Posez-moi une question pour commencer.</p>
+        <div class="hero-actions">
+          <a href="#chat" class="btn btn-primary">Démarrer la conversation</a>
+          <a href="mailto:hello@cortex-demo.fr" class="btn">Me contacter directement</a>
+        </div>
+
+        <div class="chat-panel" id="chat">
+          <div class="chat-topbar">
+            <div class="chat-orb"></div>
+            <div><strong>Cortex</strong><span>Assistant IA — profil de Maya Chen</span></div>
+          </div>
+
+          <div class="chat-transcript" id="chat-transcript">
+            <div class="msg msg-ai">
+              <div class="msg-avatar"></div>
+              <div class="msg-bubble">Bonjour 👋 Je peux vous parler de Maya — son parcours, ses compétences, ses projets ou comment la contacter. Que voulez-vous savoir ?</div>
+            </div>
+          </div>
+
+          <div class="chat-chips" id="chat-chips">
+            <button class="chat-chip" type="button" data-topic="qui">Qui es-tu ?</button>
+            <button class="chat-chip" type="button" data-topic="competences">Tes compétences ?</button>
+            <button class="chat-chip" type="button" data-topic="projets">Montre-moi tes projets</button>
+            <button class="chat-chip" type="button" data-topic="contact">Comment te contacter ?</button>
+          </div>
+
+          <form class="chat-input-row" id="chat-form">
+            <input type="text" id="chat-input" placeholder="Écrivez votre question…" autocomplete="off" />
+            <button class="btn" type="submit">Envoyer</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="cx-year">2026</span> Cortex — Démo de template.</p>
+      <p>Ceci est un site de démonstration, le profil présenté est fictif.</p>
+    </div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div></footer>
+
+  <script>
+    document.getElementById("cx-year").textContent = new Date().getFullYear();
+
+    /* ---------- Base de connaissances du chat ---------- */
+    var answers = {
+      qui: {
+        user: "Qui es-tu ?",
+        html: "Maya est designer produit &amp; développeuse front-end, basée à Lyon. Elle conçoit des interfaces depuis 7 ans, avec un attrait particulier pour les micro-interactions et les systèmes de design cohérents."
+      },
+      competences: {
+        user: "Quelles sont tes compétences ?",
+        html: "Un mélange de design et de code — de la maquette à la mise en production.<div class=\"tag-row\"><span>Figma</span><span>HTML/CSS/JS</span><span>React</span><span>GSAP</span><span>Design systems</span><span>Motion design</span></div>"
+      },
+      projets: {
+        user: "Montre-moi tes projets",
+        html: "Quelques projets récents :<div class=\"mini-project\"><div><strong>Lumen — app bien-être</strong><span>Design &amp; développement front-end</span></div></div><div class=\"mini-project\"><div><strong>Refonte Atlas Bank</strong><span>Design system &amp; interfaces</span></div></div><div class=\"mini-project\"><div><strong>Site vitrine Studio Ombre</strong><span>Direction artistique</span></div></div>"
+      },
+      contact: {
+        user: "Comment te contacter ?",
+        html: "Le plus simple : <strong>hello@cortex-demo.fr</strong>, ou en message privé sur LinkedIn. Réponse sous 48h en général."
+      }
+    };
+
+    var transcript = document.getElementById("chat-transcript");
+    var chipsWrap = document.getElementById("chat-chips");
+
+    function scrollToBottom() {
+      transcript.scrollTop = transcript.scrollHeight;
+    }
+
+    function addUserMessage(text) {
+      var msg = document.createElement("div");
+      msg.className = "msg msg-user";
+      msg.innerHTML = '<div class="msg-avatar"></div><div class="msg-bubble">' + text + "</div>";
+      transcript.appendChild(msg);
+      scrollToBottom();
+    }
+
+    function addTypingIndicator() {
+      var msg = document.createElement("div");
+      msg.className = "msg msg-ai";
+      msg.id = "typing-indicator";
+      msg.innerHTML = '<div class="msg-avatar"></div><div class="msg-bubble typing-dots"><span></span><span></span><span></span></div>';
+      transcript.appendChild(msg);
+      scrollToBottom();
+      return msg;
+    }
+
+    function addAiMessage(html) {
+      var msg = document.createElement("div");
+      msg.className = "msg msg-ai";
+      var bubble = document.createElement("div");
+      bubble.className = "msg-bubble";
+      msg.innerHTML = '<div class="msg-avatar"></div>';
+      msg.appendChild(bubble);
+      transcript.appendChild(msg);
+
+      // Texte tapé progressivement (GSAP TextPlugin si disponible, sinon direct)
+      if (window.gsap && window.TextPlugin) {
+        var tmp = document.createElement("div");
+        tmp.innerHTML = html;
+        var plain = tmp.textContent;
+        bubble.textContent = "";
+        gsap.to(bubble, {
+          duration: Math.min(plain.length * 0.018, 1.6),
+          text: { value: html },
+          ease: "none",
+          onComplete: scrollToBottom
+        });
+      } else {
+        bubble.innerHTML = html;
+      }
+      scrollToBottom();
+    }
+
+    var fallback = "Je ne suis pas certain de bien comprendre 🤔 Essayez une des questions suggérées au-dessus, ou reformulez — par exemple en parlant de compétences, de projets ou de contact.";
+
+    function findTopic(text) {
+      var t = text.toLowerCase();
+      if (/qui|présente|parcours|toi|es-tu|c'est quoi/.test(t)) return "qui";
+      if (/comp[ée]tenc|savoir|outil|stack|technolog/.test(t)) return "competences";
+      if (/projet|r[ée]alisation|travaux|portfolio/.test(t)) return "projets";
+      if (/contact|email|mail|joindre|linkedin|t[ée]l[ée]phone/.test(t)) return "contact";
+      return null;
+    }
+
+    function handleUserQuery(rawText) {
+      var text = rawText.trim();
+      if (!text) return;
+
+      var allChips = chipsWrap.querySelectorAll(".chat-chip");
+      allChips.forEach(function (c) { c.disabled = true; });
+
+      addUserMessage(text);
+
+      var topic = findTopic(text);
+      var data = topic ? answers[topic] : null;
+
+      setTimeout(function () {
+        var indicator = addTypingIndicator();
+        setTimeout(function () {
+          indicator.remove();
+          addAiMessage(data ? data.html : fallback);
+          allChips.forEach(function (c) { c.disabled = false; });
+        }, 900);
+      }, 300);
+    }
+
+    chipsWrap.addEventListener("click", function (e) {
+      var btn = e.target.closest(".chat-chip");
+      if (!btn) return;
+      var topic = btn.dataset.topic;
+      var data = answers[topic];
+      if (!data) return;
+
+      var allChips = chipsWrap.querySelectorAll(".chat-chip");
+      allChips.forEach(function (c) { c.disabled = true; });
+
+      addUserMessage(data.user);
+
+      setTimeout(function () {
+        var indicator = addTypingIndicator();
+        setTimeout(function () {
+          indicator.remove();
+          addAiMessage(data.html);
+          allChips.forEach(function (c) { c.disabled = false; });
+        }, 900);
+      }, 300);
+    });
+
+    var chatForm = document.getElementById("chat-form");
+    var chatInput = document.getElementById("chat-input");
+    chatForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      var value = chatInput.value;
+      chatInput.value = "";
+      handleUserQuery(value);
+    });
+
+    /* ---------- GSAP : séquence de démarrage + révélation du titre ---------- */
+    if (window.gsap) {
+      gsap.registerPlugin(ScrollTrigger);
+      if (window.ScrambleTextPlugin) gsap.registerPlugin(ScrambleTextPlugin);
+      if (window.SplitText) gsap.registerPlugin(SplitText);
+      if (window.TextPlugin) gsap.registerPlugin(TextPlugin);
+
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+      var bootLog = document.getElementById("boot-log");
+      var heroTitle = document.getElementById("hero-title");
+
+      if (!reduceMotion && window.ScrambleTextPlugin) {
+        var bootLines = [
+          "Initialisation du profil…",
+          "Chargement des compétences…",
+          "Connexion établie. ✓"
+        ];
+        var bootTl = gsap.timeline();
+        bootLines.forEach(function (line, i) {
+          bootTl.to(bootLog, {
+            duration: 0.6,
+            scrambleText: { text: line, chars: "01<>/_", revealDelay: 0.25, speed: 0.4 },
+            ease: "none"
+          }, i * 0.7);
+        });
+
+        bootTl.call(function () {
+          if (window.SplitText) {
+            var split = SplitText.create(heroTitle, { type: "chars" });
+            gsap.from(split.chars, { opacity: 0, y: 24, rotateX: -40, stagger: 0.02, duration: 0.6, ease: "power3.out" });
+          } else {
+            gsap.from(heroTitle, { opacity: 0, y: 20, duration: 0.6 });
+          }
+        }, null, "+=0.2");
+
+        bootTl.from(".hero .lead", { opacity: 0, y: 16, duration: 0.5 }, "+=0.3");
+        bootTl.from(".hero-actions .btn", { opacity: 0, y: 12, stagger: 0.1, duration: 0.5 }, "-=0.2");
+        bootTl.from(".chat-panel", { opacity: 0, y: 40, scale: 0.97, duration: 0.7, ease: "power2.out" }, "-=0.2");
+        bootTl.from(".chat-chips .chat-chip", { opacity: 0, y: 10, stagger: 0.06, duration: 0.4 }, "-=0.3");
+      } else {
+        gsap.set([heroTitle, ".hero .lead", ".hero-actions .btn", ".chat-panel"], { opacity: 1 });
+      }
+    }
+  </script>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/cortex/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo Cortex · GioTech Digital</div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>

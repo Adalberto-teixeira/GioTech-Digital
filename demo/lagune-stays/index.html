@@ -1,0 +1,400 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiNmMmI2NGMiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPkxTPC90ZXh0Pjwvc3ZnPg==">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="LAGUNE STAYS — hôtels, appartements et maisons de vacances à Martigues.">
+  <meta name="theme-color" content="#0d2f36">
+  <title>LAGUNE STAYS — Séjours à Martigues</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#home">
+    <span>LS</span>
+    <div><b>LAGUNE STAYS</b><small>MARTIGUES · SÉJOURS</small></div>
+  </a>
+
+  <nav class="desktop-nav">
+    <a href="#stays">Séjours</a>
+    <a href="#areas">Quartiers</a>
+    <a href="#experience">Expériences</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <div class="header-actions">
+    <button class="icon-button" id="favOpen" aria-label="Favoris">
+      <i data-lucide="heart"></i><span id="favCount">0</span>
+    </button>
+    <a class="host-button" href="#contact">Proposer un logement <i data-lucide="arrow-up-right"></i></a>
+    <button class="icon-button menu-toggle" id="menuOpen" aria-label="Menu"><i data-lucide="menu"></i></button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button id="menuClose"><i data-lucide="x"></i></button>
+  <span>LAGUNE STAYS / MENU</span>
+  <a href="#stays">Séjours <i data-lucide="arrow-up-right"></i></a>
+  <a href="#areas">Quartiers <i data-lucide="arrow-up-right"></i></a>
+  <a href="#experience">Expériences <i data-lucide="arrow-up-right"></i></a>
+  <a href="#contact">Contact <i data-lucide="arrow-up-right"></i></a>
+</div>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-bg">
+    <img src="https://images.unsplash.com/photo-1526772662000-3f88f10405ff?auto=format&fit=crop&w=2200&q=88" alt="Séjour au bord de l'eau">
+    <div class="hero-overlay"></div>
+  </div>
+
+  <div class="hero-copy" data-reveal>
+    <span>MARTIGUES / PROVENCE / MÉDITERRANÉE</span>
+    <h1>POSEZ VOS<br>VALISES<br><em>ENTRE ÉTANG & MER.</em></h1>
+    <p>Hôtels, appartements et maisons de vacances à Martigues. Réservez simplement et profitez du séjour.</p>
+  </div>
+
+  <form class="hero-search" id="searchForm">
+    <label><i data-lucide="map-pin"></i><span>Zone</span>
+      <select id="searchArea">
+        <option value="all">Tout Martigues</option>
+        <option value="Ferrières">Ferrières</option>
+        <option value="Jonquières">Jonquières</option>
+        <option value="L'Île">L'Île</option>
+        <option value="Carro">Carro</option>
+        <option value="La Couronne">La Couronne</option>
+      </select>
+    </label>
+    <label><i data-lucide="calendar-days"></i><span>Arrivée</span><input id="checkin" type="date" required></label>
+    <label><i data-lucide="calendar-check"></i><span>Départ</span><input id="checkout" type="date" required></label>
+    <label><i data-lucide="users"></i><span>Voyageurs</span>
+      <select id="guests"><option value="1">1 voyageur</option><option value="2" selected>2 voyageurs</option><option value="3">3 voyageurs</option><option value="4">4 voyageurs</option><option value="6">5-6 voyageurs</option></select>
+    </label>
+    <button>Rechercher <i data-lucide="search"></i></button>
+  </form>
+</section>
+
+<section class="benefits">
+  <div><i data-lucide="badge-check"></i><span><b>Séjours vérifiés</b><small>Sélection de démonstration</small></span></div>
+  <div><i data-lucide="headphones"></i><span><b>Assistance locale</b><small>Avant et pendant le séjour</small></span></div>
+  <div><i data-lucide="shield-check"></i><span><b>Paiement sécurisé</b><small>Checkout fictif pour la démo</small></span></div>
+</section>
+
+<section id="stays" class="section stays-section">
+  <div class="section-head" data-reveal>
+    <div>
+      <span>01 / SÉJOURS</span>
+      <h2>Votre prochaine adresse<br><em>à Martigues.</em></h2>
+    </div>
+    <p>Des hébergements fictifs pensés pour montrer le fonctionnement d'une plateforme de réservation locale.</p>
+  </div>
+
+  <div class="toolbar">
+    <div class="filters">
+      <button class="active" data-type="all">Tous</button>
+      <button data-type="hotel">Hôtels</button>
+      <button data-type="appartement">Appartements</button>
+      <button data-type="maison">Maisons</button>
+      <button data-type="villa">Villas</button>
+    </div>
+    <select id="sortSelect"><option value="default">Trier par</option><option value="asc">Prix croissant</option><option value="desc">Prix décroissant</option><option value="rating">Mieux notés</option></select>
+  </div>
+
+  <div class="stays-grid" id="staysGrid" data-stagger>
+
+    <article class="stay-card" data-id="1" data-type="appartement" data-area="L'Île" data-price="118" data-rating="4.9" data-capacity="2">
+      <div class="stay-image">
+        <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=88" alt="Appartement Canal Bleu">
+        <span class="stay-tag">COUP DE CŒUR</span>
+        <button class="fav-button" data-fav="1"><i data-lucide="heart"></i></button>
+      </div>
+      <div class="stay-body">
+        <div class="stay-topline"><span><i data-lucide="map-pin"></i> L'Île · Martigues</span><b><i data-lucide="star"></i> 4.9</b></div>
+        <h3>Appartement Canal Bleu</h3>
+        <p>Appartement lumineux au bord des canaux, idéal pour un couple.</p>
+        <div class="stay-specs"><span><i data-lucide="users"></i> 2</span><span><i data-lucide="bed-double"></i> 1</span><span><i data-lucide="wifi"></i> Wi-Fi</span></div>
+        <div class="stay-bottom"><div><b>118 €</b><span>/ nuit</span></div><button class="details-button" data-details="1">Voir <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </article>
+
+    <article class="stay-card" data-id="2" data-type="hotel" data-area="Ferrières" data-price="142" data-rating="4.7" data-capacity="2">
+      <div class="stay-image">
+        <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=88" alt="Hôtel des Étangs">
+        <span class="stay-tag">PETIT-DÉJ.</span>
+        <button class="fav-button" data-fav="2"><i data-lucide="heart"></i></button>
+      </div>
+      <div class="stay-body">
+        <div class="stay-topline"><span><i data-lucide="map-pin"></i> Ferrières</span><b><i data-lucide="star"></i> 4.7</b></div>
+        <h3>Hôtel des Étangs</h3>
+        <p>Chambre premium, terrasse, parking et petit-déjeuner inclus.</p>
+        <div class="stay-specs"><span><i data-lucide="users"></i> 2</span><span><i data-lucide="coffee"></i> Déj.</span><span><i data-lucide="car"></i> Parking</span></div>
+        <div class="stay-bottom"><div><b>142 €</b><span>/ nuit</span></div><button class="details-button" data-details="2">Voir <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </article>
+
+    <article class="stay-card" data-id="3" data-type="maison" data-area="Carro" data-price="176" data-rating="4.8" data-capacity="4">
+      <div class="stay-image">
+        <img src="https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1200&q=88" alt="Maison du Port">
+        <span class="stay-tag">MER À PIED</span>
+        <button class="fav-button" data-fav="3"><i data-lucide="heart"></i></button>
+      </div>
+      <div class="stay-body">
+        <div class="stay-topline"><span><i data-lucide="map-pin"></i> Carro</span><b><i data-lucide="star"></i> 4.8</b></div>
+        <h3>Maison du Port</h3>
+        <p>Maison de vacances à quelques minutes du port et de la plage.</p>
+        <div class="stay-specs"><span><i data-lucide="users"></i> 4</span><span><i data-lucide="bed-double"></i> 2</span><span><i data-lucide="waves"></i> Mer</span></div>
+        <div class="stay-bottom"><div><b>176 €</b><span>/ nuit</span></div><button class="details-button" data-details="3">Voir <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </article>
+
+    <article class="stay-card" data-id="4" data-type="villa" data-area="La Couronne" data-price="265" data-rating="5.0" data-capacity="6">
+      <div class="stay-image">
+        <img src="https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&w=1200&q=88" alt="Villa Côte Bleue">
+        <span class="stay-tag">PISCINE</span>
+        <button class="fav-button" data-fav="4"><i data-lucide="heart"></i></button>
+      </div>
+      <div class="stay-body">
+        <div class="stay-topline"><span><i data-lucide="map-pin"></i> La Couronne</span><b><i data-lucide="star"></i> 5.0</b></div>
+        <h3>Villa Côte Bleue</h3>
+        <p>Villa avec piscine, jardin et espace extérieur pour les familles.</p>
+        <div class="stay-specs"><span><i data-lucide="users"></i> 6</span><span><i data-lucide="bed-double"></i> 3</span><span><i data-lucide="waves"></i> Piscine</span></div>
+        <div class="stay-bottom"><div><b>265 €</b><span>/ nuit</span></div><button class="details-button" data-details="4">Voir <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </article>
+
+    <article class="stay-card" data-id="5" data-type="appartement" data-area="Jonquières" data-price="96" data-rating="4.6" data-capacity="3">
+      <div class="stay-image">
+        <img src="https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?auto=format&fit=crop&w=1200&q=88" alt="Studio Provence">
+        <span class="stay-tag">CENTRE</span>
+        <button class="fav-button" data-fav="5"><i data-lucide="heart"></i></button>
+      </div>
+      <div class="stay-body">
+        <div class="stay-topline"><span><i data-lucide="map-pin"></i> Jonquières</span><b><i data-lucide="star"></i> 4.6</b></div>
+        <h3>Studio Provence</h3>
+        <p>Studio rénové proche des commerces et restaurants du centre.</p>
+        <div class="stay-specs"><span><i data-lucide="users"></i> 3</span><span><i data-lucide="bed-double"></i> 1</span><span><i data-lucide="snowflake"></i> Clim.</span></div>
+        <div class="stay-bottom"><div><b>96 €</b><span>/ nuit</span></div><button class="details-button" data-details="5">Voir <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </article>
+
+    <article class="stay-card" data-id="6" data-type="hotel" data-area="L'Île" data-price="158" data-rating="4.9" data-capacity="2">
+      <div class="stay-image">
+        <img src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=88" alt="Maison d'Hôtes Venise Provençale">
+        <span class="stay-tag">CHARME</span>
+        <button class="fav-button" data-fav="6"><i data-lucide="heart"></i></button>
+      </div>
+      <div class="stay-body">
+        <div class="stay-topline"><span><i data-lucide="map-pin"></i> L'Île</span><b><i data-lucide="star"></i> 4.9</b></div>
+        <h3>Venise Provençale</h3>
+        <p>Maison d'hôtes intimiste avec vue sur l'eau et décoration méditerranéenne.</p>
+        <div class="stay-specs"><span><i data-lucide="users"></i> 2</span><span><i data-lucide="coffee"></i> Déj.</span><span><i data-lucide="balcony"></i> Vue</span></div>
+        <div class="stay-bottom"><div><b>158 €</b><span>/ nuit</span></div><button class="details-button" data-details="6">Voir <i data-lucide="arrow-up-right"></i></button></div>
+      </div>
+    </article>
+  </div>
+
+  <div class="no-results" id="noResults"><i data-lucide="search-x"></i><b>Aucun séjour disponible.</b><span>Modifiez les dates, la zone ou le nombre de voyageurs.</span></div>
+</section>
+
+<section id="areas" class="areas-section">
+  <div class="areas-head" data-reveal>
+    <span>02 / MARTIGUES</span>
+    <h2>Choisissez<br><em>votre ambiance.</em></h2>
+  </div>
+  <div class="areas-grid">
+    <article><img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=88" alt=""><div><span>01</span><h3>L'Île</h3><p>Canaux, charme et promenades.</p></div></article>
+    <article><img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1000&q=88" alt=""><div><span>02</span><h3>Carro</h3><p>Port, mer et ambiance village.</p></div></article>
+    <article><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1000&q=88" alt=""><div><span>03</span><h3>La Couronne</h3><p>Plages et Côte Bleue.</p></div></article>
+  </div>
+</section>
+
+<section id="experience" class="experience-section">
+  <div class="experience-copy" data-reveal>
+    <span>03 / EXPÉRIENCES</span>
+    <h2>Ne réservez pas<br>qu'un logement.<br><em>Vivez Martigues.</em></h2>
+    <p>Une section pour proposer des activités locales en complément du séjour.</p>
+  </div>
+
+  <div class="experience-list">
+    <article><i data-lucide="sailboat"></i><div><b>Sortie sur l'eau</b><span>À partir de 45 € / pers.</span></div><button><i data-lucide="arrow-up-right"></i></button></article>
+    <article><i data-lucide="utensils"></i><div><b>Table provençale</b><span>Restaurants & bonnes adresses</span></div><button><i data-lucide="arrow-up-right"></i></button></article>
+    <article><i data-lucide="bike"></i><div><b>Côte Bleue à vélo</b><span>Parcours & location</span></div><button><i data-lucide="arrow-up-right"></i></button></article>
+    <article><i data-lucide="camera"></i><div><b>Spots photo</b><span>Canaux, port et coucher de soleil</span></div><button><i data-lucide="arrow-up-right"></i></button></article>
+  </div>
+</section>
+
+<section class="host-section">
+  <div class="host-image">
+    <img data-image-shift src="https://images.unsplash.com/photo-1600585152915-d208bec867a1?auto=format&fit=crop&w=1600&q=88" alt="Maison de vacances">
+  </div>
+  <div class="host-copy" data-reveal>
+    <span>04 / PROPRIÉTAIRES</span>
+    <h2>Vous avez<br><em>un logement à Martigues ?</em></h2>
+    <p>Cette section permet de transformer le template en plateforme locale de location saisonnière.</p>
+    <a href="#contact">Proposer mon logement <i data-lucide="arrow-up-right"></i></a>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <div class="reviews-head" data-reveal><span>05 / AVIS</span><h2>Des séjours<br><em>qui donnent envie de revenir.</em></h2></div>
+  <div class="reviews-grid" data-stagger>
+    <article><div><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div><p>“Appartement très agréable et emplacement parfait pour découvrir Martigues.”</p><span>— Camille D. · avis fictif</span></article>
+    <article><div><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div><p>“La maison à Carro était exactement ce qu'il nous fallait pour le week-end.”</p><span>— Julien P. · avis fictif</span></article>
+    <article><div><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i><i data-lucide="star"></i></div><p>“Réservation simple, informations claires et très belle expérience.”</p><span>— Sarah M. · avis fictif</span></article>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="contact-copy" data-reveal>
+    <span>06 / CONTACT</span>
+    <h2>Un séjour ?<br>Un logement ?<br><em>Parlons-en.</em></h2>
+    <p>Formulaire de démonstration pour voyageurs ou propriétaires.</p>
+  </div>
+  <form id="contactForm" class="contact-form">
+    <label>Nom<input required placeholder="Votre nom"></label>
+    <label>Email<input required type="email" placeholder="vous@email.fr"></label>
+    <label>Téléphone<input placeholder="06 00 00 00 00"></label>
+    <label>Votre demande<select><option>Réserver un séjour</option><option>Proposer un logement</option><option>Demande d'information</option></select></label>
+    <label class="wide">Message<textarea rows="4" placeholder="Dates, voyageurs, logement..."></textarea></label>
+    <button>Envoyer <i data-lucide="send"></i></button>
+    <small id="contactStatus">Formulaire de démonstration.</small>
+  </form>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-brand"><span>LS</span><div><b>LAGUNE STAYS</b><small>MARTIGUES · SÉJOURS</small></div></div>
+  <div><b>Explorer</b><a href="#stays">Séjours</a><a href="#areas">Quartiers</a><a href="#experience">Expériences</a></div>
+  <div><b>Contact</b><span>Martigues · Bouches-du-Rhône</span><span>07 00 00 00 00</span><span>hello@lagunestays.fr</span></div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div>
+</footer>
+
+<div class="drawer" id="favDrawer">
+  <div class="drawer-panel">
+    <header><div><span>VOS FAVORIS</span><h2>Mes séjours.</h2></div><button id="favClose"><i data-lucide="x"></i></button></header>
+    <div id="favList"></div>
+  </div>
+</div>
+
+<div class="stay-modal" id="stayModal">
+  <div class="stay-modal-panel">
+    <button id="stayClose"><i data-lucide="x"></i></button>
+    <div class="modal-image"><img id="modalImage" src="" alt=""></div>
+    <div class="modal-content">
+      <div class="modal-title"><div><span id="modalArea">—</span><h2 id="modalTitle">—</h2></div><b id="modalRating">—</b></div>
+      <p id="modalDesc">—</p>
+      <div id="modalSpecs" class="modal-specs"></div>
+
+      <div class="booking-box">
+        <div class="booking-price"><b id="modalPrice">—</b><span>/ nuit</span></div>
+        <div class="booking-fields">
+          <label>Arrivée<input id="modalCheckin" type="date"></label>
+          <label>Départ<input id="modalCheckout" type="date"></label>
+          <label class="wide">Voyageurs<select id="modalGuests"><option value="1">1 voyageur</option><option value="2" selected>2 voyageurs</option><option value="3">3 voyageurs</option><option value="4">4 voyageurs</option><option value="6">5-6 voyageurs</option></select></label>
+        </div>
+        <div class="booking-breakdown" id="bookingBreakdown"></div>
+        <button id="bookOpen">Réserver ce séjour <i data-lucide="calendar-check"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="checkout-modal" id="checkoutModal">
+  <div class="checkout-panel">
+    <button id="checkoutClose"><i data-lucide="x"></i></button>
+    <span>RÉSERVATION / DEMO</span>
+    <h2>Finaliser le séjour.</h2>
+    <form id="bookingForm">
+      <label>Nom<input required placeholder="Votre nom"></label>
+      <label>Email<input required type="email" placeholder="vous@email.fr"></label>
+      <label>Téléphone<input required placeholder="06 00 00 00 00"></label>
+      <label>Mode de paiement<select><option>Carte bancaire (démo)</option><option>Payer sur place</option></select></label>
+      <div id="checkoutSummary" class="checkout-summary"></div>
+      <button>Confirmer la réservation <i data-lucide="lock-keyhole"></i></button>
+      <p id="bookingStatus"></p>
+    </form>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/lagune-stays/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo Lagune Stays · GioTech Digital</div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>

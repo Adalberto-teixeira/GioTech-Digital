@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page produit e-commerce — Template gratuit GioTech Digital</title>
+  <meta name="description" content="Fiche produit avec galerie, prix, avis et appel à l'action." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { padding-bottom: 0; }
+    .standalone-wrap { padding: clamp(2.5rem, 6vw, 5rem) 0; }
+    .page-view { display: block !important; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="container standalone-wrap">
+    <div class="product-mini">
+              <div class="swatch"></div>
+              <div>
+                <span class="eyebrow" style="justify-content:flex-start;">Nouveauté</span>
+                <h1 style="font-size:1.6rem; margin-top:0.5rem;">Lampe Anse</h1>
+                <div class="stars">★★★★★ (86)</div>
+                <div class="price">89 €</div>
+                <ul>
+                  <li>Fabriquée à la main en France</li>
+                  <li>Livraison offerte dès 50 €</li>
+                  <li>Garantie 2 ans</li>
+                </ul>
+                <a href="#" class="btn btn-primary">Ajouter au panier</a>
+              </div>
+            </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+  <script>
+    document.getElementById("le-year") && (document.getElementById("le-year").textContent = new Date().getFullYear());
+    var target = new Date(Date.now() + (14 * 86400000) + (6 * 3600000));
+    function tick() {
+      var diff = target - new Date(); if (diff < 0) diff = 0;
+      var d=document.getElementById("sc-days"), h=document.getElementById("sc-hours"), m=document.getElementById("sc-min"), s=document.getElementById("sc-sec");
+      if (d) d.textContent = Math.floor(diff / 86400000);
+      if (h) h.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, "0");
+      if (m) m.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
+      if (s) s.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
+    }
+    tick(); setInterval(tick, 1000);
+    var soonForm = document.getElementById("soon-form");
+    if (soonForm) soonForm.addEventListener("submit", function (e) { e.preventDefault(); document.getElementById("soon-success").classList.add("is-shown"); soonForm.reset(); });
+    document.getElementById("order-date") && (document.getElementById("order-date").textContent = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }));
+  </script>
+</body>
+</html>

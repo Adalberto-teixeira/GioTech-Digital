@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiNjMDI2ZDMiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPkY8L3RleHQ+PC9zdmc+">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Festiva — Festival de musique</title>
+  <meta name="description" content="Festiva est un template pour festivals et événements : line-up, programme par jour et billetterie." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="#" class="brand">Festi<span>va</span></a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#accueil">Accueil</a></li>
+          <li><a href="#lineup">Line-up</a></li>
+          <li><a href="#programme">Programme</a></li>
+          <li><a href="#billets">Billets</a></li>
+        <li><a href="#billets" class="nav-cta">Réserver</a></li>
+      </ul>
+      </nav>
+      <button class="mobile-nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      <a href="#billets" class="btn btn-primary">Réserver</a>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <div class="hero-blob-a" aria-hidden="true"></div>
+      <div class="hero-blob-b" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-inner">
+          <span class="eyebrow">14 — 16 août — Lyon</span>
+          <h1>Trois jours,<br />une seule énergie.</h1>
+          <p class="lead">Festiva réunit 40 artistes sur 3 scènes pour un week-end de musique en plein air. Line-up complet, food trucks et camping sur place.</p>
+          <div class="hero-actions">
+            <a href="#billets" class="btn btn-primary">Réserver mon billet</a>
+            <a href="#lineup" class="btn btn-outline">Voir le line-up</a>
+          </div>
+        </div>
+
+        <div class="countdown-row" id="countdown">
+          <div class="countdown-box"><strong id="cd-days">--</strong><span>Jours</span></div>
+          <div class="countdown-box"><strong id="cd-hours">--</strong><span>Heures</span></div>
+          <div class="countdown-box"><strong id="cd-min">--</strong><span>Minutes</span></div>
+          <div class="countdown-box"><strong id="cd-sec">--</strong><span>Secondes</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="lineup">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Line-up</span>
+          <h2>Qui joue cette année.</h2>
+        </div>
+        <div class="lineup-grid">
+          <div class="lineup-card"><svg viewBox="0 0 220 300" preserveAspectRatio="xMidYMid slice"><rect width="220" height="300" fill="#241533"/><circle cx="110" cy="120" r="70" fill="#ff2e88" opacity="0.55"/></svg><div class="lineup-info"><span>Scène principale</span><h3>Nova Wave</h3></div></div>
+          <div class="lineup-card"><svg viewBox="0 0 220 300" preserveAspectRatio="xMidYMid slice"><rect width="220" height="300" fill="#1b1226"/><polygon points="20,280 110,60 200,280" fill="#7b3fe4" opacity="0.7"/></svg><div class="lineup-info"><span>Scène électro</span><h3>Kaïro</h3></div></div>
+          <div class="lineup-card"><svg viewBox="0 0 220 300" preserveAspectRatio="xMidYMid slice"><rect width="220" height="300" fill="#2a1420"/><rect x="40" y="80" width="140" height="140" rx="16" fill="#ffc93c" opacity="0.5"/></svg><div class="lineup-info"><span>Scène live</span><h3>Les Ombres</h3></div></div>
+          <div class="lineup-card"><svg viewBox="0 0 220 300" preserveAspectRatio="xMidYMid slice"><rect width="220" height="300" fill="#1b1226"/><circle cx="80" cy="150" r="46" fill="#ff2e88" opacity="0.6"/><circle cx="150" cy="100" r="26" fill="#ffc93c" opacity="0.5"/></svg><div class="lineup-info"><span>Scène principale</span><h3>Solène Marr</h3></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="programme">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Programme</span>
+          <h2>Trois jours, heure par heure.</h2>
+        </div>
+
+        <div class="days-tabs" id="day-tabs">
+          <button class="day-tab is-active" type="button" data-day="ven">Vendredi 14</button>
+          <button class="day-tab" type="button" data-day="sam">Samedi 15</button>
+          <button class="day-tab" type="button" data-day="dim">Dimanche 16</button>
+        </div>
+
+        <div class="schedule-list is-active" data-day="ven">
+          <div class="schedule-row"><span class="time">18:00</span><span class="who">Les Ombres</span><span class="stage">Scène live</span></div>
+          <div class="schedule-row"><span class="time">20:00</span><span class="who">Kaïro</span><span class="stage">Scène électro</span></div>
+          <div class="schedule-row"><span class="time">22:30</span><span class="who">Nova Wave</span><span class="stage">Scène principale</span></div>
+        </div>
+        <div class="schedule-list" data-day="sam">
+          <div class="schedule-row"><span class="time">17:00</span><span class="who">Solène Marr</span><span class="stage">Scène principale</span></div>
+          <div class="schedule-row"><span class="time">19:30</span><span class="who">Kaïro</span><span class="stage">Scène électro</span></div>
+          <div class="schedule-row"><span class="time">22:00</span><span class="who">Nova Wave</span><span class="stage">Scène principale</span></div>
+        </div>
+        <div class="schedule-list" data-day="dim">
+          <div class="schedule-row"><span class="time">16:00</span><span class="who">Les Ombres</span><span class="stage">Scène live</span></div>
+          <div class="schedule-row"><span class="time">18:30</span><span class="who">Solène Marr</span><span class="stage">Scène principale</span></div>
+          <div class="schedule-row"><span class="time">21:00</span><span class="who">Kaïro</span><span class="stage">Scène électro</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="billets">
+      <div class="container">
+        <div class="section-head">
+          <span class="eyebrow">Billets</span>
+          <h2>Choisissez votre pass.</h2>
+        </div>
+        <div class="tickets-grid">
+          <div class="ticket-card">
+            <h3>1 jour</h3>
+            <div class="amount">45€</div>
+            <ul><li>Accès à toutes les scènes</li><li>1 jour au choix</li><li>Camping non inclus</li></ul>
+            <a href="#" class="btn btn-outline">Choisir</a>
+          </div>
+          <div class="ticket-card is-featured">
+            <h3>Pass 3 jours</h3>
+            <div class="amount">99€</div>
+            <ul><li>Accès à toutes les scènes</li><li>Vendredi à dimanche</li><li>Camping inclus</li></ul>
+            <a href="#" class="btn btn-primary">Choisir</a>
+          </div>
+          <div class="ticket-card">
+            <h3>VIP 3 jours</h3>
+            <div class="amount">180€</div>
+            <ul><li>Accès zone VIP</li><li>Vestiaire &amp; bar dédié</li><li>Camping premium inclus</li></ul>
+            <a href="#" class="btn btn-outline">Choisir</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="fv-year">2026</span> Festiva — Démo de template.</p>
+      <p>Ceci est un site de démonstration, non un événement réel.</p>
+    </div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div></footer>
+
+  <script>
+    document.getElementById("fv-year").textContent = new Date().getFullYear();
+
+    /* ---------- Compte à rebours réel jusqu'au 14 août prochain ---------- */
+    (function () {
+      function nextAug14() {
+        var now = new Date();
+        var year = now.getFullYear();
+        var target = new Date(year, 7, 14, 18, 0, 0);
+        if (target < now) target = new Date(year + 1, 7, 14, 18, 0, 0);
+        return target;
+      }
+      var target = nextAug14();
+      function tick() {
+        var diff = target - new Date();
+        if (diff < 0) diff = 0;
+        var d = Math.floor(diff / 86400000);
+        var h = Math.floor((diff % 86400000) / 3600000);
+        var m = Math.floor((diff % 3600000) / 60000);
+        var s = Math.floor((diff % 60000) / 1000);
+        document.getElementById("cd-days").textContent = d;
+        document.getElementById("cd-hours").textContent = String(h).padStart(2, "0");
+        document.getElementById("cd-min").textContent = String(m).padStart(2, "0");
+        document.getElementById("cd-sec").textContent = String(s).padStart(2, "0");
+      }
+      tick();
+      setInterval(tick, 1000);
+    })();
+
+    /* ---------- Onglets du programme (cliquables) ---------- */
+    var dayTabs = document.querySelectorAll(".day-tab");
+    var schedules = document.querySelectorAll(".schedule-list");
+    dayTabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        dayTabs.forEach(function (t) { t.classList.remove("is-active"); });
+        schedules.forEach(function (s) { s.classList.remove("is-active"); });
+        tab.classList.add("is-active");
+        document.querySelector('.schedule-list[data-day="' + tab.dataset.day + '"]').classList.add("is-active");
+      });
+    });
+
+    var reveals = document.querySelectorAll("[data-reveal]");
+    if ("IntersectionObserver" in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add("is-visible"); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(function (el) { obs.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+
+    /* ---------- GSAP : mouvement (https://gsap.com — via CDN) ---------- */
+    if (window.gsap) {
+      gsap.registerPlugin(ScrollTrigger);
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!reduceMotion) {
+        var heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        heroTl
+          .from(".hero-copy .eyebrow", { opacity: 0, y: 14, duration: 0.5 })
+          .from(".hero-copy h1", { opacity: 0, y: 30, duration: 0.7 }, "-=0.3")
+          .from(".hero-copy .lead", { opacity: 0, y: 16, duration: 0.5 }, "-=0.4")
+          .from(".hero-actions .btn", { opacity: 0, y: 12, stagger: 0.1, duration: 0.5 }, "-=0.25")
+          .from(".countdown-box", { opacity: 0, y: 20, scale: 0.9, stagger: 0.08, duration: 0.5, ease: "back.out(1.4)" }, "-=0.2");
+
+        gsap.utils.toArray(".section-head").forEach(function (head) {
+          gsap.from(head.children, {
+            opacity: 0, y: 20, stagger: 0.08, duration: 0.55, ease: "power2.out",
+            scrollTrigger: { trigger: head, start: "top 90%" }
+          });
+        });
+
+        gsap.utils.toArray(".lineup-card").forEach(function (card, i) {
+          gsap.from(card, {
+            opacity: 0, y: 34, duration: 0.6, ease: "power2.out", delay: (i % 4) * 0.08,
+            scrollTrigger: { trigger: card, start: "top 90%" }
+          });
+        });
+
+        gsap.utils.toArray(".ticket-card").forEach(function (card, i) {
+          gsap.from(card, {
+            opacity: 0, y: 30, duration: 0.6, ease: "power2.out", delay: i * 0.1,
+            scrollTrigger: { trigger: card, start: "top 88%" }
+          });
+        });
+      }
+    }
+  </script>
+
+<script>
+(function(){
+  var toggle=document.querySelector('.mobile-nav-toggle');
+  var nav=document.querySelector('.main-nav');
+  if(!toggle||!nav)return;
+  toggle.addEventListener('click',function(){
+    var isOpen=nav.classList.toggle('is-open');
+    toggle.classList.toggle('is-open',isOpen);
+    toggle.setAttribute('aria-expanded',String(isOpen));
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click',function(){
+      nav.classList.remove('is-open');
+      toggle.classList.remove('is-open');
+      toggle.setAttribute('aria-expanded','false');
+    });
+  });
+})();
+</script>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/festiva/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo Festiva · GioTech Digital</div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>

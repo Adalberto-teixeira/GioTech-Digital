@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiNlZjQ2MzgiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPkZCPC90ZXh0Pjwvc3ZnPg==">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="FLASHBITE — fast-food moderne, commande en ligne et livraison rapide.">
+  <meta name="theme-color" content="#16120f">
+  <title>FLASHBITE — Fast Food & Delivery</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a class="brand" href="#home">
+    <span>FB</span>
+    <div><b>FLASHBITE</b><small>FAST FOOD · DELIVERY</small></div>
+  </a>
+
+  <nav class="desktop-nav">
+    <a href="#menu">Menu</a>
+    <a href="#deals">Promos</a>
+    <a href="#how">Livraison</a>
+    <a href="#about">À propos</a>
+  </nav>
+
+  <div class="header-actions">
+    <a class="location" href="#how">⌖ Martigues</a>
+    <button class="cart-button" id="cartOpen">Panier <span id="cartCount">0</span></button>
+    <button class="menu-toggle" id="menuOpen">☰</button>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <button id="menuClose">×</button>
+  <span>FLASHBITE / MENU</span>
+  <a href="#menu">Menu <i>↗</i></a>
+  <a href="#deals">Promos <i>↗</i></a>
+  <a href="#how">Livraison <i>↗</i></a>
+  <a href="#about">À propos <i>↗</i></a>
+  <a href="#contact">Contact <i>↗</i></a>
+</div>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy" data-reveal>
+    <span>FAST FOOD / DELIVERY / MARTIGUES</span>
+    <h1>CHAUD.<br>RAPIDE.<br><em>CHEZ VOUS.</em></h1>
+    <p>Burgers généreux, poulet croustillant, pizzas et sides. Commandez en quelques clics et suivez votre livraison en direct.</p>
+    <div class="hero-actions">
+      <a href="#menu" class="primary">Commander maintenant ↗</a>
+      <a href="#deals" class="secondary">Voir les promos</a>
+    </div>
+    <div class="hero-meta">
+      <div><b>25 min</b><span>livraison moyenne</span></div>
+      <div><b>4.8/5</b><span>avis clients</span></div>
+      <div><b>7j/7</b><span>service</span></div>
+    </div>
+  </div>
+
+  <div class="hero-visual" data-reveal>
+    <div class="hero-orbit orbit-a"></div>
+    <div class="hero-orbit orbit-b"></div>
+    <img src="assets/art/burger.svg" alt="Burger Flashbite">
+    <div class="floating-badge badge-a"><b>-20%</b><span>sur votre 1ère commande</span></div>
+    <div class="floating-badge badge-b"><b>25 min</b><span>livraison moyenne</span></div>
+  </div>
+</section>
+
+<section class="ticker">
+  <div data-marquee-track>
+    BURGERS ✦ PIZZA ✦ CHICKEN ✦ FRIES ✦ DELIVERY ✦ BURGERS ✦ PIZZA ✦ CHICKEN ✦ FRIES ✦ DELIVERY ✦
+  </div>
+</section>
+
+<section id="menu" class="section menu-section">
+  <div class="section-head" data-reveal>
+    <div>
+      <span>01 / MENU</span>
+      <h2>Choisissez.<br><em>On prépare.</em></h2>
+    </div>
+    <p>Des recettes simples, généreuses et pensées pour arriver chaudes jusqu'à votre porte.</p>
+  </div>
+
+  <div class="category-tabs">
+    <button class="active" data-category="all">Tout</button>
+    <button data-category="burger">Burgers</button>
+    <button data-category="pizza">Pizza</button>
+    <button data-category="chicken">Chicken</button>
+    <button data-category="side">Sides</button>
+  </div>
+
+  <div class="products-grid" id="productsGrid" data-stagger>
+    <article class="product-card" data-category-card="burger">
+      <div class="product-media"><img src="assets/art/burger.svg" alt=""><span>BEST SELLER</span></div>
+      <div class="product-body">
+        <small>BURGER / SIGNATURE</small>
+        <h3>Big Flash</h3>
+        <p>Double steak, cheddar, pickles, sauce maison.</p>
+        <div><b>11,90 €</b><button class="add-product" data-name="Big Flash" data-price="11.9">Ajouter +</button></div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category-card="burger">
+      <div class="product-media"><img src="assets/art/burger.svg" alt=""><span>SPICY</span></div>
+      <div class="product-body">
+        <small>BURGER / CHICKEN</small>
+        <h3>Fire Chicken</h3>
+        <p>Poulet crispy, cheddar, salade, sauce spicy.</p>
+        <div><b>10,90 €</b><button class="add-product" data-name="Fire Chicken" data-price="10.9">Ajouter +</button></div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category-card="pizza">
+      <div class="product-media"><img src="assets/art/pizza.svg" alt=""><span>NEW</span></div>
+      <div class="product-body">
+        <small>PIZZA / 31 CM</small>
+        <h3>Hot Pepperoni</h3>
+        <p>Tomate, mozzarella, pepperoni, huile pimentée.</p>
+        <div><b>12,50 €</b><button class="add-product" data-name="Hot Pepperoni" data-price="12.5">Ajouter +</button></div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category-card="chicken">
+      <div class="product-media"><img src="assets/art/chicken.svg" alt=""><span>CRISPY</span></div>
+      <div class="product-body">
+        <small>CHICKEN / BOX</small>
+        <h3>Crispy Box</h3>
+        <p>4 tenders, fries, 2 sauces maison.</p>
+        <div><b>13,90 €</b><button class="add-product" data-name="Crispy Box" data-price="13.9">Ajouter +</button></div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category-card="side">
+      <div class="product-media"><img src="assets/art/fries.svg" alt=""><span>CLASSIC</span></div>
+      <div class="product-body">
+        <small>SIDES</small>
+        <h3>Loaded Fries</h3>
+        <p>Frites, cheddar fondu, crispy onions.</p>
+        <div><b>5,90 €</b><button class="add-product" data-name="Loaded Fries" data-price="5.9">Ajouter +</button></div>
+      </div>
+    </article>
+
+    <article class="product-card" data-category-card="pizza">
+      <div class="product-media"><img src="assets/art/pizza.svg" alt=""><span>VEGGIE</span></div>
+      <div class="product-body">
+        <small>PIZZA / 31 CM</small>
+        <h3>Green Melt</h3>
+        <p>Mozzarella, légumes grillés, pesto et roquette.</p>
+        <div><b>11,90 €</b><button class="add-product" data-name="Green Melt" data-price="11.9">Ajouter +</button></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section id="deals" class="deals-section">
+  <div class="deal-copy" data-reveal>
+    <span>02 / DEAL OF THE DAY</span>
+    <h2>2 menus.<br><em>1 prix.</em></h2>
+    <p>Deux Big Flash + deux portions de frites + deux boissons.</p>
+    <div class="deal-price"><s>31,80 €</s><b>24,90 €</b></div>
+    <button class="deal-add" data-name="Duo Flash Deal" data-price="24.9">Ajouter au panier ↗</button>
+  </div>
+
+  <div class="deal-visual">
+    <img src="assets/art/burger.svg" alt="Duo Flash">
+    <div class="deal-circle">DUO<br>DEAL</div>
+  </div>
+</section>
+
+<section id="how" class="section how-section">
+  <div class="section-head" data-reveal>
+    <div>
+      <span>03 / LIVRAISON</span>
+      <h2>Simple.<br><em>En 4 étapes.</em></h2>
+    </div>
+    <p>Le parcours est conçu pour être rapide sur téléphone comme sur ordinateur.</p>
+  </div>
+
+  <div class="steps-grid" data-stagger>
+    <article><span>01</span><b>Choisissez</b><p>Ajoutez vos plats préférés au panier.</p></article>
+    <article><span>02</span><b>Validez</b><p>Adresse, téléphone et mode de paiement.</p></article>
+    <article><span>03</span><b>On prépare</b><p>Votre commande passe directement en cuisine.</p></article>
+    <article><span>04</span><b>On livre</b><p>Suivez l'avancement jusqu'à votre porte.</p></article>
+  </div>
+</section>
+
+<section class="tracking-section">
+  <div class="tracking-copy" data-reveal>
+    <span>LIVE ORDER / DEMO</span>
+    <h2>Suivez<br><em>votre commande.</em></h2>
+    <p>Une démonstration de tracking pour montrer comment l'expérience peut fonctionner après validation.</p>
+  </div>
+
+  <div class="tracking-card">
+    <div class="track-top"><span>COMMANDE #FB2048</span><b>18 min</b></div>
+    <div class="track-progress"><i id="trackBar"></i></div>
+    <div class="track-steps">
+      <div class="done"><span>✓</span><b>Confirmée</b></div>
+      <div class="done"><span>✓</span><b>Préparation</b></div>
+      <div class="active"><span>●</span><b>En route</b></div>
+      <div><span>○</span><b>Livrée</b></div>
+    </div>
+    <button id="trackingSimulate">Simuler l'avancement</button>
+  </div>
+</section>
+
+<section id="about" class="about-section">
+  <div class="about-image">
+    <img src="https://images.unsplash.com/photo-1552566626-52f8b828add9?auto=format&fit=crop&w=1600&q=88" alt="Restaurant moderne" data-image-shift>
+  </div>
+  <div class="about-copy" data-reveal>
+    <span>04 / FLASHBITE</span>
+    <h2>Pas juste<br><em>un fast-food.</em></h2>
+    <p>FLASHBITE est une marque fictive créée pour cette démonstration. Le template convient à un fast-food, snack, burger shop, pizzeria ou service de livraison.</p>
+    <div class="about-stats">
+      <div><b>4.8</b><span>note moyenne</span></div>
+      <div><b>25</b><span>minutes</span></div>
+      <div><b>12</b><span>zones livrées</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="reviews-section">
+  <div class="reviews-head" data-reveal>
+    <span>05 / AVIS</span>
+    <h2>Ils commandent.<br><em>Ils recommandent.</em></h2>
+  </div>
+  <div class="reviews-grid" data-stagger>
+    <article><b>★★★★★</b><p>“Livraison rapide et burger encore bien chaud.”</p><span>— Sarah M.</span></article>
+    <article><b>★★★★★</b><p>“Les loaded fries sont vraiment incroyables.”</p><span>— Lucas T.</span></article>
+    <article><b>★★★★★</b><p>“Site simple, commande rapide, rien à redire.”</p><span>— Amine R.</span></article>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div data-reveal>
+    <span>06 / CONTACT</span>
+    <h2>Une question ?<br><em>On répond vite.</em></h2>
+    <p>Ouvert 7j/7 · 11:00 — 23:30</p>
+  </div>
+  <div class="contact-card">
+    <div><span>Adresse</span><b>Martigues · France</b></div>
+    <div><span>Téléphone</span><b>07 00 00 00 00</b></div>
+    <div><span>Email</span><b>hello@flashbite.fr</b></div>
+  </div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-brand">
+    <span>FB</span>
+    <div><b>FLASHBITE</b><small>FAST FOOD · DELIVERY</small></div>
+  </div>
+  <div><b>Navigation</b><a href="#menu">Menu</a><a href="#deals">Promos</a><a href="#how">Livraison</a></div>
+  <div><b>Horaires</b><span>Lun — Dim</span><span>11:00 — 23:30</span></div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div>
+</footer>
+
+<div class="cart-drawer" id="cartDrawer">
+  <div class="cart-panel">
+    <header><div><span>VOTRE COMMANDE</span><h2>Panier.</h2></div><button id="cartClose">×</button></header>
+    <div id="cartItems" class="cart-items"></div>
+    <footer>
+      <div class="cart-total"><span>Total</span><b id="cartTotal">0,00 €</b></div>
+      <button id="checkoutOpen">Commander ↗</button>
+    </footer>
+  </div>
+</div>
+
+<div class="checkout-modal" id="checkoutModal">
+  <div class="checkout-panel">
+    <button id="checkoutClose">×</button>
+    <span>CHECKOUT / DEMO</span>
+    <h2>Finaliser.</h2>
+    <form id="checkoutForm">
+      <label>Nom<input required placeholder="Votre nom"></label>
+      <label>Téléphone<input required placeholder="06 00 00 00 00"></label>
+      <label>Adresse<input required placeholder="Votre adresse"></label>
+      <label>Mode de paiement
+        <select><option>Carte à la livraison</option><option>Espèces</option><option>Paiement en ligne (démo)</option></select>
+      </label>
+      <button>Confirmer la commande ↗</button>
+      <p id="checkoutStatus"></p>
+    </form>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/flashbite/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo FlashBite · GioTech Digital</div>
+</div>
+<!-- ===== Menu inférieur fixe façon Amazon (mobile) ===== -->
+<nav class="amazon-bottom-nav" aria-label="Navigation principale mobile">
+  <a href="#home" class="is-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg><span>Accueil</span></a>
+  <button type="button" id="amazon-bottom-categories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Menu</span></button>
+  <button type="button" id="amazon-bottom-cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12L5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg><span>Panier</span><b class="amazon-bottom-badge" id="amazon-bottom-badge" style="display:none;">0</b></button>
+  <button type="button" id="amazon-bottom-account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg><span>Compte</span></button>
+</nav>
+<script>
+(function(){
+  document.getElementById('amazon-bottom-categories').addEventListener('click',function(){document.getElementById('menuOpen').click();});
+  document.getElementById('amazon-bottom-cart').addEventListener('click',function(){document.getElementById('cartOpen').click();});
+  document.getElementById('amazon-bottom-account').addEventListener('click',function(){alert('Compte client — fonctionnalité de démonstration.');});
+  var headerBadge=document.getElementById('cartCount');
+  var footBadge=document.getElementById('amazon-bottom-badge');
+  if(headerBadge && footBadge && window.MutationObserver){
+    new MutationObserver(function(){
+      footBadge.textContent=headerBadge.textContent;
+      footBadge.style.display=headerBadge.textContent==='0'?'none':'flex';
+    }).observe(headerBadge,{childList:true,characterData:true,subtree:true});
+  }
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>

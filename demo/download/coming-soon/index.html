@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bientôt en ligne — Template gratuit GioTech Digital</title>
+  <meta name="description" content="Page de lancement avec compte à rebours réel, formulaire d'alerte email et barre de progression." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body { padding-bottom: 0; }
+    .standalone-wrap { padding: clamp(2.5rem, 6vw, 5rem) 0; }
+    .page-view { display: block !important; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="container standalone-wrap">
+    <div class="page-icon icon-soon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+            <h1 style="font-size:clamp(1.8rem,4vw,2.6rem);">On y est presque.</h1>
+            <p>Notre nouveau site arrive très bientôt. Laissez votre email pour être prévenu dès l'ouverture.</p>
+
+            <div class="soon-countdown" id="soon-countdown">
+              <div class="box"><strong id="sc-days">--</strong><span>Jours</span></div>
+              <div class="box"><strong id="sc-hours">--</strong><span>Heures</span></div>
+              <div class="box"><strong id="sc-min">--</strong><span>Min</span></div>
+              <div class="box"><strong id="sc-sec">--</strong><span>Sec</span></div>
+            </div>
+
+            <div class="soon-progress">
+              <div class="soon-progress-bar"><i></i></div>
+              <div class="label"><span>Développement en cours</span><span>72%</span></div>
+            </div>
+
+            <form class="soon-form" id="soon-form">
+              <input type="email" id="soon-email" placeholder="Votre email" required />
+              <button class="btn btn-accent" type="submit">Me prévenir</button>
+            </form>
+            <div class="soon-success" id="soon-success"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg> Vous serez prévenu par email !</div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+  <script>
+    document.getElementById("le-year") && (document.getElementById("le-year").textContent = new Date().getFullYear());
+    var target = new Date(Date.now() + (14 * 86400000) + (6 * 3600000));
+    function tick() {
+      var diff = target - new Date(); if (diff < 0) diff = 0;
+      var d=document.getElementById("sc-days"), h=document.getElementById("sc-hours"), m=document.getElementById("sc-min"), s=document.getElementById("sc-sec");
+      if (d) d.textContent = Math.floor(diff / 86400000);
+      if (h) h.textContent = String(Math.floor((diff % 86400000) / 3600000)).padStart(2, "0");
+      if (m) m.textContent = String(Math.floor((diff % 3600000) / 60000)).padStart(2, "0");
+      if (s) s.textContent = String(Math.floor((diff % 60000) / 1000)).padStart(2, "0");
+    }
+    tick(); setInterval(tick, 1000);
+    var soonForm = document.getElementById("soon-form");
+    if (soonForm) soonForm.addEventListener("submit", function (e) { e.preventDefault(); document.getElementById("soon-success").classList.add("is-shown"); soonForm.reset(); });
+    document.getElementById("order-date") && (document.getElementById("order-date").textContent = new Date().toLocaleDateString("fr-FR", { day: "numeric", month: "long", year: "numeric" }));
+  </script>
+</body>
+</html>
