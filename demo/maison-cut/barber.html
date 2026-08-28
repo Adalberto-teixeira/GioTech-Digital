@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#eee9df"><meta name="description" content="Maison Cut — barber shop mobile, services, équipe et réservation.">
+<title>Maison Cut — Barber Booking</title>
+<link rel="stylesheet" href="assets/css/barber.css">
+</head>
+<body>
+<div class="app-shell">
+<header class="app-header">
+  <a class="logo" href="#home"><span>MC</span><div><b>MAISON CUT</b><small>BARBER STUDIO</small></div></a>
+  <div><button id="favOpen" class="icon-btn">♡</button><button id="menuOpen" class="icon-btn">☰</button></div>
+</header>
+
+<main>
+<section class="view active" data-view="home">
+  <div class="hero">
+    <img src="assets/art/hero.svg" alt="Illustration barber shop">
+    <div class="shade"></div>
+    <div class="hero-content">
+      <span>BARBER · HAIR · BEARD</span>
+      <h1>Votre style.<br><em>Notre précision.</em></h1>
+      <p>Des coupes nettes, des détails soignés et un rendez-vous réservé en quelques secondes.</p>
+      <div><button data-nav="booking">Réserver ↗</button><button data-nav="services">Voir les services</button></div>
+    </div>
+  </div>
+
+  <section class="block quick-book">
+    <div class="block-head"><div><span>PROCHAIN CRÉNEAU</span><h2>Aujourd'hui.</h2></div><b>17:30</b></div>
+    <button data-nav="booking">Réserver ce créneau ↗</button>
+  </section>
+
+  <section class="block">
+    <div class="block-head"><div><span>LES PLUS RÉSERVÉS</span><h2>Les essentiels.</h2></div><button data-nav="services">Tout voir →</button></div>
+    <div class="service-cards">
+      <article><div class="service-icon">01</div><div><small>45 MIN</small><h3>Skin Fade</h3><p>Dégradé précis + finition</p></div><b>28 €</b></article>
+      <article><div class="service-icon">02</div><div><small>35 MIN</small><h3>Coupe classique</h3><p>Ciseaux ou tondeuse</p></div><b>24 €</b></article>
+      <article><div class="service-icon">03</div><div><small>1H</small><h3>Coupe + barbe</h3><p>Service complet</p></div><b>42 €</b></article>
+    </div>
+  </section>
+
+  <section class="block inspiration">
+    <div class="block-head"><div><span>STYLES</span><h2>Trouvez votre coupe.</h2></div><button data-nav="styles">Galerie →</button></div>
+    <div class="mood-row"><img src="assets/art/fade.svg"><img src="assets/art/classic.svg"><img src="assets/art/texture.svg"></div>
+  </section>
+
+  <section class="block reviews">
+    <span>AVIS CLIENTS</span>
+    <blockquote>“Ponctuel, propre et exactement la coupe que j'avais demandée.”</blockquote>
+    <div><b>★★★★★</b><span>Thomas R. · client démo</span></div>
+  </section>
+</section>
+
+<section class="view" data-view="services">
+  <div class="page-title"><span>SERVICES / TARIFS</span><h1>Choisissez<br><em>votre service.</em></h1><p>Des prestations simples, claires et faciles à réserver.</p></div>
+  <div class="service-list">
+    <article><div><span>01</span><h2>Skin Fade</h2><p>Dégradé peau, contour et coiffage.</p><small>45 min</small></div><b>28 €</b><button class="select-service" data-service="Skin Fade" data-price="28" data-duration="45 min">Choisir ↗</button></article>
+    <article><div><span>02</span><h2>Coupe classique</h2><p>Ciseaux, tondeuse ou combinaison.</p><small>35 min</small></div><b>24 €</b><button class="select-service" data-service="Coupe classique" data-price="24" data-duration="35 min">Choisir ↗</button></article>
+    <article><div><span>03</span><h2>Taille de barbe</h2><p>Contours, longueur et finition.</p><small>25 min</small></div><b>18 €</b><button class="select-service" data-service="Taille de barbe" data-price="18" data-duration="25 min">Choisir ↗</button></article>
+    <article><div><span>04</span><h2>Coupe + barbe</h2><p>Le service complet Maison Cut.</p><small>1h</small></div><b>42 €</b><button class="select-service" data-service="Coupe + barbe" data-price="42" data-duration="1h">Choisir ↗</button></article>
+    <article><div><span>05</span><h2>Junior</h2><p>Coupe enfant / adolescent.</p><small>30 min</small></div><b>20 €</b><button class="select-service" data-service="Junior" data-price="20" data-duration="30 min">Choisir ↗</button></article>
+  </div>
+</section>
+
+<section class="view" data-view="booking">
+  <div class="page-title"><span>BOOKING / 4 ÉTAPES</span><h1>Votre<br><em>rendez-vous.</em></h1><p>Service, barber, jour et heure.</p></div>
+
+  <div class="booking-card">
+    <div class="booking-step"><span>01</span><h2>Service</h2></div>
+    <label>Prestation<select id="bookingService">
+      <option value="28|Skin Fade|45 min">Skin Fade · 28 €</option>
+      <option value="24|Coupe classique|35 min">Coupe classique · 24 €</option>
+      <option value="18|Taille de barbe|25 min">Taille de barbe · 18 €</option>
+      <option value="42|Coupe + barbe|1h">Coupe + barbe · 42 €</option>
+      <option value="20|Junior|30 min">Junior · 20 €</option>
+    </select></label>
+
+    <div class="booking-step"><span>02</span><h2>Votre barber</h2></div>
+    <div class="barber-choice" id="barberChoice">
+      <button class="active" data-barber="Yanis"><span>Y</span><div><b>Yanis</b><small>Fade · Beard</small></div></button>
+      <button data-barber="Lucas"><span>L</span><div><b>Lucas</b><small>Classic · Scissor</small></div></button>
+      <button data-barber="Mehdi"><span>M</span><div><b>Mehdi</b><small>Texture · Fade</small></div></button>
+    </div>
+
+    <div class="booking-step"><span>03</span><h2>Date</h2></div>
+    <div class="date-strip" id="dateStrip"></div>
+
+    <div class="booking-step"><span>04</span><h2>Créneau disponible</h2></div>
+    <div class="slots" id="slots"></div>
+
+    <div class="booking-summary">
+      <div><span>Service</span><b id="summaryService">Skin Fade</b></div>
+      <div><span>Barber</span><b id="summaryBarber">Yanis</b></div>
+      <div><span>Date</span><b id="summaryDate">—</b></div>
+      <div><span>Heure</span><b id="summaryTime">—</b></div>
+      <div><span>Prix</span><b id="summaryPrice">28 €</b></div>
+    </div>
+    <button class="primary-wide" id="continueBooking">Continuer ↗</button>
+  </div>
+</section>
+
+<section class="view" data-view="styles">
+  <div class="page-title"><span>STYLE / GALLERY</span><h1>Choisissez<br><em>votre look.</em></h1></div>
+  <div class="gallery-filter"><button class="active" data-style="all">Tout</button><button data-style="fade">Fade</button><button data-style="classic">Classic</button><button data-style="beard">Barbe</button></div>
+  <div class="gallery-grid">
+    <article data-style-card="fade"><img src="assets/art/fade.svg"><div><span>Skin Fade</span><button class="fav-style">♡</button></div></article>
+    <article data-style-card="classic"><img src="assets/art/classic.svg"><div><span>Classic Cut</span><button class="fav-style">♡</button></div></article>
+    <article data-style-card="fade"><img src="assets/art/texture.svg"><div><span>Textured Crop</span><button class="fav-style">♡</button></div></article>
+    <article data-style-card="beard"><img src="assets/art/beard.svg"><div><span>Beard Shape</span><button class="fav-style">♡</button></div></article>
+  </div>
+</section>
+
+<section class="view" data-view="team">
+  <div class="page-title"><span>TEAM / BARBERS</span><h1>Choisissez<br><em>votre expert.</em></h1><p>Profils fictifs pour la démonstration du template.</p></div>
+  <div class="team-list">
+    <article><div class="avatar a1">Y</div><div><span>BARBER / 01</span><h2>Yanis</h2><p>Skin fade · Beard · 8 ans d'expérience</p><div><b>4.9 ★</b><button class="book-barber" data-barber="Yanis">Réserver ↗</button></div></div></article>
+    <article><div class="avatar a2">L</div><div><span>BARBER / 02</span><h2>Lucas</h2><p>Ciseaux · Classique · 6 ans d'expérience</p><div><b>4.8 ★</b><button class="book-barber" data-barber="Lucas">Réserver ↗</button></div></div></article>
+    <article><div class="avatar a3">M</div><div><span>BARBER / 03</span><h2>Mehdi</h2><p>Texture · Fade · 5 ans d'expérience</p><div><b>4.9 ★</b><button class="book-barber" data-barber="Mehdi">Réserver ↗</button></div></div></article>
+  </div>
+</section>
+
+<section class="view" data-view="account">
+  <div class="page-title"><span>MY / APPOINTMENTS</span><h1>Mes<br><em>rendez-vous.</em></h1><p>Les réservations de démonstration apparaissent ici.</p></div>
+  <div id="appointmentList"></div>
+  <div class="account-note"><span>VERSION RÉELLE</span><p>Le calendrier peut être connecté à Supabase, Firebase ou un backend pour gérer les horaires de plusieurs coiffeurs en temps réel.</p></div>
+</section>
+</main>
+
+<nav class="bottom-nav">
+  <button class="active" data-nav="home"><span>⌂</span><small>Accueil</small></button>
+  <button data-nav="services"><span>◇</span><small>Services</small></button>
+  <button class="book-main" data-nav="booking"><span>+</span><small>Réserver</small></button>
+  <button data-nav="styles"><span>✦</span><small>Styles</small></button>
+  <button data-nav="account"><span>◎</span><small>Mes RDV</small></button>
+</nav>
+
+<div class="menu-drawer" id="menuDrawer"><div>
+  <button id="menuClose">×</button><span>MAISON CUT</span>
+  <a data-nav="home">Accueil</a><a data-nav="services">Services & tarifs</a><a data-nav="booking">Réserver</a><a data-nav="styles">Styles</a><a data-nav="team">L'équipe</a><a data-nav="account">Mes rendez-vous</a>
+  <small>Instagram · WhatsApp · Contact</small>
+</div></div>
+
+<div class="booking-modal" id="bookingModal">
+ <div class="booking-panel">
+   <button id="bookingClose">×</button><span>CONFIRMATION / DÉMO</span><h2>Finaliser le rendez-vous.</h2>
+   <form id="bookingForm">
+     <label>Nom<input required name="name" placeholder="Votre nom"></label>
+     <label>Téléphone<input required name="phone" placeholder="06 00 00 00 00"></label>
+     <label>Email<input required type="email" name="email" placeholder="vous@email.fr"></label>
+     <label>Note<textarea name="note" rows="3" placeholder="Style souhaité, longueur, détail..."></textarea></label>
+     <div class="modal-summary" id="modalSummary"></div>
+     <button class="primary-wide">Confirmer le rendez-vous ↗</button>
+     <p id="bookingStatus"></p>
+   </form>
+ </div>
+</div>
+
+<div class="fav-drawer" id="favDrawer"><div><button id="favClose">×</button><span>STYLES SAUVEGARDÉS</span><h2>Vos favoris.</h2><div id="favList"><p>Ajoutez un style depuis la galerie.</p></div></div></div>
+<div id="toast" class="toast"></div>
+</div>
+<script src="assets/js/barber.js"></script>
+</body></html>

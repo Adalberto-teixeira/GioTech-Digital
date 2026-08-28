@@ -1,0 +1,53 @@
+<!doctype html><html lang="fr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#f3f0ea">
+<link rel="stylesheet" href="assets/css/style.css"><meta name="description" content="Rubrique Nexus Journal."><title>Rubrique — Nexus Journal</title></head><body><header class="site-header">
+  <div class="header-line">
+    <a class="brand" href="index.html"><span>N</span><div><b>NEXUS</b><small>JOURNAL</small></div></a>
+    <div class="header-center"><span>Design</span><i></i><span>Tech</span><i></i><span>Culture</span></div>
+    <div class="header-actions">
+      <button class="round-btn" id="searchToggle" aria-label="Recherche">⌕</button>
+      <button class="round-btn" id="themeToggle" aria-label="Mode sombre">◐</button>
+      <a class="join-btn" href="#newsletter">Newsletter ↗</a>
+    </div>
+  </div>
+  <nav class="nav">
+    <a href="index.html">À la une</a>
+    <a href="category.html?cat=Tech">Tech</a>
+    <a href="category.html?cat=Design">Design</a>
+    <a href="category.html?cat=Culture">Culture</a>
+    <a href="category.html?cat=Business">Business</a>
+    <a href="category.html?cat=Voyage">Voyage</a>
+    <a href="category.html?cat=Lifestyle">Lifestyle</a>
+  </nav>
+  <div class="search-panel" id="searchPanel">
+    <div class="search-inner"><input id="searchInput" placeholder="Rechercher dans Nexus Journal..."><button id="searchClose">×</button></div>
+    <div class="search-results" id="searchResults"></div>
+  </div>
+</header>
+<main>
+<section class="category-hero reveal"><span>RUBRIQUE</span><h1 id="categoryTitle">Tech</h1><p>Une sélection de récits, analyses et idées autour des changements qui méritent notre attention.</p></section>
+<section class="section category-section">
+  <div class="category-tools"><div><button class="active" data-filter="all">Tout</button><button data-filter="Analyse">Analyse</button><button data-filter="Interview">Interview</button><button data-filter="Guide">Guide</button></div><select id="sort"><option value="recent">Plus récent</option><option value="popular">Plus populaire</option></select></div>
+  <div class="category-list" id="categoryList">
+    <article class="category-row reveal" data-type="Analyse" data-pop="97"><img src="assets/images/tech.webp" alt="" loading="lazy"><div><span>ANALYSE</span><h2>La technologie personnelle devient plus discrète</h2><p>Pourquoi les prochains produits essaient moins de montrer leur puissance.</p><small>8 min · Aujourd'hui</small></div></article>
+    <article class="category-row reveal" data-type="Interview" data-pop="82"><img src="assets/images/foldable.webp" alt="" loading="lazy"><div><span>INTERVIEW</span><h2>“Un bon produit commence par ce que l'on décide de ne pas ajouter”</h2><p>Entretien fictif autour du design de produits et de l'innovation.</p><small>6 min · Aujourd'hui</small></div></article>
+    <article class="category-row reveal" data-type="Guide" data-pop="73"><img src="assets/images/screen.webp" alt="" loading="lazy"><div><span>GUIDE</span><h2>Construire un espace numérique plus calme en cinq étapes</h2><p>Notifications, organisation et outils : retrouver une expérience plus lisible.</p><small>5 min · Hier</small></div></article>
+    <article class="category-row reveal" data-type="Analyse" data-pop="88"><img src="assets/images/laptop.webp" alt="" loading="lazy"><div><span>ANALYSE</span><h2>Le retour du matériel dans une époque dominée par le cloud</h2><p>Pourquoi l'objet physique reprend une place importante dans l'expérience.</p><small>7 min · Hier</small></div></article>
+  </div>
+</section>
+</main><footer>
+  <div class="footer-grid">
+    <div class="footer-brand"><a class="brand" href="index.html"><span>N</span><div><b>NEXUS</b><small>JOURNAL</small></div></a><p>Template éditorial gratuit pour magazine digital, blog moderne ou média indépendant.</p></div>
+    <div><strong>Explorer</strong><a href="category.html?cat=Tech">Tech</a><a href="category.html?cat=Design">Design</a><a href="category.html?cat=Culture">Culture</a><a href="category.html?cat=Voyage">Voyage</a></div>
+    <div><strong>Magazine</strong><a href="#">À propos</a><a href="#">Contact</a><a href="#">Contributeurs</a><a href="#">Archives</a></div>
+  </div>
+  <div class="footer-bottom"><span>© <span id="year"></span> Nexus Journal — Démonstration.</span><span>Créé par <b>GioTech Digital</b> · <a href="https://adalberto.fr" target="_blank" rel="noopener">Adalberto Furtado — adalberto.fr ↗</a></span></div>
+</footer>
+<nav class="mobile-dock">
+  <a class="active" href="index.html"><span>⌂</span><small>Accueil</small></a>
+  <a href="category.html?cat=Tech"><span>◈</span><small>Tech</small></a>
+  <button id="mobileSearch"><span>⌕</span><small>Recherche</small></button>
+  <a href="category.html?cat=Culture"><span>◎</span><small>Culture</small></a>
+  <a href="#newsletter"><span>✦</span><small>Newsletter</small></a>
+</nav><script src="assets/js/main.js"></script></body></html>

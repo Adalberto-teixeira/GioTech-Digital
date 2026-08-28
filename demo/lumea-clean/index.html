@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiMxZTdhNTIiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPkw8L3RleHQ+PC9zdmc+">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Luméa Clean — template premium gratuit pour entreprise de nettoyage, ménage, bureaux et entretien professionnel.">
+  <meta name="theme-color" content="#f4fbf8">
+  <title>Luméa Clean — Nettoyage premium</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Luméa Clean accueil">
+      <span class="brand-icon">L</span><span>Luméa <b>Clean</b></span>
+    </a>
+    <nav class="desktop-nav">
+      <a href="#services">Services</a>
+      <a href="#process">Méthode</a>
+      <a href="#results">Résultats</a>
+      <a href="#reviews">Avis</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <a class="header-cta" href="#quote">Estimer mon nettoyage <span>↗</span></a>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-photo" aria-hidden="true"></div>
+      <div class="hero-overlay" aria-hidden="true"></div>
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span></span> Maison • Bureau • Location • Entretien</p>
+        <h1>Un espace propre.<br><em>Un esprit plus léger.</em></h1>
+        <p class="hero-lead">Une expérience de nettoyage moderne, flexible et transparente — pensée pour les particuliers, les professionnels et les locations courte durée.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#quote">Obtenir une estimation <span>↗</span></a>
+          <a class="btn ghost" href="#services">Découvrir les services</a>
+        </div>
+        <div class="hero-proof">
+          <div><strong>4.9/5</strong><span>note démo</span></div>
+          <div><strong>7j/7</strong><span>créneaux flexibles</span></div>
+          <div><strong>100%</strong><span>devis transparent</span></div>
+        </div>
+      </div>
+
+      <aside class="quick-card reveal" data-delay="120">
+        <div class="quick-head">
+          <span>Réservation express</span><b>≈ 60 sec</b>
+        </div>
+        <label>Type de service
+          <select id="quickService">
+            <option value="home">Ménage à domicile</option>
+            <option value="office">Bureaux & locaux</option>
+            <option value="deep">Grand nettoyage</option>
+            <option value="rental">Location / Airbnb</option>
+          </select>
+        </label>
+        <label>Surface
+          <div class="range-line"><input id="surfaceRange" type="range" min="20" max="250" value="70"><output id="surfaceOutput">70 m²</output></div>
+        </label>
+        <label>Fréquence
+          <div class="segment">
+            <button class="active" type="button" data-frequency="once">Une fois</button>
+            <button type="button" data-frequency="weekly">Chaque semaine</button>
+          </div>
+        </label>
+        <div class="price-preview">
+          <small>Estimation démo à partir de</small>
+          <strong id="quickPrice">79 €</strong>
+        </div>
+        <a class="btn primary full" href="#quote">Continuer <span>↓</span></a>
+      </aside>
+
+      <a class="scroll-tip" href="#services">Découvrir <i></i></a>
+    </section>
+
+    <section class="trust-strip">
+      <div class="trust-track">
+        <span>PRODUITS RESPONSABLES</span><i>✦</i><span>INTERVENANTS VÉRIFIÉS</span><i>✦</i><span>RÉSERVATION RAPIDE</span><i>✦</i><span>SATISFACTION SUIVIE</span><i>✦</i><span>PRIX TRANSPARENTS</span><i>✦</i>
+        <span>PRODUITS RESPONSABLES</span><i>✦</i><span>INTERVENANTS VÉRIFIÉS</span><i>✦</i><span>RÉSERVATION RAPIDE</span><i>✦</i><span>SATISFACTION SUIVIE</span><i>✦</i><span>PRIX TRANSPARENTS</span><i>✦</i>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-tag">01 — Nos services</p>
+          <h2>Le bon service,<br><em>au bon moment.</em></h2>
+        </div>
+        <p>Des prestations faciles à comprendre, personnalisables et conçues pour répondre aux situations les plus courantes.</p>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <div class="service-img"><img src="assets/images/service-home.webp" alt="Nettoyage à domicile" loading="lazy"><span>01</span></div>
+          <div class="service-body"><div><small>Particuliers</small><h3>Ménage à domicile</h3></div><p>Entretien régulier ou ponctuel, pièces de vie, cuisine, salle de bain et sols.</p><a href="#quote">Configurer ce service →</a></div>
+        </article>
+        <article class="service-card reveal" data-delay="70">
+          <div class="service-img"><img src="assets/images/service-office.webp" alt="Nettoyage de bureaux" loading="lazy"><span>02</span></div>
+          <div class="service-body"><div><small>Professionnels</small><h3>Bureaux & locaux</h3></div><p>Interventions adaptées aux horaires, espaces de travail, sanitaires et zones communes.</p><a href="#quote">Configurer ce service →</a></div>
+        </article>
+        <article class="service-card reveal" data-delay="140">
+          <div class="service-img"><img src="assets/images/service-deep.webp" alt="Grand nettoyage" loading="lazy"><span>03</span></div>
+          <div class="service-body"><div><small>Ponctuel</small><h3>Grand nettoyage</h3></div><p>Après travaux, déménagement, remise en état ou nettoyage approfondi saisonnier.</p><a href="#quote">Configurer ce service →</a></div>
+        </article>
+        <article class="service-card reveal">
+          <div class="service-img"><img src="assets/images/service-window.webp" alt="Vitres et détails" loading="lazy"><span>04</span></div>
+          <div class="service-body"><div><small>Options</small><h3>Vitres & détails</h3></div><p>Vitres, encadrements, électroménager, balcon et options complémentaires.</p><a href="#quote">Ajouter une option →</a></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section experience" id="process">
+      <div class="experience-panel">
+        <div class="experience-copy reveal">
+          <p class="section-tag">02 — Une expérience simple</p>
+          <h2>Réserver un nettoyage ne devrait pas être <em>compliqué.</em></h2>
+          <p>Un parcours clair, depuis l'estimation jusqu'à la fin de l'intervention. Cette démo simule tout le flux en JavaScript.</p>
+          <div class="steps">
+            <div><span>01</span><section><b>Choisissez</b><small>Service, surface et options.</small></section></div>
+            <div><span>02</span><section><b>Planifiez</b><small>Date et créneau souhaités.</small></section></div>
+            <div><span>03</span><section><b>Confirmez</b><small>Coordonnées et récapitulatif.</small></section></div>
+            <div><span>04</span><section><b>Profitez</b><small>Suivi et confirmation locale.</small></section></div>
+          </div>
+        </div>
+        <div class="phone-wrap reveal" data-delay="100">
+          <div class="phone">
+            <div class="phone-bar"><span>9:41</span><i></i><b>●●●</b></div>
+            <div class="app-brand"><span class="brand-icon">L</span><div><b>Luméa Clean</b><small>Votre prochaine intervention</small></div></div>
+            <div class="app-card">
+              <div class="app-status"><i></i> Confirmée</div>
+              <h3>Ménage à domicile</h3>
+              <p>Mardi · 09:00 — 11:30</p>
+              <div class="cleaner"><span>MC</span><div><b>Marie C.</b><small>Intervenante démo · 4.9 ★</small></div></div>
+            </div>
+            <div class="app-progress"><span class="done"></span><span class="done"></span><span class="active"></span><span></span></div>
+            <div class="app-row"><span>Adresse</span><b>12 avenue Exemple</b></div>
+            <div class="app-row"><span>Estimation</span><b>89 €</b></div>
+            <button type="button">Voir les détails</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section results" id="results">
+      <div class="section-heading reveal">
+        <div><p class="section-tag">03 — Avant / après</p><h2>Les détails font<br><em>la différence.</em></h2></div>
+        <p>Faites glisser le curseur pour comparer. Le composant fonctionne entièrement en JavaScript vanilla.</p>
+      </div>
+      <div class="compare reveal" id="compare">
+        <img class="compare-after" src="assets/images/after.webp" alt="Résultat après nettoyage" loading="lazy">
+        <div class="compare-before" id="compareBefore"><img src="assets/images/before.webp" alt="Espace avant nettoyage" loading="lazy"></div>
+        <input id="compareRange" aria-label="Comparer avant et après" type="range" min="0" max="100" value="50">
+        <div class="compare-line" id="compareLine"><span>↔</span></div>
+        <div class="compare-label before-label">Avant</div><div class="compare-label after-label">Après</div>
+      </div>
+    </section>
+
+    <section class="section why">
+      <div class="why-grid">
+        <div class="why-image reveal"><img src="assets/images/team.webp" alt="Équipe de nettoyage" loading="lazy"><div class="badge"><strong>+ de temps</strong><span>pour ce qui compte vraiment</span></div></div>
+        <div class="why-copy reveal" data-delay="90">
+          <p class="section-tag">04 — Pourquoi Luméa</p>
+          <h2>Une qualité suivie, pas seulement <em>promise.</em></h2>
+          <div class="features">
+            <article><span>✓</span><div><b>Checklist par prestation</b><p>Chaque intervention suit une liste claire et personnalisable.</p></div></article>
+            <article><span>✓</span><div><b>Suivi après intervention</b><p>Une expérience de feedback simple pour mesurer la satisfaction.</p></div></article>
+            <article><span>✓</span><div><b>Équipe identifiable</b><p>Profil, créneau et détails visibles avant l'intervention.</p></div></article>
+            <article><span>✓</span><div><b>Options transparentes</b><p>Le prix évolue avec les choix avant la confirmation.</p></div></article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="quote-section" id="quote">
+      <div class="quote-shell">
+        <div class="quote-copy reveal">
+          <p class="section-tag">05 — Estimateur</p>
+          <h2>Votre estimation<br>en <em>quelques clics.</em></h2>
+          <p>Cet outil est une démonstration interactive. Aucun paiement réel n'est effectué.</p>
+          <div class="estimate-live">
+            <span>Estimation actuelle</span><strong id="estimateTotal">79 €</strong><small>Prix fictif de démonstration</small>
+          </div>
+        </div>
+        <form class="quote-form reveal" data-delay="80" id="quoteForm">
+          <div class="form-step"><span>1</span><h3>Votre prestation</h3></div>
+          <div class="choice-grid" id="serviceChoices">
+            <button class="choice active" type="button" data-service="home"><b>Maison</b><small>Entretien courant</small></button>
+            <button class="choice" type="button" data-service="office"><b>Bureau</b><small>Locaux professionnels</small></button>
+            <button class="choice" type="button" data-service="deep"><b>Grand nettoyage</b><small>Remise en état</small></button>
+            <button class="choice" type="button" data-service="rental"><b>Location</b><small>Turnover voyageurs</small></button>
+          </div>
+          <label>Surface approximative <div class="range-line"><input id="quoteSurface" type="range" min="20" max="300" value="70"><output id="quoteSurfaceOutput">70 m²</output></div></label>
+          <div class="options">
+            <label><input type="checkbox" value="15"> Vitres <span>+15 €</span></label>
+            <label><input type="checkbox" value="12"> Four <span>+12 €</span></label>
+            <label><input type="checkbox" value="10"> Réfrigérateur <span>+10 €</span></label>
+          </div>
+          <div class="form-row"><label>Nom<input name="name" required placeholder="Votre nom"></label><label>Email<input name="email" required type="email" placeholder="vous@email.fr"></label></div>
+          <div class="form-row"><label>Date souhaitée<input name="date" required type="date"></label><label>Créneau<select name="slot"><option>08:00 — 11:00</option><option>11:00 — 14:00</option><option>14:00 — 17:00</option><option>17:00 — 20:00</option></select></label></div>
+          <button class="btn primary full" type="submit">Recevoir mon récapitulatif <span>↗</span></button>
+          <p class="form-message" id="quoteMessage"></p>
+        </form>
+      </div>
+    </section>
+
+    <section class="section reviews" id="reviews">
+      <div class="section-heading reveal">
+        <div><p class="section-tag">06 — Expérience client</p><h2>Ce qu'ils en<br><em>disent.</em></h2></div>
+        <p>Exemples fictifs fournis uniquement pour montrer la mise en page du template.</p>
+      </div>
+      <div class="review-grid">
+        <article class="review reveal"><div class="stars">★★★★★</div><p>“La réservation est très claire et j'apprécie de voir immédiatement le créneau, le prix et la personne qui intervient.”</p><div><strong>Claire D.</strong><span>Cliente démo · Martigues</span></div></article>
+        <article class="review reveal" data-delay="70"><div class="stars">★★★★★</div><p>“Notre bureau est entretenu tôt le matin sans perturber l'équipe. Le suivi est simple et professionnel.”</p><div><strong>Julien M.</strong><span>Entreprise démo</span></div></article>
+        <article class="review reveal" data-delay="140"><div class="stars">★★★★★</div><p>“Très pratique pour gérer les rotations de location. La checklist permet de ne rien oublier.”</p><div><strong>Sarah L.</strong><span>Hôte démo</span></div></article>
+      </div>
+    </section>
+
+    <section class="section faq">
+      <div class="faq-layout">
+        <div class="faq-intro reveal"><p class="section-tag">07 — FAQ</p><h2>Questions<br><em>fréquentes.</em></h2><p>Tout ce qu'il faut pour rassurer avant une première réservation.</p></div>
+        <div class="accordion">
+          <button class="faq-item reveal"><span>Les produits sont-ils inclus ?</span><i>+</i><p>Dans cette démonstration, oui. Vous pouvez facilement adapter le texte selon votre offre réelle.</p></button>
+          <button class="faq-item reveal"><span>Puis-je modifier mon créneau ?</span><i>+</i><p>Le template peut afficher une politique d'annulation ou de modification personnalisée.</p></button>
+          <button class="faq-item reveal"><span>Comment fonctionne l'estimation ?</span><i>+</i><p>Le JavaScript calcule un montant fictif selon le service, la surface et les options sélectionnées.</p></button>
+          <button class="faq-item reveal"><span>Le paiement est-il réel ?</span><i>+</i><p>Non. Ce template gratuit n'intègre aucun paiement réel. Il s'agit uniquement d'une démonstration front-end.</p></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journal">
+      <div class="section-heading reveal">
+        <div><p class="section-tag">08 — Conseils</p><h2>Le journal<br><em>Luméa.</em></h2></div>
+        <p>Une section éditoriale prête à accueillir vos articles SEO et conseils d'entretien.</p>
+      </div>
+      <div class="article-grid">
+        <article class="article reveal"><img src="assets/images/article-1.webp" alt="" loading="lazy"><div><small>Conseils · 4 min</small><h3>Une routine simple pour garder une cuisine nette</h3><a href="#">Lire l'article →</a></div></article>
+        <article class="article reveal" data-delay="70"><img src="assets/images/article-2.webp" alt="" loading="lazy"><div><small>Organisation · 5 min</small><h3>Préparer son logement avant un grand nettoyage</h3><a href="#">Lire l'article →</a></div></article>
+        <article class="article reveal" data-delay="140"><img src="assets/images/article-3.webp" alt="" loading="lazy"><div><small>Professionnels · 3 min</small><h3>À quelle fréquence nettoyer ses bureaux ?</h3><a href="#">Lire l'article →</a></div></article>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="contact-inner reveal">
+        <p class="section-tag">09 — Contact</p>
+        <h2>Prêt à retrouver<br>un espace qui <em>respire ?</em></h2>
+        <div class="contact-actions"><a class="btn primary" href="#quote">Estimer mon service <span>↗</span></a><a class="contact-phone" href="tel:+33100000000">01 00 00 00 00</a></div>
+      </div>
+      <div class="bubble one"></div><div class="bubble two"></div><div class="bubble three"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-main">
+      <div class="footer-brand"><a class="brand" href="#home"><span class="brand-icon">L</span><span>Luméa <b>Clean</b></span></a><p>Template gratuit et moderne pour entreprise de nettoyage et services à domicile.</p></div>
+      <div><strong>Services</strong><a href="#services">Maison</a><a href="#services">Bureaux</a><a href="#services">Grand nettoyage</a><a href="#services">Locations</a></div>
+      <div><strong>Découvrir</strong><a href="#process">Méthode</a><a href="#results">Avant / après</a><a href="#reviews">Avis</a><a href="#quote">Estimation</a></div>
+      <div><strong>Contact</strong><a href="mailto:bonjour@example.fr">bonjour@example.fr</a><a href="tel:+33100000000">01 00 00 00 00</a><span>France</span></div>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year"></span> Luméa Clean — Démonstration.</span></div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div></footer>
+
+  <nav class="mobile-dock" aria-label="Navigation mobile">
+    <a class="active" href="#home"><span>⌂</span><small>Accueil</small></a>
+    <a href="#services"><span>✦</span><small>Services</small></a>
+    <a class="dock-main" href="#quote"><span>+</span><small>Devis</small></a>
+    <a href="#results"><span>◐</span><small>Résultats</small></a>
+    <a href="#contact"><span>↗</span><small>Contact</small></a>
+  </nav>
+
+  <div class="toast" id="toast"><span>✓</span><div><b>Estimation enregistrée</b><small>Démo stockée localement dans votre navigateur.</small></div></div>
+  <script src="assets/js/main.js"></script>
+
+</div>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/lumea-clean/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo Lumea Clean · GioTech Digital</div>
+</div>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>

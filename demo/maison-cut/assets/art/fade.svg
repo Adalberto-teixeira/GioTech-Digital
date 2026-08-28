@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 700">
+<defs><linearGradient id="g" x2="1" y2="1"><stop stop-color="#1b2927"/><stop offset="1" stop-color="#b68c59"/></linearGradient></defs>
+<rect width="700" height="700" rx="60" fill="url(#g)"/>
+<circle cx="530" cy="145" r="150" fill="#fff" opacity=".1"/>
+<ellipse cx="350" cy="310" rx="150" ry="185" fill="#b77f5f"/>
+<path d="M194 315C190 105 510 115 512 306C438 221 320 213 246 250C221 262 203 284 194 315Z" fill="#161716"/>
+<path d="M235 355Q255 500 347 530Q447 497 469 355Q422 414 348 420Q281 414 235 355Z" fill="#26211e"/>
+<text x="40" y="590" fill="#fff" font-family="Arial" font-weight="bold" font-size="62">SKIN FADE</text>
+<text x="45" y="635" fill="#fff" fill-opacity=".8" font-family="Arial" font-size="20" letter-spacing="5">CLEAN / SHARP</text>
+</svg>

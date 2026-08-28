@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 1200">
+<defs>
+  <linearGradient id="bg" x2="1" y2="1"><stop stop-color="#17201f"/><stop offset=".52" stop-color="#324a43"/><stop offset="1" stop-color="#b28c5b"/></linearGradient>
+  <linearGradient id="skin" x2="1" y2="1"><stop stop-color="#d9a480"/><stop offset="1" stop-color="#9d674e"/></linearGradient>
+</defs>
+<rect width="900" height="1200" fill="url(#bg)"/>
+<circle cx="690" cy="240" r="260" fill="#d9b77a" opacity=".18"/>
+<circle cx="140" cy="1050" r="320" fill="#88b8a7" opacity=".12"/>
+<!-- stylized fictional client -->
+<ellipse cx="475" cy="465" rx="190" ry="235" fill="url(#skin)"/>
+<path d="M282 470C276 180 675 142 688 455C602 355 505 326 418 352C353 373 309 414 282 470Z" fill="#161716"/>
+<path d="M302 410C325 230 500 180 625 245C510 220 390 274 302 410Z" fill="#2e302d"/>
+<ellipse cx="406" cy="480" rx="20" ry="11" fill="#211b18"/>
+<ellipse cx="548" cy="480" rx="20" ry="11" fill="#211b18"/>
+<path d="M409 594Q474 630 538 588" fill="none" stroke="#704137" stroke-width="11" stroke-linecap="round"/>
+<path d="M327 535Q347 695 470 727Q604 692 624 535Q563 606 473 618Q389 610 327 535Z" fill="#25211e" opacity=".96"/>
+<path d="M245 1200Q260 850 430 730Q520 685 620 744Q760 860 790 1200Z" fill="#111515"/>
+<!-- barber scissors -->
+<g transform="translate(80 830) rotate(-18)">
+<circle cx="70" cy="60" r="45" fill="none" stroke="#d7b77e" stroke-width="14"/>
+<circle cx="160" cy="60" r="45" fill="none" stroke="#d7b77e" stroke-width="14"/>
+<path d="M105 72L300 200M125 70L300 -20" stroke="#d7b77e" stroke-width="16" stroke-linecap="round"/>
+</g>
+<text x="55" y="88" fill="#efe9dc" font-family="Arial" font-size="23" letter-spacing="8">MAISON CUT / BARBER STUDIO</text>
+</svg>

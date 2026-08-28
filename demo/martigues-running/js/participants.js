@@ -1,0 +1,2 @@
+function renderParticipants(){const q=(document.getElementById('psearch')?.value||'').toLowerCase(); const tbody=document.getElementById('participantsBody');if(!tbody)return;tbody.innerHTML=participants().filter(p=>`${p.bib} ${p.name} ${p.club} ${p.country} ${p.race}`.toLowerCase().includes(q)).map(p=>`<tr><td><b>#${p.bib}</b></td><td>${p.name}</td><td>${p.club}</td><td>${p.country}</td><td>${p.race}</td><td>SAS ${p.race==='Marathon'?'A':'B'}</td></tr>`).join('')}
+document.getElementById('psearch')?.addEventListener('input',renderParticipants);renderParticipants();

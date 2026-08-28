@@ -1,0 +1,6 @@
+const steps=[...document.querySelectorAll('.form-step')], pills=[...document.querySelectorAll('.step-pill')];let current=0;
+function showStep(i){current=i;steps.forEach((s,n)=>s.classList.toggle('active',n===i));pills.forEach((p,n)=>p.classList.toggle('active',n===i));window.scrollTo({top:180,behavior:'smooth'})}
+document.querySelectorAll('[data-next]').forEach(b=>b.onclick=()=>showStep(Math.min(current+1,steps.length-1)));
+document.querySelectorAll('[data-prev]').forEach(b=>b.onclick=()=>showStep(Math.max(current-1,0)));
+const form=document.getElementById('registrationForm');
+if(form)form.addEventListener('submit',e=>{e.preventDefault();const fd=new FormData(form), bib=Math.floor(1000+Math.random()*8999); const data={bib,first:fd.get('first'),last:fd.get('last'),race:fd.get('race'),club:fd.get('club')||'Individuel',country:fd.get('country')||'France',time:fd.get('time')||'04:15:00'};localStorage.setItem('mrf_last_registration',JSON.stringify(data)); const list=JSON.parse(localStorage.getItem('mrf_participants')||'[]');list.unshift(data);localStorage.setItem('mrf_participants',JSON.stringify(list.slice(0,50)));document.getElementById('confirmName').textContent=`${data.first} ${data.last}`;document.getElementById('confirmBib').textContent=`#${bib}`;document.getElementById('confirmRace').textContent=data.race;showStep(steps.length-1)});

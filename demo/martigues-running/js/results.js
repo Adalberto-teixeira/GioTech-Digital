@@ -1,0 +1,2 @@
+function render(){const q=(document.getElementById('search')?.value||'').toLowerCase(); const tbody=document.getElementById('resultsBody');if(!tbody)return; tbody.innerHTML=participants().filter(p=>`${p.bib} ${p.name} ${p.club} ${p.race}`.toLowerCase().includes(q)).map(p=>`<tr><td>${p.rank}</td><td><b>#${p.bib}</b></td><td>${p.name}</td><td>${p.club}</td><td>${p.race}</td><td><b>${p.time}</b></td></tr>`).join('')}
+document.getElementById('search')?.addEventListener('input',render);render();
