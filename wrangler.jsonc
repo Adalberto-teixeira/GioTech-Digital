@@ -3,6 +3,12 @@
   "name": "giotech-digital",
   "main": "worker.js",
   "compatibility_date": "2026-08-29",
+  "routes": [
+    {
+      "pattern": "giotech-digital.fr",
+      "custom_domain": true
+    }
+  ],
   "assets": {
     "directory": ".",
     "binding": "ASSETS",
