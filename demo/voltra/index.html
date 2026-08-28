@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTQiIGZpbGw9IiM0YjNkZjAiLz48dGV4dCB4PSIzMiIgeT0iMzIiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzMCIgZm9udC13ZWlnaHQ9IjcwMCIgZmlsbD0iI2ZmZiIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZG9taW5hbnQtYmFzZWxpbmU9ImNlbnRyYWwiPlY8L3RleHQ+PC9zdmc+">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Voltra — Téléphones, ordinateurs &amp; composants</title>
+  <meta name="description" content="Voltra est un template de boutique en ligne pour l'électronique : téléphones, ordinateurs, composants PC et accessoires, avec panier fonctionnel." />
+  <meta name="robots" content="noindex, nofollow" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js"></script>
+
+  <!-- ===== Définitions SVG réutilisées par les rendus produits ===== -->
+  <style>
+    .p-phone-body { fill: url(#gradTitanium); }
+    .p-laptop-body { fill: url(#gradAlu); }
+  </style>
+</head>
+<body>
+
+  <svg width="0" height="0" style="position:absolute;">
+    <defs>
+      <linearGradient id="gradTitanium" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#e4e6ee"/>
+        <stop offset="45%" stop-color="#b9bccb"/>
+        <stop offset="100%" stop-color="#8a8da0"/>
+      </linearGradient>
+      <linearGradient id="gradAlu" x1="0" y1="0" x2="0" y2="1">
+        <stop offset="0%" stop-color="#eceef3"/>
+        <stop offset="100%" stop-color="#c3c6d3"/>
+      </linearGradient>
+      <linearGradient id="gradScreenBlue" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#3654ff"/>
+        <stop offset="100%" stop-color="#8b3cff"/>
+      </linearGradient>
+      <linearGradient id="gradScreenDark" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#1a1c2b"/>
+        <stop offset="100%" stop-color="#12131a"/>
+      </linearGradient>
+      <linearGradient id="gradPCB" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#1c1f2b"/>
+        <stop offset="100%" stop-color="#12131a"/>
+      </linearGradient>
+      <linearGradient id="gradRGB" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#3654ff"/>
+        <stop offset="50%" stop-color="#8b3cff"/>
+        <stop offset="100%" stop-color="#ff3b8b"/>
+      </linearGradient>
+    </defs>
+  </svg>
+
+  <header class="site-header">
+    <div class="container">
+      <button class="amazon-menu-btn" type="button" id="amazon-menu-btn" aria-label="Menu et catégories" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <a href="#" class="brand"><span class="mark"></span>Voltra</a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="#produits">Téléphones</a></li>
+          <li><a href="#produits">Ordinateurs</a></li>
+          <li><a href="#produits">Composants</a></li>
+          <li><a href="#avis">Avis</a></li>
+        </ul>
+      </nav>
+      <div class="header-actions">
+        <button class="icon-btn" type="button" aria-label="Rechercher" id="desktop-search-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+        <button class="icon-btn" type="button" id="cart-toggle" aria-label="Panier">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12L5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg>
+          <span class="cart-badge" id="cart-badge" style="display:none;">0</span>
+        </button>
+      </div>
+    </div>
+    <div class="amazon-search-row">
+      <select class="amazon-search-cat" aria-label="Catégorie">
+        <option>Tout</option>
+        <option>Téléphones</option>
+        <option>Ordinateurs</option>
+        <option>Composants</option>
+      </select>
+      <input type="search" class="amazon-search-input" placeholder="Rechercher sur Voltra" aria-label="Rechercher un produit">
+      <button class="amazon-search-submit" type="button" aria-label="Lancer la recherche"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg></button>
+    </div>
+  </header>
+
+  <!-- ===== Menu catégories (tiroir latéral, style Amazon) ===== -->
+  <div class="amazon-drawer-overlay" id="amazon-drawer-overlay"></div>
+  <aside class="amazon-drawer" id="amazon-drawer">
+    <div class="amazon-drawer-head">
+      <span>Bonjour, identifiez-vous</span>
+      <button class="cart-close" id="amazon-drawer-close" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="amazon-drawer-section">
+      <h4>Parcourir par catégorie</h4>
+      <a href="#produits">Téléphones</a>
+      <a href="#produits">Ordinateurs</a>
+      <a href="#produits">Composants</a>
+      <a href="#avis">Avis clients</a>
+    </div>
+    <div class="amazon-drawer-section">
+      <h4>Aide &amp; paramètres</h4>
+      <a href="#">Mon compte (démo)</a>
+      <a href="#">Service client (démo)</a>
+    </div>
+  </aside>
+
+  <!-- ===== Panier (interactif) ===== -->
+  <div class="cart-overlay" id="cart-overlay"></div>
+  <aside class="cart-drawer" id="cart-drawer">
+    <div class="cart-head">
+      <h3>Votre panier</h3>
+      <button class="cart-close" id="cart-close" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+    <div class="cart-items" id="cart-items">
+      <div class="cart-empty">Votre panier est vide.<br />Ajoutez un produit pour commencer.</div>
+    </div>
+    <div class="cart-foot">
+      <div class="cart-subtotal"><span>Sous-total</span><span id="cart-subtotal">0 €</span></div>
+      <button class="btn btn-primary btn-block" id="cart-checkout">Passer commande</button>
+      <p class="cart-note">Démo — aucune commande réelle n'est traitée.</p>
+    </div>
+  </aside>
+  <div class="toast" id="toast"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M20 6 9 17l-5-5"/></svg><span id="toast-text">Ajouté au panier</span></div>
+
+  <!-- ================= VUE RAPIDE PRODUIT ================= -->
+  <div class="qv-overlay" id="qv-overlay"></div>
+  <div class="qv-modal" id="qv-modal">
+    <button class="qv-close" id="qv-close" aria-label="Fermer">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg>
+    </button>
+    <div class="qv-media" id="qv-media"></div>
+    <div class="qv-body">
+      <span class="qv-badge" id="qv-badge" style="display:none;">Best-seller</span>
+      <div class="product-stars" id="qv-stars"></div>
+      <h2 id="qv-name"></h2>
+      <p class="qv-spec" id="qv-spec"></p>
+      <p class="qv-desc" id="qv-desc"></p>
+      <div class="qv-price" id="qv-price"></div>
+      <div class="qv-qty-row">
+        <span>Quantité</span>
+        <div class="qty-stepper">
+          <button type="button" id="qv-qty-dec" aria-label="Réduire">−</button>
+          <span id="qv-qty-val">1</span>
+          <button type="button" id="qv-qty-inc" aria-label="Augmenter">+</button>
+        </div>
+      </div>
+      <button class="btn btn-gradient btn-block" type="button" id="qv-add">Ajouter au panier</button>
+      <ul class="qv-features">
+        <li>Livraison offerte dès 50 €</li>
+        <li>Retour gratuit sous 30 jours</li>
+        <li>Garantie constructeur 2 ans</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- ================= CHECKOUT ================= -->
+  <div class="checkout-overlay" id="checkout-overlay"></div>
+  <div class="checkout-modal" id="checkout-modal">
+    <div class="checkout-head">
+      <div class="checkout-steps" id="checkout-steps">
+        <span data-step="1" class="is-active">1. Panier</span>
+        <span data-step="2">2. Coordonnées</span>
+        <span data-step="3">3. Livraison</span>
+        <span data-step="4">4. Paiement</span>
+      </div>
+      <button class="qv-close" id="checkout-close" aria-label="Fermer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+    </div>
+
+    <div class="checkout-panel" data-panel="1">
+      <h3>Votre commande</h3>
+      <div class="checkout-cart-list" id="checkout-cart-list"></div>
+      <div class="checkout-line"><span>Sous-total</span><span id="co-subtotal">0 €</span></div>
+      <div class="checkout-line"><span>Livraison</span><span id="co-shipping">Calculée à l'étape suivante</span></div>
+    </div>
+
+    <div class="checkout-panel" data-panel="2" hidden>
+      <h3>Vos coordonnées</h3>
+      <div class="form-row">
+        <div class="form-field"><label for="co-name">Nom complet</label><input id="co-name" type="text" placeholder="Jean Dupont" /></div>
+        <div class="form-field"><label for="co-email">Email</label><input id="co-email" type="email" placeholder="vous@exemple.fr" /></div>
+      </div>
+      <div class="form-field"><label for="co-address">Adresse de livraison</label><input id="co-address" type="text" placeholder="12 rue Exemple, 75000 Paris, France" /></div>
+    </div>
+
+    <div class="checkout-panel" data-panel="3" hidden>
+      <h3>Mode de livraison</h3>
+      <label class="delivery-option"><input type="radio" name="co-delivery" value="standard" checked /><span><strong>Livraison standard</strong><small>3 à 5 jours ouvrés</small></span><b>Gratuite</b></label>
+      <label class="delivery-option"><input type="radio" name="co-delivery" value="express" /><span><strong>Livraison express</strong><small>24 à 48h</small></span><b>+9,90 €</b></label>
+    </div>
+
+    <div class="checkout-panel" data-panel="4" hidden>
+      <h3>Paiement</h3>
+      <div class="payment-methods">
+        <label class="payment-option is-active"><input type="radio" name="co-payment" value="card" checked /><span>💳 Carte bancaire</span></label>
+        <label class="payment-option"><input type="radio" name="co-payment" value="paypal" /><span>🅿️ PayPal</span></label>
+        <label class="payment-option"><input type="radio" name="co-payment" value="apple" /><span> Apple Pay</span></label>
+      </div>
+      <div id="co-card-fields">
+        <div class="form-field"><label>Numéro de carte</label><input type="text" placeholder="4242 4242 4242 4242" inputmode="numeric" /></div>
+        <div class="form-row">
+          <div class="form-field"><label>Expiration</label><input type="text" placeholder="MM/AA" /></div>
+          <div class="form-field"><label>CVC</label><input type="text" placeholder="123" /></div>
+        </div>
+      </div>
+      <p class="checkout-note">Démo — aucun paiement réel n'est traité, aucune donnée n'est envoyée.</p>
+      <div class="checkout-line checkout-total"><span>Total</span><span id="co-total">0 €</span></div>
+    </div>
+
+    <div class="checkout-panel" data-panel="confirm" hidden>
+      <div class="checkout-confirm">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+        <h3>Commande confirmée !</h3>
+        <p>Merci pour votre commande <strong id="co-order-number"></strong>. Un email de confirmation démo aurait été envoyé.</p>
+        <button class="btn btn-outline" type="button" id="checkout-restart">Fermer</button>
+      </div>
+    </div>
+
+    <div class="checkout-foot" id="checkout-foot">
+      <button class="btn btn-outline" type="button" id="checkout-prev" disabled>Précédent</button>
+      <button class="btn btn-gradient" type="button" id="checkout-next">Suivant</button>
+    </div>
+  </div>
+
+
+  <main>
+
+    <section class="hero" id="accueil">
+      <div class="hero-blob" aria-hidden="true"></div>
+      <div class="container">
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <span class="eyebrow">Nouveauté — en stock</span>
+            <h1>Nova X13 Pro.</h1>
+            <p class="lead">Puce dernière génération, écran 120Hz, autonomie de 2 jours. Le smartphone pensé pour ne jamais vous ralentir.</p>
+            <div class="hero-price-row">
+              <span class="price">999 €</span>
+              <span class="old-price">1 099 €</span>
+            </div>
+            <div class="hero-actions">
+              <button class="btn btn-gradient" type="button" data-add-to-cart data-id="nova-x13" data-name="Nova X13 Pro" data-price="999">Ajouter au panier</button>
+              <a href="#produits" class="btn btn-outline">Voir tous les produits</a>
+            </div>
+          </div>
+
+          <div class="hero-visual" aria-hidden="true">
+            <div class="glow"></div>
+            <svg viewBox="0 0 200 410">
+              <rect x="4" y="4" width="192" height="402" rx="42" class="p-phone-body" stroke="#00000014" stroke-width="1"/>
+              <rect x="13" y="13" width="174" height="384" rx="35" fill="url(#gradScreenBlue)"/>
+              <rect x="78" y="27" width="44" height="15" rx="7.5" fill="#0a0b12"/>
+              <g fill="#ffffff" opacity="0.92">
+                <rect x="30" y="70" width="34" height="34" rx="9"/>
+                <rect x="83" y="70" width="34" height="34" rx="9"/>
+                <rect x="136" y="70" width="34" height="34" rx="9"/>
+                <rect x="30" y="114" width="34" height="34" rx="9" opacity="0.7"/>
+                <rect x="83" y="114" width="34" height="34" rx="9" opacity="0.7"/>
+                <rect x="136" y="114" width="34" height="34" rx="9" opacity="0.7"/>
+              </g>
+              <rect x="30" y="320" width="140" height="46" rx="14" fill="#ffffff" opacity="0.16"/>
+              <rect x="80" y="390" width="40" height="4" rx="2" fill="#ffffff" opacity="0.5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" style="padding-bottom:0;">
+      <div class="container">
+        <div class="specs-strip">
+          <div class="specs-item"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 12V8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h6"/><path d="M16 22h6M19 19v6"/></svg></div><strong>Livraison 24h</strong><span>Partout en France</span></div>
+          <div class="specs-item"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4.5 8-11V5l-8-3-8 3v6c0 6.5 8 11 8 11Z"/></svg></div><strong>Garantie 2 ans</strong><span>Sur tous les produits</span></div>
+          <div class="specs-item"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3"/></svg></div><strong>Retours 30 jours</strong><span>Sans justification</span></div>
+          <div class="specs-item"><div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 10h18"/></svg></div><strong>Paiement sécurisé</strong><span>3x sans frais dispo.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="produits">
+      <div class="container">
+        <div class="section-top-row">
+          <div class="section-head">
+            <span class="eyebrow">Catalogue</span>
+            <h2>Nos produits.</h2>
+          </div>
+        </div>
+
+        <div class="cat-filters" id="cat-filters">
+          <button class="cat-pill is-active" type="button" data-cat="tous">Tous</button>
+          <button class="cat-pill" type="button" data-cat="telephones"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/></svg>Téléphones</button>
+          <button class="cat-pill" type="button" data-cat="ordinateurs"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg>Ordinateurs</button>
+          <button class="cat-pill" type="button" data-cat="composants"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="7" width="16" height="10" rx="2"/><circle cx="9" cy="12" r="2"/><circle cx="15" cy="12" r="2"/></svg>Composants</button>
+          <button class="cat-pill" type="button" data-cat="accessoires"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>Accessoires</button>
+        </div>
+
+        <div class="product-grid" id="product-grid">
+
+          <!-- Laptop -->
+          <article class="product-card" data-cat="ordinateurs">
+            <div class="product-media">
+              <span class="product-badge">Best-seller</span>
+              <button class="product-wish" type="button" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
+              <svg viewBox="0 0 400 280">
+                <rect x="90" y="20" width="220" height="150" rx="14" fill="url(#gradAlu)" stroke="#00000012"/>
+                <rect x="102" y="32" width="196" height="126" rx="6" fill="url(#gradScreenDark)"/>
+                <rect x="112" y="42" width="80" height="8" rx="4" fill="#3654ff" opacity="0.8"/>
+                <rect x="112" y="58" width="120" height="6" rx="3" fill="#ffffff" opacity="0.25"/>
+                <rect x="112" y="70" width="90" height="6" rx="3" fill="#ffffff" opacity="0.18"/>
+                <path d="M70 170 L330 170 L360 230 L40 230 Z" fill="url(#gradAlu)" stroke="#00000012"/>
+                <rect x="150" y="205" width="100" height="12" rx="6" fill="#8a8da0" opacity="0.5"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <div class="product-stars">★★★★★ (312)</div>
+              <h3>AirBook 14</h3>
+              <div class="spec">14" · 16 Go RAM · 512 Go SSD</div>
+              <div class="product-foot">
+                <span class="price">1 299 €</span>
+                <button class="add-btn" type="button" data-add-to-cart data-id="airbook-14" data-name="AirBook 14" data-price="1299" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Phone 2 -->
+          <article class="product-card" data-cat="telephones">
+            <div class="product-media">
+              <span class="product-badge">Nouveau</span>
+              <button class="product-wish" type="button" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
+              <svg viewBox="0 0 200 300">
+                <rect x="55" y="10" width="90" height="280" rx="26" class="p-phone-body" stroke="#00000014"/>
+                <rect x="61" y="16" width="78" height="268" rx="21" fill="url(#gradScreenDark)"/>
+                <rect x="88" y="26" width="24" height="9" rx="4.5" fill="#0a0b12"/>
+                <g fill="#8b3cff" opacity="0.85"><rect x="72" y="60" width="20" height="20" rx="6"/><rect x="98" y="60" width="20" height="20" rx="6"/><rect x="72" y="86" width="20" height="20" rx="6" opacity="0.6"/><rect x="98" y="86" width="20" height="20" rx="6" opacity="0.6"/></g>
+              </svg>
+            </div>
+            <div class="product-body">
+              <div class="product-stars">★★★★★ (188)</div>
+              <h3>Nova X13 Mini</h3>
+              <div class="spec">128 Go · Puce A-series · 5G</div>
+              <div class="product-foot">
+                <span class="price">749 €</span>
+                <button class="add-btn" type="button" data-add-to-cart data-id="nova-x13-mini" data-name="Nova X13 Mini" data-price="749" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- GPU -->
+          <article class="product-card" data-cat="composants">
+            <div class="product-media">
+              <span class="product-badge">Populaire</span>
+              <button class="product-wish" type="button" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
+              <svg viewBox="0 0 400 240">
+                <rect x="40" y="50" width="320" height="120" rx="14" fill="url(#gradPCB)"/>
+                <rect x="40" y="164" width="320" height="8" fill="url(#gradRGB)"/>
+                <circle cx="130" cy="110" r="46" fill="#1c1f2b" stroke="#3654ff" stroke-width="2"/>
+                <circle cx="130" cy="110" r="30" fill="none" stroke="#8b3cff" stroke-width="1.5" opacity="0.7"/>
+                <circle cx="270" cy="110" r="46" fill="#1c1f2b" stroke="#3654ff" stroke-width="2"/>
+                <circle cx="270" cy="110" r="30" fill="none" stroke="#8b3cff" stroke-width="1.5" opacity="0.7"/>
+                <rect x="150" y="20" width="100" height="30" rx="4" fill="#1c1f2b"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <div class="product-stars">★★★★★ (541)</div>
+              <h3>Vortex RTX 4070</h3>
+              <div class="spec">12 Go GDDR6X · Ray tracing</div>
+              <div class="product-foot">
+                <span class="price">799 €</span>
+                <button class="add-btn" type="button" data-add-to-cart data-id="vortex-rtx" data-name="Vortex RTX 4070" data-price="799" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Earbuds -->
+          <article class="product-card" data-cat="accessoires">
+            <div class="product-media">
+              <button class="product-wish" type="button" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
+              <svg viewBox="0 0 200 200">
+                <rect x="55" y="60" width="90" height="70" rx="16" class="p-phone-body" stroke="#00000014"/>
+                <rect x="70" y="75" width="60" height="8" rx="4" fill="#8a8da0" opacity="0.6"/>
+                <circle cx="82" cy="105" r="14" fill="url(#gradScreenBlue)"/>
+                <circle cx="118" cy="105" r="14" fill="url(#gradScreenBlue)"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <div class="product-stars">★★★★☆ (264)</div>
+              <h3>Pulse Buds</h3>
+              <div class="spec">Réduction de bruit active</div>
+              <div class="product-foot">
+                <span class="price">129 €</span>
+                <button class="add-btn" type="button" data-add-to-cart data-id="pulse-buds" data-name="Pulse Buds" data-price="129" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Keyboard -->
+          <article class="product-card" data-cat="composants">
+            <div class="product-media">
+              <button class="product-wish" type="button" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
+              <svg viewBox="0 0 400 200">
+                <rect x="40" y="40" width="320" height="120" rx="12" fill="url(#gradPCB)"/>
+                <rect x="40" y="150" width="320" height="6" fill="url(#gradRGB)"/>
+                <g fill="#2e3244">
+                  <rect x="55" y="55" width="26" height="22" rx="4"/><rect x="85" y="55" width="26" height="22" rx="4"/><rect x="115" y="55" width="26" height="22" rx="4"/><rect x="145" y="55" width="26" height="22" rx="4"/><rect x="175" y="55" width="26" height="22" rx="4"/><rect x="205" y="55" width="26" height="22" rx="4"/><rect x="235" y="55" width="26" height="22" rx="4"/><rect x="265" y="55" width="26" height="22" rx="4"/><rect x="295" y="55" width="26" height="22" rx="4"/><rect x="325" y="55" width="26" height="22" rx="4"/>
+                  <rect x="55" y="82" width="26" height="22" rx="4"/><rect x="85" y="82" width="26" height="22" rx="4"/><rect x="115" y="82" width="26" height="22" rx="4"/><rect x="145" y="82" width="26" height="22" rx="4"/><rect x="175" y="82" width="26" height="22" rx="4"/><rect x="205" y="82" width="26" height="22" rx="4"/><rect x="235" y="82" width="26" height="22" rx="4"/><rect x="265" y="82" width="26" height="22" rx="4"/><rect x="295" y="82" width="26" height="22" rx="4"/><rect x="325" y="82" width="26" height="22" rx="4"/>
+                  <rect x="55" y="109" width="220" height="22" rx="4"/><rect x="285" y="109" width="66" height="22" rx="4"/>
+                </g>
+              </svg>
+            </div>
+            <div class="product-body">
+              <div class="product-stars">★★★★★ (176)</div>
+              <h3>TypeMaster RGB</h3>
+              <div class="spec">Switches mécaniques · Rétroéclairé</div>
+              <div class="product-foot">
+                <span class="price">149 €</span>
+                <button class="add-btn" type="button" data-add-to-cart data-id="typemaster-rgb" data-name="TypeMaster RGB" data-price="149" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Monitor -->
+          <article class="product-card" data-cat="ordinateurs">
+            <div class="product-media">
+              <button class="product-wish" type="button" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
+              <svg viewBox="0 0 400 260">
+                <rect x="60" y="30" width="280" height="160" rx="10" fill="url(#gradAlu)" stroke="#00000012"/>
+                <rect x="72" y="42" width="256" height="136" rx="4" fill="url(#gradScreenBlue)"/>
+                <rect x="188" y="190" width="24" height="30" fill="#b9bccb"/>
+                <rect x="140" y="220" width="120" height="10" rx="5" fill="#8a8da0"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <div class="product-stars">★★★★★ (99)</div>
+              <h3>ViewPro 27</h3>
+              <div class="spec">27" · 4K · 144Hz</div>
+              <div class="product-foot">
+                <span class="price">349 €</span>
+                <button class="add-btn" type="button" data-add-to-cart data-id="viewpro-27" data-name="ViewPro 27" data-price="349" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Watch -->
+          <article class="product-card" data-cat="accessoires">
+            <div class="product-media">
+              <button class="product-wish" type="button" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
+              <svg viewBox="0 0 200 200">
+                <rect x="80" y="20" width="40" height="26" rx="6" fill="#8a8da0"/>
+                <rect x="80" y="154" width="40" height="26" rx="6" fill="#8a8da0"/>
+                <rect x="55" y="55" width="90" height="90" rx="22" class="p-phone-body" stroke="#00000014"/>
+                <rect x="66" y="66" width="68" height="68" rx="16" fill="url(#gradScreenDark)"/>
+                <circle cx="100" cy="100" r="24" fill="none" stroke="#3654ff" stroke-width="2.5"/>
+                <path d="M100 84v16l12 8" fill="none" stroke="#ffffff" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <div class="product-stars">★★★★☆ (147)</div>
+              <h3>Chrono Watch S</h3>
+              <div class="spec">Suivi santé · Autonomie 5 jours</div>
+              <div class="product-foot">
+                <span class="price">249 €</span>
+                <button class="add-btn" type="button" data-add-to-cart data-id="chrono-watch-s" data-name="Chrono Watch S" data-price="249" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mouse -->
+          <article class="product-card" data-cat="accessoires">
+            <div class="product-media">
+              <button class="product-wish" type="button" aria-label="Ajouter aux favoris"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.6l-1-1a5.5 5.5 0 0 0-7.8 7.8L12 21l8.8-8.6a5.5 5.5 0 0 0 0-7.8Z"/></svg></button>
+              <svg viewBox="0 0 200 200">
+                <path d="M100 40c-26 0-42 20-42 55v20c0 30 18 45 42 45s42-15 42-45V95c0-35-16-55-42-55Z" class="p-phone-body" stroke="#00000014"/>
+                <line x1="100" y1="40" x2="100" y2="95" stroke="#00000014"/>
+                <rect x="94" y="50" width="12" height="26" rx="6" fill="#3654ff" opacity="0.7"/>
+              </svg>
+            </div>
+            <div class="product-body">
+              <div class="product-stars">★★★★★ (390)</div>
+              <h3>Glide Pro</h3>
+              <div class="spec">Sans fil · 26 000 DPI</div>
+              <div class="product-foot">
+                <span class="price">79 €</span>
+                <button class="add-btn" type="button" data-add-to-cart data-id="glide-pro" data-name="Glide Pro" data-price="79" aria-label="Ajouter au panier"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="avis">
+      <div class="container">
+        <div class="section-head centered">
+          <span class="eyebrow">Avis clients</span>
+          <h2>Ce qu'en pensent nos clients.</h2>
+        </div>
+        <div class="review-grid">
+          <div class="review-card"><div class="stars">★★★★★</div><p class="quote">Livré en 24h comme promis, et le Nova X13 tient largement ses promesses côté autonomie.</p><div class="author">— Karim B., achat vérifié</div></div>
+          <div class="review-card"><div class="stars">★★★★★</div><p class="quote">La Vortex RTX tourne parfaitement, aucune surchauffe même en session longue.</p><div class="author">— Manon T., achat vérifié</div></div>
+          <div class="review-card"><div class="stars">★★★★☆</div><p class="quote">Service client réactif pour un échange de taille sur la montre. Très satisfaite.</p><div class="author">— Julie R., achat vérifié</div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="newsletter-panel">
+          <div>
+            <span class="eyebrow" style="color:#14c99a;">Newsletter</span>
+            <h2>Les meilleures offres, avant tout le monde.</h2>
+            <p>Ventes flash et nouveautés, une fois par semaine.</p>
+          </div>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Votre email" />
+            <button class="btn btn-gradient" type="submit">S'inscrire</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="vt-year">2026</span> Voltra — Démo de template.</p>
+      <p>Ceci est un site de démonstration, non une boutique réelle.</p>
+    </div>
+  <div class="gt-credit" style="display:block!important;text-align:center;padding:1.1rem 1rem;font-size:.72rem;color:inherit;opacity:.65;line-height:1.6;grid-column:1/-1;margin-top:1.4rem;padding-top:1.4rem;border-top:1px solid rgba(128,128,128,0.2);">© 2026 <a href="https://giotech-digital.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">GioTech Digital</a>. Tous droits réservés.<br>Conçu &amp; développé par <a href="https://adalberto.fr" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Adalberto Teixeira</a></div></footer>
+
+  <script>
+    document.getElementById("vt-year").textContent = new Date().getFullYear();
+
+    /* ---------- Tiroir de catégories façon Amazon (mobile) ---------- */
+    var amazonBtn = document.getElementById("amazon-menu-btn");
+    var amazonDrawer = document.getElementById("amazon-drawer");
+    var amazonOverlay = document.getElementById("amazon-drawer-overlay");
+    function openAmazonDrawer() {
+      amazonDrawer.classList.add("is-open");
+      amazonOverlay.classList.add("is-open");
+      amazonBtn.setAttribute("aria-expanded", "true");
+    }
+    function closeAmazonDrawer() {
+      amazonDrawer.classList.remove("is-open");
+      amazonOverlay.classList.remove("is-open");
+      amazonBtn.setAttribute("aria-expanded", "false");
+    }
+    amazonBtn.addEventListener("click", openAmazonDrawer);
+    amazonOverlay.addEventListener("click", closeAmazonDrawer);
+    document.getElementById("amazon-drawer-close").addEventListener("click", closeAmazonDrawer);
+    amazonDrawer.querySelectorAll("a").forEach(function (a) { a.addEventListener("click", closeAmazonDrawer); });
+
+    /* ---------- Panier (état + logique) ---------- */
+    var cart = [];
+
+    function formatPrice(n) { return n.toLocaleString("fr-FR") + " €"; }
+
+    function renderCart() {
+      var itemsWrap = document.getElementById("cart-items");
+      var badge = document.getElementById("cart-badge");
+      var subtotalEl = document.getElementById("cart-subtotal");
+
+      if (cart.length === 0) {
+        itemsWrap.innerHTML = '<div class="cart-empty">Votre panier est vide.<br />Ajoutez un produit pour commencer.</div>';
+        badge.style.display = "none";
+        subtotalEl.textContent = formatPrice(0);
+        return;
+      }
+
+      var totalQty = 0, subtotal = 0;
+      itemsWrap.innerHTML = "";
+      cart.forEach(function (item) {
+        totalQty += item.qty;
+        subtotal += item.qty * item.price;
+        var row = document.createElement("div");
+        row.className = "cart-item";
+        row.innerHTML =
+          '<div class="thumb"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="6" y="2" width="12" height="20" rx="3"/></svg></div>' +
+          '<div class="info">' +
+            '<strong>' + item.name + '</strong>' +
+            '<span>' + formatPrice(item.price) + '</span>' +
+            '<div class="qty-row">' +
+              '<button class="qty-btn" data-action="dec" data-id="' + item.id + '">−</button>' +
+              '<span>' + item.qty + '</span>' +
+              '<button class="qty-btn" data-action="inc" data-id="' + item.id + '">+</button>' +
+              '<a class="remove" data-action="remove" data-id="' + item.id + '">Retirer</a>' +
+            '</div>' +
+          '</div>';
+        itemsWrap.appendChild(row);
+      });
+
+      badge.style.display = "flex";
+      badge.textContent = totalQty;
+      subtotalEl.textContent = formatPrice(subtotal);
+    }
+
+    function addToCart(id, name, price) {
+      var existing = cart.find(function (i) { return i.id === id; });
+      if (existing) { existing.qty++; }
+      else { cart.push({ id: id, name: name, price: price, qty: 1 }); }
+      renderCart();
+      showToast(name + " ajouté au panier");
+    }
+
+    document.getElementById("cart-items").addEventListener("click", function (e) {
+      var btn = e.target.closest("[data-action]");
+      if (!btn) return;
+      var id = btn.dataset.id;
+      var item = cart.find(function (i) { return i.id === id; });
+      if (!item) return;
+      if (btn.dataset.action === "inc") item.qty++;
+      if (btn.dataset.action === "dec") { item.qty--; if (item.qty <= 0) cart = cart.filter(function (i) { return i.id !== id; }); }
+      if (btn.dataset.action === "remove") cart = cart.filter(function (i) { return i.id !== id; });
+      renderCart();
+    });
+
+    document.querySelectorAll("[data-add-to-cart]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        addToCart(btn.dataset.id, btn.dataset.name, parseFloat(btn.dataset.price));
+        if (window.gsap) gsap.fromTo(btn, { scale: 1 }, { scale: 1.15, duration: 0.15, yoyo: true, repeat: 1, ease: "power1.inOut" });
+      });
+    });
+
+    /* ---------- Ouverture / fermeture du panier ---------- */
+    var overlay = document.getElementById("cart-overlay");
+    var drawer = document.getElementById("cart-drawer");
+    function openCart() { overlay.classList.add("is-open"); drawer.classList.add("is-open"); }
+    function closeCart() { overlay.classList.remove("is-open"); drawer.classList.remove("is-open"); }
+    document.getElementById("cart-toggle").addEventListener("click", openCart);
+    document.getElementById("cart-close").addEventListener("click", closeCart);
+    overlay.addEventListener("click", closeCart);
+    document.getElementById("cart-checkout").addEventListener("click", function () {
+      if (cart.length === 0) return;
+      openCheckout();
+    });
+
+    /* ---------- Vue rapide produit ---------- */
+    var qvOverlay = document.getElementById("qv-overlay");
+    var qvModal = document.getElementById("qv-modal");
+    var qvQty = 1;
+    var qvCurrent = null;
+
+    function openQuickView(card) {
+      var media = card.querySelector(".product-media").cloneNode(true);
+      var wish = media.querySelector(".product-wish"); if (wish) wish.remove();
+      var badge = media.querySelector(".product-badge"); if (badge) badge.remove();
+      document.getElementById("qv-media").innerHTML = "";
+      document.getElementById("qv-media").appendChild(media);
+
+      var badgeText = card.querySelector(".product-badge");
+      var badgeEl = document.getElementById("qv-badge");
+      if (badgeText) { badgeEl.textContent = badgeText.textContent; badgeEl.style.display = "inline-block"; }
+      else { badgeEl.style.display = "none"; }
+
+      document.getElementById("qv-stars").textContent = (card.querySelector(".product-stars") || {}).textContent || "";
+      document.getElementById("qv-name").textContent = card.querySelector("h3").textContent;
+      document.getElementById("qv-spec").textContent = (card.querySelector(".spec") || {}).textContent || "";
+      var price = card.querySelector(".price").textContent;
+      document.getElementById("qv-price").textContent = price;
+
+      var addBtn = card.querySelector("[data-add-to-cart]");
+      qvCurrent = { id: addBtn.dataset.id, name: addBtn.dataset.name, price: parseFloat(addBtn.dataset.price) };
+      qvQty = 1;
+      document.getElementById("qv-qty-val").textContent = qvQty;
+
+      var descriptions = {
+        "airbook-14": "Un ordinateur portable fin et puissant pour le travail quotidien, les études ou la création — autonomie longue durée et écran net.",
+        "nova-x13": "Le smartphone phare de la gamme Nova : appareil photo avancé, écran fluide et performances taillées pour un usage intensif."
+      };
+      document.getElementById("qv-desc").textContent =
+        descriptions[qvCurrent.id] || ("Le " + qvCurrent.name + " combine qualité de fabrication et performances fiables, pensé pour durer et s'intégrer facilement à votre quotidien.");
+
+      qvOverlay.classList.add("is-open");
+      qvModal.classList.add("is-open");
+    }
+    function closeQuickView() { qvOverlay.classList.remove("is-open"); qvModal.classList.remove("is-open"); }
+
+    document.querySelectorAll(".product-card").forEach(function (card) {
+      var media = card.querySelector(".product-media");
+      var title = card.querySelector("h3");
+      [media, title].forEach(function (el) {
+        if (!el) return;
+        el.style.cursor = "pointer";
+        el.addEventListener("click", function () { openQuickView(card); });
+      });
+    });
+
+    document.getElementById("qv-close").addEventListener("click", closeQuickView);
+    qvOverlay.addEventListener("click", closeQuickView);
+    document.getElementById("qv-qty-dec").addEventListener("click", function () { if (qvQty > 1) { qvQty--; document.getElementById("qv-qty-val").textContent = qvQty; } });
+    document.getElementById("qv-qty-inc").addEventListener("click", function () { qvQty++; document.getElementById("qv-qty-val").textContent = qvQty; });
+    document.getElementById("qv-add").addEventListener("click", function () {
+      if (!qvCurrent) return;
+      for (var i = 0; i < qvQty; i++) addToCart(qvCurrent.id, qvCurrent.name, qvCurrent.price);
+      closeQuickView();
+    });
+
+    /* ---------- Checkout multi-étapes (démo) ---------- */
+    var checkoutOverlay = document.getElementById("checkout-overlay");
+    var checkoutModal = document.getElementById("checkout-modal");
+    var checkoutStep = 1;
+    var TOTAL_STEPS = 4;
+    var deliveryFees = { standard: 0, express: 9.9 };
+
+    function renderCheckoutCart() {
+      var list = document.getElementById("checkout-cart-list");
+      list.innerHTML = "";
+      var subtotal = 0;
+      cart.forEach(function (item) {
+        subtotal += item.qty * item.price;
+        var row = document.createElement("div");
+        row.className = "checkout-cart-row";
+        row.innerHTML = "<span>" + item.qty + " × " + item.name + "</span><strong>" + formatPrice(item.qty * item.price) + "</strong>";
+        list.appendChild(row);
+      });
+      document.getElementById("co-subtotal").textContent = formatPrice(subtotal);
+      return subtotal;
+    }
+
+    function currentDeliveryFee() {
+      var checked = document.querySelector('input[name="co-delivery"]:checked');
+      return checked ? deliveryFees[checked.value] : 0;
+    }
+
+    function updateCheckoutTotals() {
+      var subtotal = renderCheckoutCart();
+      var fee = currentDeliveryFee();
+      document.getElementById("co-total").textContent = formatPrice(subtotal + fee);
+    }
+
+    function showCheckoutStep(n) {
+      document.querySelectorAll(".checkout-panel").forEach(function (p) { p.hidden = true; });
+      document.querySelector('.checkout-panel[data-panel="' + n + '"]').hidden = false;
+      document.querySelectorAll("#checkout-steps span").forEach(function (s) {
+        var step = parseInt(s.dataset.step, 10);
+        s.classList.toggle("is-active", step === n);
+        s.classList.toggle("is-done", step < n);
+      });
+      document.getElementById("checkout-prev").disabled = n === 1;
+      document.getElementById("checkout-next").textContent = n === TOTAL_STEPS ? "Confirmer la commande" : "Suivant";
+      document.getElementById("checkout-foot").style.display = "flex";
+      if (n === 3 || n === 4) updateCheckoutTotals();
+    }
+
+    function openCheckout() {
+      checkoutStep = 1;
+      showCheckoutStep(1);
+      renderCheckoutCart();
+      checkoutOverlay.classList.add("is-open");
+      checkoutModal.classList.add("is-open");
+      closeCart();
+    }
+    function closeCheckout() { checkoutOverlay.classList.remove("is-open"); checkoutModal.classList.remove("is-open"); }
+
+    document.getElementById("checkout-close").addEventListener("click", closeCheckout);
+    checkoutOverlay.addEventListener("click", closeCheckout);
+
+    document.getElementById("checkout-next").addEventListener("click", function () {
+      if (checkoutStep === TOTAL_STEPS) {
+        var orderNumber = "VLT-" + Math.floor(100000 + Math.random() * 900000);
+        document.getElementById("co-order-number").textContent = "#" + orderNumber;
+        document.querySelectorAll(".checkout-panel").forEach(function (p) { p.hidden = true; });
+        document.querySelector('.checkout-panel[data-panel="confirm"]').hidden = false;
+        document.getElementById("checkout-foot").style.display = "none";
+        return;
+      }
+      checkoutStep++;
+      showCheckoutStep(checkoutStep);
+    });
+    document.getElementById("checkout-prev").addEventListener("click", function () {
+      if (checkoutStep === 1) return;
+      checkoutStep--;
+      showCheckoutStep(checkoutStep);
+    });
+    document.getElementById("checkout-restart").addEventListener("click", function () {
+      cart = [];
+      renderCart();
+      closeCheckout();
+    });
+    document.querySelectorAll('input[name="co-delivery"]').forEach(function (r) { r.addEventListener("change", updateCheckoutTotals); });
+
+    /* ---------- Toast ---------- */
+    var toastTimeout;
+    function showToast(text) {
+      var toast = document.getElementById("toast");
+      document.getElementById("toast-text").textContent = text;
+      toast.classList.add("is-shown");
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(function () { toast.classList.remove("is-shown"); }, 2200);
+    }
+
+    /* ---------- Favoris (visuel) ---------- */
+    document.querySelectorAll(".product-wish").forEach(function (btn) {
+      btn.addEventListener("click", function () { btn.classList.toggle("is-active"); });
+    });
+
+    /* ---------- Filtres catégories ---------- */
+    var catPills = document.querySelectorAll(".cat-pill");
+    var products = document.querySelectorAll("#product-grid .product-card");
+    catPills.forEach(function (pill) {
+      pill.addEventListener("click", function () {
+        catPills.forEach(function (p) { p.classList.remove("is-active"); });
+        pill.classList.add("is-active");
+        var cat = pill.dataset.cat;
+        products.forEach(function (card) {
+          card.style.display = (cat === "tous" || card.dataset.cat === cat) ? "" : "none";
+        });
+      });
+    });
+
+    var reveals = document.querySelectorAll("[data-reveal]");
+    if ("IntersectionObserver" in window) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) { entry.target.classList.add("is-visible"); obs.unobserve(entry.target); }
+        });
+      }, { threshold: 0.15 });
+      reveals.forEach(function (el) { obs.observe(el); });
+    } else {
+      reveals.forEach(function (el) { el.classList.add("is-visible"); });
+    }
+
+    /* ---------- GSAP : mouvement (https://gsap.com — via CDN) ---------- */
+    if (window.gsap) {
+      gsap.registerPlugin(ScrollTrigger);
+      var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      if (!reduceMotion) {
+        var heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
+        heroTl
+          .from(".hero-copy .eyebrow", { opacity: 0, y: 14, duration: 0.5 })
+          .from(".hero-copy h1", { opacity: 0, y: 26, duration: 0.65 }, "-=0.3")
+          .from(".hero-copy .lead", { opacity: 0, y: 16, duration: 0.5 }, "-=0.35")
+          .from(".hero-price-row", { opacity: 0, y: 12, duration: 0.4 }, "-=0.25")
+          .from(".hero-actions .btn", { opacity: 0, y: 12, stagger: 0.1, duration: 0.5 }, "-=0.2")
+          .from(".hero-visual svg", { opacity: 0, y: 30, scale: 0.92, duration: 0.8, ease: "back.out(1.3)" }, "-=0.5");
+
+        gsap.from(".specs-item", {
+          opacity: 0, y: 20, stagger: 0.08, duration: 0.5, ease: "power2.out",
+          scrollTrigger: { trigger: ".specs-strip", start: "top 90%" }
+        });
+
+        gsap.utils.toArray(".product-card").forEach(function (card, i) {
+          gsap.from(card, {
+            opacity: 0, y: 34, duration: 0.6, ease: "power2.out", delay: (i % 4) * 0.07,
+            scrollTrigger: { trigger: card, start: "top 92%" }
+          });
+        });
+
+        gsap.utils.toArray(".review-card").forEach(function (card, i) {
+          gsap.from(card, {
+            opacity: 0, y: 26, duration: 0.55, ease: "power2.out", delay: i * 0.08,
+            scrollTrigger: { trigger: card, start: "top 90%" }
+          });
+        });
+
+        gsap.from(".newsletter-panel > *", {
+          opacity: 0, y: 22, stagger: 0.12, duration: 0.6, ease: "power2.out",
+          scrollTrigger: { trigger: ".newsletter-panel", start: "top 85%" }
+        });
+      }
+    }
+  </script>
+
+<style>
+  #gt-phone-btn{position:fixed;right:16px;bottom:76px;z-index:99998;width:48px;height:48px;border-radius:50%;background:#10151f;color:#fff;border:none;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 24px -8px rgba(16,21,31,0.5);cursor:pointer;transition:transform .2s ease}
+  #gt-phone-btn:hover{transform:translateY(-3px) scale(1.05)}
+  #gt-phone-btn svg{width:22px;height:22px}
+  #gt-phone-overlay{position:fixed;inset:0;background:rgba(16,21,31,0.5);z-index:99998;opacity:0;pointer-events:none;transition:opacity .25s ease}
+  #gt-phone-overlay.is-open{opacity:1;pointer-events:auto}
+  #gt-phone-card{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%) scale(0.94);background:#fff;border-radius:20px;padding:1.8rem;z-index:99999;text-align:center;box-shadow:0 30px 60px -20px rgba(0,0,0,0.35);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;font-family:-apple-system,'Inter',sans-serif;width:min(280px,86vw)}
+  #gt-phone-card.is-open{opacity:1;pointer-events:auto;transform:translate(-50%,-50%) scale(1)}
+  #gt-phone-card h4{margin:0 0 .3rem;font-size:1.05rem;color:#10151f}
+  #gt-phone-card p{margin:0 0 1rem;font-size:.82rem;color:#666;line-height:1.4}
+  #gt-phone-qr{display:flex;justify-content:center;margin-bottom:1rem}
+  #gt-phone-close{border:1px solid #e2e4e9;background:none;border-radius:999px;padding:.5rem 1.2rem;font-weight:700;font-size:.82rem;cursor:pointer;color:#10151f}
+  @media (max-width:640px){#gt-phone-btn{display:none}}
+</style>
+<button id="gt-phone-btn" aria-label="Voir sur mon téléphone" title="Voir sur mon téléphone">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="2" width="10" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+</button>
+<div id="gt-phone-overlay"></div>
+<div id="gt-phone-card">
+  <h4>Voir sur votre téléphone</h4>
+  <p>Scannez ce code avec l'appareil photo de votre téléphone pour ouvrir cette démo, comme une vraie application.</p>
+  <div id="gt-phone-qr"></div>
+  <button id="gt-phone-close">Fermer</button>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-phone-btn');
+  var overlay=document.getElementById('gt-phone-overlay');
+  var card=document.getElementById('gt-phone-card');
+  var closeBtn=document.getElementById('gt-phone-close');
+  var qrRendered=false;
+  function openCard(){
+    overlay.classList.add('is-open');card.classList.add('is-open');
+    if(!qrRendered && window.QRCode){
+      new QRCode(document.getElementById('gt-phone-qr'),{text:"https://giotech-digital.fr/demo/voltra/",width:150,height:150,colorDark:"#10151f",colorLight:"#ffffff"});
+      qrRendered=true;
+    }
+  }
+  function closeCard(){overlay.classList.remove('is-open');card.classList.remove('is-open');}
+  btn.addEventListener('click',openCard);
+  overlay.addEventListener('click',closeCard);
+  closeBtn.addEventListener('click',closeCard);
+})();
+</script>
+
+<style>
+  #gt-back-btn{position:fixed;left:16px;bottom:16px;z-index:99997;width:44px;height:44px;border-radius:50%;background:#fff;color:#10151f;border:1px solid rgba(0,0,0,0.1);display:flex;align-items:center;justify-content:center;box-shadow:0 8px 20px -8px rgba(16,21,31,0.35);cursor:pointer;transition:transform .2s ease}
+  #gt-back-btn:hover{transform:translateY(-3px)}
+  #gt-back-btn svg{width:19px;height:19px}
+  #gt-back-popover{position:fixed;left:16px;bottom:68px;z-index:99997;background:#fff;border-radius:14px;box-shadow:0 16px 36px -12px rgba(16,21,31,0.35);padding:0.5rem;min-width:200px;opacity:0;transform:translateY(8px) scale(0.97);pointer-events:none;transition:opacity .2s ease,transform .2s ease;font-family:-apple-system,'Inter',sans-serif}
+  #gt-back-popover.is-open{opacity:1;transform:translateY(0) scale(1);pointer-events:auto}
+  #gt-back-popover a{display:block;padding:0.65rem 0.8rem;border-radius:8px;font-size:0.86rem;font-weight:600;color:#10151f;text-decoration:none}
+  #gt-back-popover a:hover{background:#f4f5f8}
+  #gt-back-popover .gt-brand-line{font-size:0.7rem;color:#9a9ca8;padding:0.5rem 0.8rem 0.3rem;border-top:1px solid #f0f1f4;margin-top:0.2rem}
+</style>
+<button id="gt-back-btn" aria-label="Navigation GioTech Digital" title="Navigation GioTech Digital">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg>
+</button>
+<div id="gt-back-popover">
+  <a href="../../">← Accueil GioTech</a>
+  <a href="../../templates">Voir tous les templates</a>
+  <div class="gt-brand-line">Démo Voltra · GioTech Digital</div>
+</div>
+<!-- ===== Menu inférieur fixe façon Amazon (mobile) ===== -->
+<nav class="amazon-bottom-nav" aria-label="Navigation principale mobile">
+  <a href="#home" class="is-active"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></svg><span>Accueil</span></a>
+  <button type="button" id="amazon-bottom-categories"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Catégories</span></button>
+  <button type="button" id="amazon-bottom-cart"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6h15l-1.5 9h-12L5 3H2"/><circle cx="9" cy="20" r="1.4"/><circle cx="17" cy="20" r="1.4"/></svg><span>Panier</span><b class="amazon-bottom-badge" id="amazon-bottom-badge" style="display:none;">0</b></button>
+  <button type="button" id="amazon-bottom-account"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg><span>Compte</span></button>
+</nav>
+<script>
+(function(){
+  var footNav=document.querySelector('.amazon-bottom-nav');
+  document.getElementById('amazon-bottom-categories').addEventListener('click',function(){document.getElementById('amazon-menu-btn').click();});
+  document.getElementById('amazon-bottom-cart').addEventListener('click',function(){document.getElementById('cart-toggle').click();});
+  document.getElementById('amazon-bottom-account').addEventListener('click',function(){alert('Compte client — fonctionnalité de démonstration.');});
+  // synchronise le badge du panier du header avec celui du menu du bas
+  var headerBadge=document.getElementById('cart-badge');
+  var footBadge=document.getElementById('amazon-bottom-badge');
+  if(headerBadge && footBadge && window.MutationObserver){
+    new MutationObserver(function(){
+      footBadge.textContent=headerBadge.textContent;
+      footBadge.style.display=headerBadge.style.display;
+    }).observe(headerBadge,{childList:true,characterData:true,subtree:true,attributes:true});
+  }
+})();
+</script>
+<script>
+(function(){
+  var btn=document.getElementById('gt-back-btn');
+  var pop=document.getElementById('gt-back-popover');
+  btn.addEventListener('click',function(e){e.stopPropagation();pop.classList.toggle('is-open');});
+  document.addEventListener('click',function(e){if(!pop.contains(e.target)&&e.target!==btn)pop.classList.remove('is-open');});
+})();
+</script>
+</body>
+</html>
