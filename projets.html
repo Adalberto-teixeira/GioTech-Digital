@@ -51,10 +51,17 @@
     .progress-card h3 { margin-top: 0.7rem; font-size: 1.1rem; }
     .progress-card p { margin-top: 0.5rem; font-size: 0.9rem; }
 
+    .proof-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 2rem; }
+    .proof-card { border: 1px solid var(--line); border-radius: var(--radius-md); padding: 1.5rem; background: var(--surface); }
+    .proof-number { display: inline-flex; align-items: center; justify-content: center; width: 2rem; height: 2rem; border-radius: 50%; background: rgba(23,211,238,0.12); color: var(--cyan-ink); font-family: var(--font-mono); font-size: 0.75rem; font-weight: 700; }
+    .proof-card h3 { margin-top: 1rem; font-size: 1.05rem; }
+    .proof-card p { margin-top: 0.55rem; font-size: 0.9rem; }
+    .proof-note { margin-top: 1.4rem; color: var(--text-dimmer); font-size: 0.86rem; }
+
     @media (max-width: 860px) {
       .case-card { grid-template-columns: 1fr; }
       .case-media { min-height: 200px; }
-      .progress-grid { grid-template-columns: 1fr; }
+      .progress-grid, .proof-grid { grid-template-columns: 1fr; }
     }
   </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "GioTech Digital", "url": "https://giotech-digital.fr/", "logo": "https://giotech-digital.fr/assets/logos/logo-mark.png", "email": "contact@giotech-digital.fr", "telephone": "+33753911502", "address": {"@type": "PostalAddress", "addressLocality": "Martigues", "addressRegion": "Provence-Alpes-Côte d’Azur", "addressCountry": "FR"}, "areaServed": [{"@type": "City", "name": "Martigues"}, {"@type": "City", "name": "Marseille"}, {"@type": "AdministrativeArea", "name": "Bouches-du-Rhône"}, {"@type": "Country", "name": "France"}], "sameAs": ["https://www.linkedin.com/company/giotech-digital/", "https://www.instagram.com/giotech.digital/", "https://github.com/Adalberto-teixeira"]}</script>
@@ -118,7 +125,7 @@
               <span class="case-status">En ligne</span>
               <div class="live-preview-shell" aria-hidden="true">
                 <div class="preview-chrome"><span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span><span class="preview-url">giosmart-services.fr</span></div>
-                <iframe class="template-live-frame" loading="lazy" src="https://giosmart-services.fr/" tabindex="-1" title="Aperçu de Gio Smart Services"></iframe>
+                <iframe class="template-live-frame" loading="lazy" data-src="https://giosmart-services.fr/" tabindex="-1" title="Aperçu de Gio Smart Services"></iframe>
               </div>
             </div>
             <div class="case-body">
@@ -138,7 +145,7 @@
               <span class="case-status">En ligne</span>
               <div class="live-preview-shell" aria-hidden="true">
                 <div class="preview-chrome"><span class="dot dot-red"></span><span class="dot dot-amber"></span><span class="dot dot-green"></span><span class="preview-url">adalberto.fr</span></div>
-                <iframe class="template-live-frame" loading="lazy" src="https://www.adalberto.fr/" tabindex="-1" title="Aperçu de Adalberto.fr"></iframe>
+                <iframe class="template-live-frame" loading="lazy" data-src="https://www.adalberto.fr/" tabindex="-1" title="Aperçu de Adalberto.fr"></iframe>
               </div>
             </div>
             <div class="case-body">
@@ -205,6 +212,34 @@
     </section>
 
     <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <span class="eyebrow">Des preuves, pas des promesses</span>
+          <h2>Vous pouvez vérifier le travail avant de me contacter.</h2>
+          <p>Les projets présentés ici sont accessibles publiquement. Vous pouvez les ouvrir, les tester sur mobile et juger directement la qualité de l’expérience.</p>
+        </div>
+        <div class="proof-grid" data-reveal>
+          <article class="proof-card">
+            <span class="proof-number">01</span>
+            <h3>Sites consultables</h3>
+            <p>Chaque projet publié renvoie vers une version réellement accessible, pas vers une simple image de présentation.</p>
+          </article>
+          <article class="proof-card">
+            <span class="proof-number">02</span>
+            <h3>Fonctions concrètes</h3>
+            <p>Formulaires, devis, réservation, espace client ou assistant IA : les fonctionnalités sont décrites sans résultats inventés.</p>
+          </article>
+          <article class="proof-card">
+            <span class="proof-number">03</span>
+            <h3>Avancement transparent</h3>
+            <p>Un projet encore en construction est clairement identifié comme tel, avec une version de démonstration lorsqu’elle est disponible.</p>
+          </article>
+        </div>
+        <p class="proof-note" data-reveal>Les témoignages clients seront ajoutés uniquement avec leur accord explicite.</p>
+      </div>
+    </section>
+
+    <section class="section section-alt">
       <div class="container">
         <div class="cta-panel" data-reveal>
           <div class="cta-copy">
