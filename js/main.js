@@ -345,6 +345,33 @@ window.addEventListener('pageshow', () => {
   window.setTimeout(applyMarketplaceQuery, 200);
 });
 
+/* ---------- Aperçus en direct : chargement uniquement à proximité de l'écran ---------- */
+(() => {
+  const frames = [...document.querySelectorAll('.template-live-frame[data-src]')];
+  if (!frames.length) return;
+
+  const loadFrame = (frame) => {
+    if (frame.src || !frame.dataset.src) return;
+    frame.src = frame.dataset.src;
+    frame.removeAttribute('data-src');
+  };
+
+  if (!('IntersectionObserver' in window)) {
+    frames.forEach(loadFrame);
+    return;
+  }
+
+  const previewObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach((entry) => {
+      if (!entry.isIntersecting) return;
+      loadFrame(entry.target);
+      observer.unobserve(entry.target);
+    });
+  }, { rootMargin: '320px 240px', threshold: 0 });
+
+  frames.forEach((frame) => previewObserver.observe(frame));
+})();
+
 /* ---------- Aperçus en direct : mise à l'échelle dynamique (couvre toujours toute la zone, quelle que soit la taille de la carte) ---------- */
 (() => {
   const NATIVE_W = 1280, NATIVE_H = 860;
