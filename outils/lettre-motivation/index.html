@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Créez gratuitement une lettre de motivation professionnelle, adaptée à une offre, puis exportez-la en PDF.">
+<title>Générateur de lettre de motivation gratuit</title>
+<link rel="icon" type="image/png" href="../../assets/icons/icon-192.png" />
+<link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png" />
+<link rel="stylesheet" href="assets/css/style.css">
+
+<style id="toolsuite-shell-styles">
+/* Shared shell only. Namespaced to avoid altering CV/template internals. */
+body{padding-top:72px!important}
+.toolsuite-header{
+ position:fixed;top:0;left:0;right:0;height:72px;z-index:9990;
+ background:#111720;border-bottom:1px solid rgba(255,255,255,.10);
+ font-family:Arial,sans-serif;
+}
+.toolsuite-nav{
+ max-width:1450px;height:100%;margin:auto;padding:0 22px;
+ display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:28px;
+}
+.toolsuite-brand{display:flex;align-items:center;gap:9px;color:#fff!important;text-decoration:none!important}
+.toolsuite-brand>span{width:38px;height:38px;border-radius:10px;background:#2459ef;display:grid;place-items:center;color:#fff;font-weight:900}
+.toolsuite-brand div{display:grid;line-height:1}.toolsuite-brand b{font-size:.88rem}.toolsuite-brand small{font-size:.58rem;color:#9ba8b6;margin-top:5px;letter-spacing:.10em}
+.toolsuite-links{display:flex;justify-content:center;align-items:center;gap:24px}
+.toolsuite-links a{
+ color:#ccd5df!important;text-decoration:none!important;font-size:.78rem!important;
+ font-weight:700!important;white-space:nowrap!important;position:relative!important;
+}
+.toolsuite-links a:after{content:"";position:absolute;left:0;right:100%;bottom:-8px;height:2px;background:#63e8ff;transition:right .2s ease}
+.toolsuite-links a:hover{color:#fff!important}.toolsuite-links a:hover:after{right:0}
+.toolsuite-links .toolsuite-home{color:#dfff57!important}
+.toolsuite-menu-button{display:none;border:1px solid rgba(255,255,255,.15);background:transparent;color:#fff;border-radius:9px;width:40px;height:40px}
+.toolsuite-mobile{display:none;position:absolute;top:64px;left:10px;right:10px;padding:9px;background:#111720;border:1px solid rgba(255,255,255,.12);border-radius:13px;box-shadow:0 20px 50px rgba(0,0,0,.35)}
+.toolsuite-mobile.open{display:grid}.toolsuite-mobile a{padding:10px;border-radius:8px;color:#f5f7fa!important;text-decoration:none!important;font:700 .8rem Arial,sans-serif!important}.toolsuite-mobile a:hover{background:rgba(255,255,255,.06)}
+.toolsuite-footer{
+ clear:both!important;position:relative!important;z-index:2!important;
+ margin:72px 0 0!important;padding:48px max(18px,4vw) 24px!important;
+ background:#0f141c!important;color:#fff!important;border:0!important;
+ font-family:Arial,sans-serif!important;
+}
+.toolsuite-footer-inner{
+ max-width:1380px;margin:auto;display:grid;grid-template-columns:1.5fr .8fr .8fr;gap:48px;
+}
+.toolsuite-footer-logo{display:inline-block;color:#fff!important;text-decoration:none!important;font-size:1.35rem!important;font-weight:900!important}
+.toolsuite-footer p{
+ display:block!important;visibility:visible!important;opacity:1!important;
+ color:#c1cad4!important;font-size:.82rem!important;line-height:1.7!important;
+ max-width:520px!important;margin:14px 0 18px!important;
+}
+.toolsuite-footer h4{display:block!important;color:#fff!important;font-size:.86rem!important;margin:0 0 13px!important}
+.toolsuite-footer a:not(.toolsuite-footer-logo){
+ display:block!important;visibility:visible!important;opacity:1!important;
+ color:#c7d0da!important;text-decoration:none!important;font-size:.78rem!important;
+ line-height:1.45!important;margin:8px 0!important;
+}
+.toolsuite-footer a:hover{color:#fff!important}
+.toolsuite-return{display:inline-flex!important;width:max-content!important;border:1px solid rgba(255,255,255,.16)!important;padding:9px 12px!important;border-radius:999px!important}
+.toolsuite-footer-bottom{
+ max-width:1380px;margin:34px auto 0;padding-top:18px;border-top:1px solid rgba(255,255,255,.11);
+ display:flex;justify-content:space-between;gap:18px;
+ color:#9ca8b5!important;font-size:.7rem!important;line-height:1.5!important;
+}
+.giotech-backlink{
+ position:fixed!important;right:16px!important;bottom:16px!important;z-index:9980!important;
+ padding:10px 13px!important;border-radius:999px!important;background:#111720!important;
+ color:#fff!important;text-decoration:none!important;font:700 12px Arial,sans-serif!important;
+ box-shadow:0 10px 30px rgba(0,0,0,.22)!important;
+}
+.toolsuite-reveal{opacity:0;transform:translateY(22px);transition:opacity .65s ease,transform .65s ease}
+.toolsuite-reveal.toolsuite-visible{opacity:1;transform:none}
+@media(max-width:980px){
+ body{padding-top:64px!important}.toolsuite-header{height:64px}.toolsuite-nav{grid-template-columns:1fr auto;padding:0 13px}.toolsuite-links{display:none}.toolsuite-menu-button{display:block}
+ .toolsuite-footer-inner{grid-template-columns:1fr 1fr}.toolsuite-footer-about{grid-column:1/-1}
+}
+@media(max-width:600px){
+ .toolsuite-footer-inner{grid-template-columns:1fr;gap:28px}.toolsuite-footer-about{grid-column:auto}
+ .toolsuite-footer-bottom{flex-direction:column}.giotech-backlink{right:10px!important;bottom:10px!important}
+}
+@media(prefers-reduced-motion:reduce){.toolsuite-reveal{opacity:1!important;transform:none!important;transition:none!important}}
+</style>
+
+
+<style id="toolsuite-active-neutral">
+.toolsuite-links a.is-current{
+  color:#ffffff!important;
+  background:rgba(255,255,255,.08)!important;
+  padding:8px 10px!important;
+  border-radius:8px!important;
+}
+.toolsuite-links a.is-current:after{display:none!important}
+.toolsuite-links a.is-current:hover{color:#ffffff!important}
+.toolsuite-links .toolsuite-home:after{display:none!important}
+</style>
+<link rel="manifest" href="../../manifest.json">
+<meta name="theme-color" content="#10151f">
+<link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GioTools">
+  <link rel="stylesheet" href="../assets/tabbar.css">
+  <link rel="stylesheet" href="../assets/ios-install.css">
+</head>
+<body>
+
+<header class="toolsuite-header">
+  <div class="toolsuite-nav">
+    <a class="toolsuite-brand" href="../../outils"><span>G</span><div><b>GioTools</b><small>OUTILS GRATUITS</small></div></a>
+    <nav class="toolsuite-links" aria-label="Navigation des outils">
+      <a class="toolsuite-home" href="../../">Accueil GioTech</a>
+      <a href="../cv/">CV</a>
+      <a class="is-current" href="../lettre-motivation/">Lettre</a>
+      <a href="../signature-email/">Signature</a>
+      <a href="../qr-code/">QR Code</a>
+      <a href="../devis-factures/">Devis / Facture</a>
+      <a href="../../outils">Tous les outils</a>
+    </nav>
+    <button type="button" class="toolsuite-menu-button" aria-label="Menu">☰</button>
+  </div>
+  <div class="toolsuite-mobile">
+    <a href="../../">Accueil GioTech</a>
+    <a href="../../outils">Tous les outils</a>
+    <a href="../cv/">Créateur de CV</a>
+    <a class="is-current" href="../lettre-motivation/">Lettre de motivation</a>
+    <a href="../signature-email/">Signature e-mail</a>
+    <a href="../qr-code/">QR Code</a>
+    <a href="../devis-factures/">Facture / Devis</a>
+  </div>
+</header>
+
+<a class="giotech-backlink" href="../../">← GioTech Digital</a>
+
+
+<main>
+<section class="hero">
+  <div class="hero-copy">
+    <span class="eyebrow">OUTIL CARRIÈRE · GRATUIT</span>
+    <h1>Une lettre claire.<br><em>Adaptée au poste.</em></h1>
+    <p>Renseignez votre profil, collez l’offre d’emploi et choisissez le ton. Le générateur crée une lettre structurée que vous pouvez corriger avant de la télécharger en PDF.</p>
+    <div class="badges">
+      <span>✓ Sans inscription</span>
+      <span>✓ Texte modifiable</span>
+      <span>✓ Aperçu A4</span>
+      <span>✓ Export PDF</span>
+    </div>
+  </div>
+  <aside class="hero-card">
+    <span>PARCOURS</span>
+    <ol>
+      <li><b>01</b> Votre profil</li>
+      <li><b>02</b> L’offre d’emploi</li>
+      <li><b>03</b> Le style</li>
+      <li><b>04</b> Génération & PDF</li>
+    </ol>
+  </aside>
+</section>
+
+<section class="workspace">
+  <div class="workspace-grid">
+    <form id="form" class="panel form-panel" onsubmit="return false">
+      <div class="panel-title">
+        <div><span>ÉTAPE 1</span><h2>Vos informations</h2></div>
+        <button type="button" id="resetBtn" class="ghost">Réinitialiser</button>
+      </div>
+
+      <section class="form-section">
+        <h3>Identité</h3>
+        <div class="grid2">
+          <label>Prénom<input id="firstName" value="Sophie"></label>
+          <label>Nom<input id="lastName" value="Martin"></label>
+          <label>Email<input id="email" type="email" value="sophie.martin@exemple.fr"></label>
+          <label>Téléphone<input id="phone" value="+33 6 00 00 00 00"></label>
+          <label>Ville<input id="city" value="Paris"></label>
+          <label>Date<input id="date" type="date"></label>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h3>Poste & entreprise</h3>
+        <div class="grid2">
+          <label>Poste visé<input id="jobTitle" value="Assistante administrative"></label>
+          <label>Entreprise<input id="company" value="Entreprise Exemple"></label>
+          <label>Nom du recruteur<input id="recruiter" placeholder="Optionnel"></label>
+          <label>Ville de l’entreprise<input id="companyCity" value="Lyon"></label>
+        </div>
+      </section>
+
+      <section class="form-section">
+        <h3>Votre profil</h3>
+        <label>Expérience principale<textarea id="experience">3 années d’expérience en communication digitale, création de contenus et gestion de réseaux sociaux.</textarea></label>
+        <label>Compétences à mettre en avant<textarea id="skills">Organisation, créativité, rédaction, Canva, réseaux sociaux, gestion de projet</textarea></label>
+        <label>Votre motivation<textarea id="motivation">Je souhaite rejoindre une équipe dynamique dans laquelle je pourrai mettre à profit mes compétences tout en continuant à progresser.</textarea></label>
+      </section>
+
+      <section class="form-section">
+        <h3>Offre d’emploi</h3>
+        <label>Collez l’annonce ou ses éléments importants
+          <textarea id="offer" class="large" placeholder="Missions, profil recherché, qualités, outils...">Nous recherchons une personne organisée, créative, à l’aise avec les réseaux sociaux et capable de gérer plusieurs projets simultanément. Maîtrise de Canva appréciée.</textarea>
+        </label>
+        <div class="offer-help">
+          <span id="keywordCount">0 mot-clé détecté</span>
+          <button type="button" id="analyzeBtn">Analyser l’offre</button>
+        </div>
+        <div class="keywords" id="keywords"></div>
+      </section>
+
+      <section class="form-section">
+        <h3>Style de la lettre</h3>
+        <div class="tones">
+          <button type="button" class="tone active" data-tone="professional"><b>Professionnel</b><small>Équilibré et classique</small></button>
+          <button type="button" class="tone" data-tone="warm"><b>Chaleureux</b><small>Plus humain</small></button>
+          <button type="button" class="tone" data-tone="direct"><b>Direct</b><small>Court et impactant</small></button>
+        </div>
+      </section>
+
+      <div class="form-actions">
+        <button type="button" class="primary" id="generateBtn">Générer ma lettre</button>
+        <button type="button" class="secondary" id="saveBtn">Enregistrer</button>
+      </div>
+      <p class="privacy">Les données sont enregistrées uniquement dans votre navigateur si vous utilisez le bouton “Enregistrer”.</p>
+    </form>
+
+    <aside class="panel result-panel">
+      <div class="panel-title">
+        <div><span>ÉTAPE 2</span><h2>Votre lettre</h2></div>
+        <span class="status-pill" id="statusPill">BROUILLON</span>
+      </div>
+
+      <div id="empty" class="empty">
+        <div>✦</div>
+        <h3>Votre lettre apparaîtra ici.</h3>
+        <p>Complétez vos informations puis cliquez sur “Générer ma lettre”.</p>
+      </div>
+
+      <div id="result" class="result hidden">
+        <textarea id="editor" spellcheck="true"></textarea>
+        <div class="editor-info">
+          <span><b id="wordCount">0</b> mots</span>
+          <span>Vous pouvez modifier librement le texte.</span>
+        </div>
+        <div class="result-actions">
+          <button type="button" id="previewBtn">Voir en A4</button>
+          <button type="button" id="copyBtn">Copier</button>
+          <button type="button" class="download" id="pdfBtn">Télécharger PDF</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<section class="tips">
+  <div class="tips-head">
+    <span class="eyebrow">CONSEILS</span>
+    <h2>Une bonne lettre ne répète pas le CV.</h2>
+  </div>
+  <div class="tip-grid">
+    <article><span>01</span><b>Parlez du poste</b><p>Montrez que vous avez compris les besoins de l’entreprise.</p></article>
+    <article><span>02</span><b>Donnez du concret</b><p>Reliez vos expériences à ce que le recruteur recherche.</p></article>
+    <article><span>03</span><b>Restez lisible</b><p>Une page est généralement suffisante.</p></article>
+    <article><span>04</span><b>Relisez</b><p>Le générateur aide, mais la version finale doit rester personnelle.</p></article>
+  </div>
+</section>
+</main>
+
+<div class="modal" id="modal">
+  <div class="modal-inner">
+    <div class="modal-bar">
+      <strong>Aperçu A4</strong>
+      <div>
+        <button id="closeModal">Modifier</button>
+        <button class="download" id="modalPdf">Télécharger PDF</button>
+      </div>
+    </div>
+    <article class="paper" id="paper"></article>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+<script src="assets/js/main.js"></script>
+
+<footer class="toolsuite-footer">
+  <div class="toolsuite-footer-inner">
+    <div class="toolsuite-footer-about">
+      <a href="../../outils" class="toolsuite-footer-logo">GioTools</a>
+      <p>Une collection d’outils gratuits pour créer vos documents professionnels directement dans votre navigateur.</p>
+      <a href="../../" class="toolsuite-return">← Retour à la page d’accueil</a>
+    </div>
+    <div>
+      <h4>Outils</h4>
+      <a href="../cv/">Créateur de CV</a>
+      <a class="is-current" href="../lettre-motivation/">Lettre de motivation</a>
+      <a href="../signature-email/">Signature e-mail</a>
+      <a href="../qr-code/">QR Code</a>
+      <a href="../devis-factures/">Facture / Devis</a>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <a href="../../outils">Tous les outils</a>
+      <a href="../../templates">Templates</a>
+      <a href="../../">Accueil GioTech</a>
+    </div>
+  </div>
+  <div class="toolsuite-footer-bottom">
+    <span>Outils gratuits · Sans inscription</span>
+    <span>Vos données restent dans votre navigateur lorsque l’outil le précise.</span>
+  </div>
+</footer>
+
+
+<script id="toolsuite-shell-script">
+(function(){
+ const btn=document.querySelector(".toolsuite-menu-button"), menu=document.querySelector(".toolsuite-mobile");
+ if(btn&&menu){
+   btn.addEventListener("click",()=>menu.classList.toggle("open"));
+   menu.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>menu.classList.remove("open")));
+ }
+ const nodes=[...document.querySelectorAll("main > section, .panel, .hero-card, .template-card, .how-grid article, .tip-grid article")].slice(0,35);
+ nodes.forEach(x=>x.classList.add("toolsuite-reveal"));
+ if("IntersectionObserver" in window && !matchMedia("(prefers-reduced-motion: reduce)").matches){
+   const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("toolsuite-visible");io.unobserve(e.target)}}),{threshold:.08});
+   nodes.forEach(x=>io.observe(x));
+ } else nodes.forEach(x=>x.classList.add("toolsuite-visible"));
+})();
+</script>
+
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("/sw.js", { scope: "/" }).catch(() => {}));
+  }
+</script>
+<nav class="giotools-tabbar" aria-label="Navigation Outils">
+  <a href="../cv/" class="">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M8 7h8M8 11h8M8 15h5"/></svg>
+    <span>CV</span>
+  </a>
+  <a href="../lettre-motivation/" class="is-active">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+    <span>Lettre</span>
+  </a>
+  <a href="../signature-email/" class="">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+    <span>Signature</span>
+  </a>
+  <a href="../qr-code/" class="">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3h-3M19 19h2v2h-2M14 19h2v2h-2M19 14h2v2h-2"/></svg>
+    <span>QR Code</span>
+  </a>
+  <a href="../devis-factures/" class="">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2v18l3-2 3 2 3-2 3 2V2z"/><path d="M9 7h6M9 11h6"/></svg>
+    <span>Devis</span>
+  </a>
+</nav>
+<script src="../assets/ios-install.js"></script>
+</body>
+</html>

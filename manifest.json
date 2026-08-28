@@ -1,0 +1,26 @@
+{
+  "name": "GioTech Outils — CV, Lettre, Devis, Signature, QR Code",
+  "short_name": "GioTools",
+  "description": "Outils gratuits GioTech Digital : créateur de CV, lettre de motivation, devis/factures, signature email et générateur de QR Code. Sans compte, tout reste sur votre appareil.",
+  "start_url": "/outils",
+  "id": "/outils",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#10151f",
+  "lang": "fr",
+  "icons": [
+    { "src": "assets/icons/icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "assets/icons/icon-maskable-192.png", "sizes": "192x192", "type": "image/png", "purpose": "maskable" },
+    { "src": "assets/icons/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "shortcuts": [
+    { "name": "Créer un CV", "url": "/outils/cv/", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Lettre de motivation", "url": "/outils/lettre-motivation/", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Devis / Facture", "url": "/outils/devis-factures/", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "Signature email", "url": "/outils/signature-email/", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] },
+    { "name": "QR Code", "url": "/outils/qr-code/", "icons": [{ "src": "assets/icons/icon-192.png", "sizes": "192x192" }] }
+  ]
+}

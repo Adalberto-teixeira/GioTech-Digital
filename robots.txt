@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://giotech-digital.fr/sitemap.xml

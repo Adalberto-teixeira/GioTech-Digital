@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>À propos de GioTech Digital | Créateur web à Martigues</title>
+  <meta name="description" content="Découvrez GioTech Digital, studio web basé à Martigues : création de sites modernes, templates, démos et accompagnement digital." />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://giotech-digital.fr/apropos" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="GioTech Digital" />
+  <meta property="og:title" content="À propos — GioTech Digital" />
+  <meta property="og:image" content="assets/logos/logo-mark.png" />
+  <meta property="og:description" content="Développeur autodidacte à Martigues depuis 2021, spécialisé dans les sites web modernes." />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:url" content="https://giotech-digital.fr/apropos" />
+
+  <link rel="icon" type="image/png" href="assets/logos/logo-mark.png" />
+  <link rel="apple-touch-icon" href="assets/logos/logo-mark.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <style>
+    .apropos-hero { padding-top: clamp(7rem, 14vw, 9.5rem); padding-bottom: clamp(2rem, 4vw, 3rem); }
+    .apropos-hero-grid { display: grid; grid-template-columns: auto 1fr; gap: 2.2rem; align-items: center; }
+    .apropos-avatar { width: 96px; height: 96px; border-radius: 50%; background: var(--gradient-brand); flex-shrink: 0; display: flex; align-items: center; justify-content: center; color: #fff; font-family: var(--font-display); font-weight: 700; font-size: 2rem; }
+
+    .timeline-list { max-width: 640px; margin-inline: auto; display: grid; gap: 0; }
+    .timeline-item { display: grid; grid-template-columns: 90px 1fr; gap: 1.4rem; padding: 1.4rem 0; border-top: 1px solid var(--line); }
+    .timeline-list .timeline-item:last-child { border-bottom: 1px solid var(--line); }
+    .timeline-item .yr { font-family: var(--font-mono); font-size: 0.85rem; color: var(--cyan-ink); }
+    .timeline-item h3 { font-size: 1.05rem; }
+    .timeline-item p { margin-top: 0.4rem; font-size: 0.92rem; }
+
+    .values-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.3rem; }
+    .value-card { padding: 1.7rem; border: 1px solid var(--line); border-radius: var(--radius-md); background: var(--surface); }
+    .value-card .icon { width: 40px; height: 40px; border-radius: 10px; background: var(--bg-alt); color: var(--cyan-ink); display: flex; align-items: center; justify-content: center; margin-bottom: 1rem; }
+    .value-card .icon svg { width: 19px; height: 19px; }
+    .value-card h3 { font-size: 0.98rem; }
+    .value-card p { margin-top: 0.5rem; font-size: 0.88rem; }
+
+    .stack-row { display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center; }
+    .stack-row span { font-family: var(--font-mono); font-size: 0.82rem; padding: 0.5rem 1rem; border: 1px solid var(--line-strong); border-radius: 999px; color: var(--text-dim); }
+
+    @media (max-width: 860px) {
+      .apropos-hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .apropos-hero-grid .apropos-avatar { margin-inline: auto; }
+      .values-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 560px) {
+      .values-grid { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; gap: 0.3rem; }
+    }
+  </style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "ProfessionalService", "name": "GioTech Digital", "url": "https://giotech-digital.fr/", "logo": "https://giotech-digital.fr/assets/logos/logo-mark.png", "email": "contact@giotech-digital.fr", "telephone": "+33753911502", "address": {"@type": "PostalAddress", "addressLocality": "Martigues", "addressRegion": "Provence-Alpes-Côte d’Azur", "addressCountry": "FR"}, "areaServed": [{"@type": "City", "name": "Martigues"}, {"@type": "City", "name": "Marseille"}, {"@type": "AdministrativeArea", "name": "Bouches-du-Rhône"}, {"@type": "Country", "name": "France"}], "sameAs": ["https://www.linkedin.com/company/giotech-digital/", "https://www.instagram.com/giotech.digital/", "https://github.com/Adalberto-teixeira"]}</script>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://giotech-digital.fr/"}, {"@type": "ListItem", "position": 2, "name": "À propos de GioTech Digital", "item": "https://giotech-digital.fr/apropos"}]}</script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main" style="position:absolute;left:-999px;top:0;background:#17d3ee;color:#10151f;padding:0.6rem 1rem;z-index:999;">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a href="/" class="brand" aria-label="GioTech Digital — accueil">
+        <img src="assets/logos/logo-mark.png" alt="Logo GioTech Digital" width="32" height="32" />
+        <span class="brand-full">Gio<span>Tech</span> Digital</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="/#templates">Templates</a></li>
+          <li class="nav-dropdown">
+            <a href="outils" class="nav-dropdown-trigger">Outils <span aria-hidden="true">⌄</span></a>
+            <ul class="nav-submenu">
+              <li><a href="outils/cv/"><strong>Créateur de CV</strong><small>CV professionnel & PDF</small></a></li>
+              <li><a href="outils/lettre-motivation/"><strong>Lettre de motivation</strong><small>Générateur gratuit</small></a></li>
+              <li><a href="outils/signature-email/"><strong>Signature e-mail</strong><small>Signature HTML professionnelle</small></a></li>
+              <li><a href="outils/qr-code/"><strong>Générateur de QR Code</strong><small>QR Code rapide & gratuit</small></a></li>
+              <li><a href="outils/devis-factures/"><strong>Facture / Devis</strong><small>Documents A4 & PDF</small></a></li>
+              <li class="submenu-all"><a href="outils"><strong>Voir tous les outils →</strong></a></li>
+            </ul>
+          </li>
+          <li><a href="projets">Projets</a></li>
+          <li><a href="apropos" class="is-active">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact" class="btn btn-outline header-cta">Demander un devis</a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <section class="section apropos-hero">
+      <div class="container">
+        <div class="apropos-hero-grid" data-reveal>
+          <div class="apropos-avatar">AF</div>
+          <div>
+            <span class="eyebrow">À propos</span>
+            <h1 style="margin-top:0.6rem;">GioTech Digital, studio web à Martigues.</h1>
+            <p style="margin-top:0.9rem; font-size:1.05rem; max-width:56ch;">Développeur web autodidacte basé à Martigues, je conçois des templates et des sites sur-mesure depuis 2021 — avec une conviction simple : un site se juge en le voyant fonctionner, pas en le décrivant.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head" data-reveal style="max-width:640px;">
+          <span class="eyebrow">Mon parcours</span>
+          <h2>Comment tout a commencé.</h2>
+        </div>
+        <div class="timeline-list" data-reveal>
+          <div class="timeline-item">
+            <span class="yr">2021</span>
+            <div><h3>Premiers pas en autodidacte</h3><p>J'ai commencé à coder par passion — HTML, CSS, puis JavaScript. Mon premier vrai projet client : un site vitrine pour ControlBath, une entreprise portugaise, réalisé à distance.</p></div>
+          </div>
+          <div class="timeline-item">
+            <span class="yr">2021—25</span>
+            <div><h3>Pratique continue</h3><p>Des années à construire, casser et reconstruire des projets pour progresser — sites personnels, expérimentations, veille technique constante.</p></div>
+          </div>
+          <div class="timeline-item">
+            <span class="yr">2026</span>
+            <div><h3>GioTech Digital</h3><p>Structuration de l'activité autour d'une approche claire : des templates prêts à l'emploi et des démos réelles plutôt que de longues descriptions. Lancement de Gio Smart Services et de ce site.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head" data-reveal style="margin-inline:auto; text-align:center;">
+          <span class="eyebrow">Ma méthode</span>
+          <h2>Ce qui guide chaque projet.</h2>
+        </div>
+        <div class="values-grid" data-reveal>
+          <div class="value-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="13" rx="2"/><path d="M8 21h8"/></svg></div>
+            <h3>La preuve avant tout</h3>
+            <p>Une démo cliquable convainc mieux qu'un paragraphe. Chaque template est testable en direct.</p>
+          </div>
+          <div class="value-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M13 2 4 14h7l-1 8 9-12h-7l1-8Z"/></svg></div>
+            <h3>Du code léger</h3>
+            <p>HTML/CSS/JS natif, sans dépendances inutiles — des sites rapides à charger, faciles à faire évoluer.</p>
+          </div>
+          <div class="value-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20 6 9 17l-5-5"/></svg></div>
+            <h3>Des infos vérifiables</h3>
+            <p>Aucun chiffre inventé sur ce site — ce que vous voyez (démos, projets, statistiques) reflète la réalité.</p>
+          </div>
+          <div class="value-card">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M17 1l4 4-4 4M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
+            <h3>Un accompagnement direct</h3>
+            <p>Pas d'intermédiaire : vous échangez directement avec la personne qui construit votre site.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head" data-reveal style="margin-inline:auto; text-align:center;">
+          <span class="eyebrow">Outils</span>
+          <h2>Avec quoi je construis.</h2>
+        </div>
+        <div class="stack-row" data-reveal>
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>GSAP</span><span>Design responsive</span><span>Figma</span><span>Git &amp; GitHub</span><span>Cloudflare Pages</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta-panel" data-reveal>
+          <div class="cta-copy">
+            <span class="eyebrow">Contact</span>
+            <h2>Discutons de votre projet.</h2>
+            <p>Basé à Martigues, j'interviens à distance partout en France. Réponse sous 48h.</p>
+            <div class="cta-actions">
+              <a href="contact" class="btn btn-primary">
+                Demander un devis
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17 17 7M9 7h8v8"/></svg>
+              </a>
+              <a href="projets" class="btn btn-outline">Voir mes projets</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer marketplace-footer">
+  <div class="container">
+    <div class="footer-market-head">
+      <div class="footer-market-copy">
+        <span class="eyebrow">GioTech Digital · Martigues</span>
+        <h2>Des templates pour démarrer vite.<br>Un site sur-mesure pour aller plus loin.</h2>
+        <p>Explorez les démos, téléchargez les ressources gratuites ou demandez une adaptation professionnelle pour votre activité à Martigues, Marseille et partout en France.</p>
+      </div>
+      <div class="footer-market-actions">
+        <a class="btn btn-primary" href="templates">Explorer le catalogue</a>
+        <a class="btn btn-outline footer-outline" href="contact">Demander un devis</a>
+      </div>
+    </div>
+
+    <div class="footer-category-bar" aria-label="Catégories populaires">
+      <a href="templates">HTML</a><a href="templates">E-commerce</a><a href="templates">Immobilier</a><a href="templates">Restaurant</a><a href="templates">Portfolio</a><a href="templates">Mobile</a><a href="templates">Pages gratuites</a>
+    </div>
+
+    <div class="footer-market-grid">
+      <div class="footer-brand footer-market-brand">
+        <a href="/" class="brand"><img src="assets/logos/logo-mark.png" alt="GioTech Digital, création de sites internet à Martigues" width="34" height="34"><span class="brand-full">Gio<span>Tech</span> Digital</span></a>
+        <p>Création de sites internet, templates HTML/CSS/JS et démos web modernes. Basé à Martigues, projets à Marseille, dans les Bouches-du-Rhône et à distance en France.</p>
+        <div class="footer-local"><span>Martigues</span><span>Marseille</span><span>Bouches-du-Rhône</span><span>France</span></div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/giotech-digital/" target="_blank" rel="noopener" aria-label="GioTech Digital sur LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0ZM3.4 8.75h3.08V21H3.4V8.75Zm6.2 0h2.95v1.68h.04c.41-.78 1.42-1.6 2.93-1.6 3.13 0 3.71 2.06 3.71 4.74V21h-3.08v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.6V8.75Z"/></svg></a>
+          <a href="https://www.instagram.com/giotech.digital/" target="_blank" rel="noopener" aria-label="GioTech Digital sur Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://github.com/Adalberto-teixeira" target="_blank" rel="noopener" aria-label="GioTech Digital sur GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.36 1.08 2.93.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-1.99 1.03-2.7-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.71 1.03 1.6 1.03 2.7 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col"><h4>Marketplace</h4><ul>
+        <li><a href="templates">Tous les templates</a></li><li><a href="templates">Templates gratuits</a></li><li><a href="templates">Templates premium</a></li><li><a href="projets">Projets clients</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Création web locale</h4><ul>
+        <li><a href="creation-site-internet-martigues">Site internet à Martigues</a></li><li><a href="creation-site-internet-marseille">Site internet à Marseille</a></li><li><a href="agence-web-bouches-du-rhone">Agence web Bouches-du-Rhône</a></li><li><a href="creation-site-internet-france">Création web en France</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>GioTech</h4><ul>
+        <li><a href="apropos">À propos</a></li><li><a href="contact">Contact & devis</a></li><li><a href="seo-agent">Agent SEO intégré</a></li><li><a href="mentions-legales">Mentions légales</a></li><li><a href="confidentialite">Confidentialité</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:contact@giotech-digital.fr">contact@giotech-digital.fr</a></li><li><a href="tel:+33753911502">07 53 91 15 02</a></li><li><a href="https://wa.me/33753911502" target="_blank" rel="noopener">WhatsApp</a></li><li><span>Martigues, France</span></li>
+      </ul></div>
+    </div>
+
+    <div class="footer-trust-row">
+      <span>✓ Démos testables</span><span>✓ Mobile-first</span><span>✓ HTML / CSS / JavaScript</span><span>✓ SEO technique</span><span>✓ Réponse sous 48h</span>
+    </div>
+    <div class="footer-bottom"><p>© <span data-year>2026</span> GioTech Digital. Tous droits réservés.</p><p>Création de sites internet à Martigues & Marseille · Services web en France</p></div>
+  </div>
+</footer>
+
+  <nav class="mobile-dock" aria-label="Navigation mobile">
+    <ul>
+      <li>
+        <a href="/">
+          <span class="dock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 11.5 12 4l9 7.5"/><path d="M5 10v10h14V10"/></svg></span>
+          <span class="label">Accueil</span>
+        </a>
+      </li>
+      <li>
+        <a href="/#templates">
+          <span class="dock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
+          <span class="label">Templates</span>
+        </a>
+      </li>
+      <li>
+        <a href="outils">
+          <span class="dock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M14.7 6.3a4 4 0 0 0-5.4 5.4L2 19l3 3 7.3-7.3a4 4 0 0 0 5.4-5.4l-2.8 2.8-2-2 2.8-2.8Z"/></svg></span>
+          <span class="label">Outils</span>
+        </a>
+      </li>
+      <li>
+        <a href="projets">
+          <span class="dock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v4H4zM4 12h16v8H4z"/></svg></span>
+          <span class="label">Projets</span>
+        </a>
+      </li>
+      <li>
+        <a href="contact">
+          <span class="dock-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16v16H4zM4 4l8 8 8-8"/></svg></span>
+          <span class="label">Contact</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

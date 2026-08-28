@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Outils gratuits — CV, lettre, QR Code, devis & factures | GioTech Digital</title>
+<link rel="icon" type="image/png" href="assets/icons/icon-192.png" />
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png" />
+<meta name="description" content="Découvrez les outils gratuits GioTech Digital : créateur de CV, lettre de motivation, signature e-mail, générateur de QR Code, devis et factures.">
+<link rel="canonical" href="https://giotech-digital.fr/outils">
+<meta name="robots" content="index,follow"><meta property="og:type" content="website"><meta property="og:title" content="Outils gratuits — CV, lettre, QR Code, devis & factures | GioTech Digital"><meta property="og:description" content="Découvrez les outils gratuits GioTech Digital : créateur de CV, lettre de motivation, signature e-mail, générateur de QR Code, devis et factures."><meta property="og:image" content="https://giotech-digital.fr/assets/logos/logo-mark.png"><meta property="og:url" content="https://giotech-digital.fr/outils">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/components.css">
+<link rel="stylesheet" href="css/responsive.css">
+<style>
+.tools-hero{padding:150px 0 70px;background:linear-gradient(180deg,rgba(23,211,238,.08),transparent)}
+.tools-hero h1{font-size:clamp(3.5rem,8vw,7.5rem);line-height:.88;letter-spacing:-.06em;max-width:1000px;margin:.5rem 0 1rem}
+.tools-hero p{max-width:720px;color:var(--text-dim);font-size:1.02rem;line-height:1.7}
+.tools-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding:35px 0 90px}
+.tool-card{display:grid;grid-template-columns:88px 1fr;gap:20px;padding:25px;border:1px solid var(--line);border-radius:22px;background:var(--surface);text-decoration:none;color:inherit;transition:.25s}
+.tool-card:hover{transform:translateY(-5px);border-color:var(--cyan);box-shadow:0 22px 55px rgba(0,0,0,.10)}
+.tool-icon{width:76px;height:76px;border-radius:18px;display:grid;place-items:center;background:var(--text);color:var(--bg);font-size:1.25rem;font-weight:900;letter-spacing:-.03em}
+.tool-copy span{font-size:.68rem;color:var(--cyan-ink);font-weight:800;letter-spacing:.1em}
+.tool-copy h3{font-size:1.45rem;margin:.45rem 0}
+.tool-copy p{font-size:.84rem;line-height:1.6;color:var(--text-dim);margin:0 0 1rem}
+.tool-copy strong{font-size:.78rem}
+.tools-note{margin-bottom:90px;padding:30px;border:1px solid var(--line);border-radius:22px;background:var(--surface)}
+.tools-note h2{font-size:clamp(2rem,4vw,3.5rem);letter-spacing:-.04em;margin:0 0 .7rem}
+.tools-note p{max-width:800px;color:var(--text-dim);line-height:1.7}
+@media(max-width:800px){.tools-grid{grid-template-columns:1fr}}
+@media(max-width:520px){.tool-card{grid-template-columns:1fr}.tools-hero{padding-top:115px}.tools-hero h1{font-size:clamp(2.2rem,11vw,3.5rem)}}
+.pwa-install-btn{display:inline-flex;align-items:center;gap:.6rem;margin-top:1.6rem;padding:1rem 1.8rem;border-radius:999px;border:none;background:linear-gradient(135deg,#4f7dff,#2f5ce0);color:#fff;font-weight:700;font-size:1rem;cursor:pointer;box-shadow:0 8px 24px -6px rgba(79,125,255,.55),0 0 0 0 rgba(79,125,255,.4);transition:transform .2s ease,box-shadow .2s ease;animation:pwaPulse 2.4s ease-in-out infinite}
+.pwa-install-btn:hover{transform:translateY(-3px) scale(1.02);box-shadow:0 14px 32px -6px rgba(79,125,255,.65)}
+.pwa-install-btn:disabled{animation:none;cursor:default}
+@keyframes pwaPulse{0%,100%{box-shadow:0 8px 24px -6px rgba(79,125,255,.55),0 0 0 0 rgba(79,125,255,.35)}50%{box-shadow:0 8px 24px -6px rgba(79,125,255,.55),0 0 0 10px rgba(79,125,255,0)}}
+@media(prefers-reduced-motion:reduce){.pwa-install-btn{animation:none}}
+.pwa-install-btn svg{width:18px;height:18px}
+
+.install-promo{padding:20px 0 70px}
+.install-promo-card{display:grid;grid-template-columns:1.3fr 1fr;gap:2.5rem;align-items:center;background:var(--ink,#10151f);color:#fff;border-radius:28px;padding:clamp(1.8rem,4vw,3.2rem)}
+.install-promo-copy h2{color:#fff;font-size:clamp(1.7rem,3vw,2.4rem);margin:.4rem 0 .8rem;letter-spacing:-.02em}
+.install-promo-copy p{color:#b7bfcc;font-size:.98rem;line-height:1.65;max-width:52ch}
+.install-promo-list{list-style:none;padding:0;margin:1.1rem 0 1.5rem;display:grid;gap:.5rem;color:#d5dae3;font-size:.9rem}
+.install-promo-qr{background:#fff;border-radius:20px;padding:1.4rem;text-align:center;display:flex;flex-direction:column;align-items:center;gap:.8rem;justify-self:center}
+.install-promo-qr span{font-size:.76rem;color:#555;max-width:180px;line-height:1.4}
+@media(max-width:800px){.install-promo-card{grid-template-columns:1fr;text-align:center}.install-promo-copy p{margin-inline:auto}.install-promo-list{justify-items:center}.install-promo-qr{order:-1}}
+@media(max-width:760px){.install-promo{display:none}}
+</style>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#10151f">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="GioTools">
+<link rel="stylesheet" href="outils/assets/ios-install.css">
+</head>
+<body>
+<header class="site-header">
+    <div class="container">
+      <a href="/" class="brand" aria-label="GioTech Digital — accueil">
+        <img src="assets/logos/logo-mark.png" alt="Logo GioTech Digital" width="32" height="32" />
+        <span class="brand-full">Gio<span>Tech</span> Digital</span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Navigation principale">
+        <ul>
+          <li><a href="templates" class="is-active">Templates</a></li>
+          <li class="nav-dropdown">
+            <a href="outils" class="nav-dropdown-trigger is-active">Outils <span aria-hidden="true">⌄</span></a>
+            <ul class="nav-submenu">
+              <li><a href="outils/cv/"><strong>Créateur de CV</strong><small>CV professionnel & PDF</small></a></li>
+              <li><a href="outils/lettre-motivation/"><strong>Lettre de motivation</strong><small>Générateur gratuit</small></a></li>
+              <li><a href="outils/signature-email/"><strong>Signature e-mail</strong><small>Signature HTML professionnelle</small></a></li>
+              <li><a href="outils/qr-code/"><strong>Générateur de QR Code</strong><small>QR Code rapide & gratuit</small></a></li>
+              <li><a href="outils/devis-factures/"><strong>Facture / Devis</strong><small>Documents A4 & PDF</small></a></li>
+              <li class="submenu-all"><a href="outils"><strong>Voir tous les outils →</strong></a></li>
+            </ul>
+          </li>
+          <li><a href="projets">Projets</a></li>
+          <li><a href="apropos">À propos</a></li>
+          <li><a href="contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <a href="contact" class="btn btn-outline header-cta">Demander un devis</a>
+      </div>
+    </div>
+  </header>
+<main>
+<section class="tools-hero">
+ <div class="container">
+   <span class="eyebrow">OUTILS GIO TECH · GRATUITS</span>
+   <h1>Des outils utiles.<br>Sans complication.</h1>
+   <p>Créez vos documents professionnels directement dans votre navigateur. Aucun compte n’est nécessaire pour commencer et chaque outil a été pensé pour fonctionner aussi bien sur ordinateur que sur mobile.</p>
+   <button type="button" id="pwa-install-btn" class="pwa-install-btn" style="display:none;">
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13m0 0-4-4m4 4 4-4"/><path d="M5 21h14"/></svg>
+     Installer l'app sur mon appareil
+   </button>
+ </div>
+</section>
+
+<section class="install-promo">
+  <div class="container">
+    <div class="install-promo-card">
+      <div class="install-promo-copy">
+        <span class="eyebrow" style="color:#4f7dff;">GioTools sur votre téléphone</span>
+        <h2>Emportez vos outils partout.</h2>
+        <p>GioTools fonctionne comme une vraie application : installez-la sur votre téléphone pour l'ouvrir en un tap, plein écran, sans passer par le navigateur. Ça marche aussi sur ordinateur.</p>
+        <ul class="install-promo-list">
+          <li>✓ Aucune boutique d'application, aucun compte</li>
+          <li>✓ Fonctionne même avec une connexion faible</li>
+          <li>✓ Vos données restent sur votre appareil</li>
+        </ul>
+        <button type="button" id="pwa-install-btn-2" class="pwa-install-btn" style="display:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v13m0 0-4-4m4 4 4-4"/><path d="M5 21h14"/></svg>
+          Installer sur cet ordinateur
+        </button>
+      </div>
+      <div class="install-promo-qr">
+        <div id="promo-qrcode"></div>
+        <span>Scannez avec votre téléphone pour ouvrir GioTools</span>
+      </div>
+    </div>
+  </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+  if (window.QRCode) {
+    new QRCode(document.getElementById("promo-qrcode"), {
+      text: "https://giotech-digital.fr/outils",
+      width: 128,
+      height: 128,
+      colorDark: "#10151f",
+      colorLight: "#ffffff",
+    });
+  }
+</script>
+
+<section>
+ <div class="container">
+   <div class="tools-grid">
+     
+      <a class="tool-card" href="outils/cv/">
+        <div class="tool-icon">CV</div>
+        <div class="tool-copy">
+          <span>OUTIL GRATUIT</span>
+          <h3>Créateur de CV</h3>
+          <p>Créez un CV professionnel parmi plusieurs modèles, ajoutez vos expériences et téléchargez-le en PDF.</p>
+          <strong>Ouvrir l’outil →</strong>
+        </div>
+      </a>
+      <a class="tool-card" href="outils/lettre-motivation/">
+        <div class="tool-icon">LM</div>
+        <div class="tool-copy">
+          <span>OUTIL GRATUIT</span>
+          <h3>Générateur de lettre de motivation</h3>
+          <p>Créez une lettre structurée à partir de votre profil et de l’offre d’emploi.</p>
+          <strong>Ouvrir l’outil →</strong>
+        </div>
+      </a>
+      <a class="tool-card" href="outils/signature-email/">
+        <div class="tool-icon">SE</div>
+        <div class="tool-copy">
+          <span>OUTIL GRATUIT</span>
+          <h3>Signature e-mail</h3>
+          <p>Construisez une signature professionnelle avec photo, coordonnées et réseaux sociaux.</p>
+          <strong>Ouvrir l’outil →</strong>
+        </div>
+      </a>
+      <a class="tool-card" href="outils/qr-code/">
+        <div class="tool-icon">QR</div>
+        <div class="tool-copy">
+          <span>OUTIL GRATUIT</span>
+          <h3>Générateur de QR Code</h3>
+          <p>Créez rapidement un QR Code pour une URL, un contact ou une information à partager.</p>
+          <strong>Ouvrir l’outil →</strong>
+        </div>
+      </a>
+      <a class="tool-card" href="outils/devis-factures/">
+        <div class="tool-icon">DF</div>
+        <div class="tool-copy">
+          <span>OUTIL GRATUIT</span>
+          <h3>Facture / Devis</h3>
+          <p>Créez des devis et factures A4 avec calcul automatique, TVA, modèles et export PDF.</p>
+          <strong>Ouvrir l’outil →</strong>
+        </div>
+      </a>
+   </div>
+   <div class="tools-note">
+     <span class="eyebrow">UNE SEULE BOÎTE À OUTILS</span>
+     <h2>CV, candidature et gestion professionnelle.</h2>
+     <p>La collection GioTech commence avec cinq outils : création de CV, lettre de motivation, signature e-mail, QR Code et devis/factures. D’autres outils pourront être ajoutés plus tard au même endroit sans alourdir le menu principal.</p>
+   </div>
+ </div>
+</section>
+</main>
+<footer class="site-footer marketplace-footer">
+  <div class="container">
+    <div class="footer-market-head">
+      <div class="footer-market-copy">
+        <span class="eyebrow">GioTech Digital · Martigues</span>
+        <h2>Des templates pour démarrer vite.<br>Un site sur-mesure pour aller plus loin.</h2>
+        <p>Explorez les démos, téléchargez les ressources gratuites ou demandez une adaptation professionnelle pour votre activité à Martigues, Marseille et partout en France.</p>
+      </div>
+      <div class="footer-market-actions">
+        <a class="btn btn-primary" href="templates">Explorer le catalogue</a>
+        <a class="btn btn-outline footer-outline" href="contact">Demander un devis</a>
+      </div>
+    </div>
+
+    <div class="footer-category-bar" aria-label="Catégories populaires">
+      <a href="templates">HTML</a><a href="templates">E-commerce</a><a href="templates">Immobilier</a><a href="templates">Restaurant</a><a href="templates">Portfolio</a><a href="templates">Mobile</a><a href="templates">Pages gratuites</a>
+    </div>
+
+    <div class="footer-market-grid">
+      <div class="footer-brand footer-market-brand">
+        <a href="/" class="brand"><img src="assets/logos/logo-mark.png" alt="GioTech Digital, création de sites internet à Martigues" width="34" height="34"><span class="brand-full">Gio<span>Tech</span> Digital</span></a>
+        <p>Création de sites internet, templates HTML/CSS/JS et démos web modernes. Basé à Martigues, projets à Marseille, dans les Bouches-du-Rhône et à distance en France.</p>
+        <div class="footer-local"><span>Martigues</span><span>Marseille</span><span>Bouches-du-Rhône</span><span>France</span></div>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/company/giotech-digital/" target="_blank" rel="noopener" aria-label="GioTech Digital sur LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.94 5a1.94 1.94 0 1 1-3.88 0 1.94 1.94 0 0 1 3.88 0ZM3.4 8.75h3.08V21H3.4V8.75Zm6.2 0h2.95v1.68h.04c.41-.78 1.42-1.6 2.93-1.6 3.13 0 3.71 2.06 3.71 4.74V21h-3.08v-5.7c0-1.36-.02-3.1-1.89-3.1-1.9 0-2.19 1.48-2.19 3v5.8H9.6V8.75Z"/></svg></a>
+          <a href="https://www.instagram.com/giotech.digital/" target="_blank" rel="noopener" aria-label="GioTech Digital sur Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.8" fill="currentColor" stroke="none"/></svg></a>
+          <a href="https://github.com/Adalberto-teixeira" target="_blank" rel="noopener" aria-label="GioTech Digital sur GitHub"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-3.16 19.49c.5.1.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.46-1.16-1.11-1.47-1.11-1.47-.9-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.36 1.08 2.93.83.09-.65.35-1.08.63-1.33-2.22-.25-4.56-1.11-4.56-4.95 0-1.1.39-1.99 1.03-2.7-.1-.25-.45-1.27.1-2.65 0 0 .84-.27 2.75 1.02a9.6 9.6 0 0 1 5 0c1.91-1.3 2.75-1.02 2.75-1.02.55 1.38.2 2.4.1 2.65.64.71 1.03 1.6 1.03 2.7 0 3.85-2.34 4.7-4.57 4.94.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2Z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col"><h4>Marketplace</h4><ul>
+        <li><a href="templates">Tous les templates</a></li><li><a href="templates">Templates gratuits</a></li><li><a href="templates">Templates premium</a></li><li><a href="projets">Projets clients</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Création web locale</h4><ul>
+        <li><a href="creation-site-internet-martigues">Site internet à Martigues</a></li><li><a href="creation-site-internet-marseille">Site internet à Marseille</a></li><li><a href="agence-web-bouches-du-rhone">Agence web Bouches-du-Rhône</a></li><li><a href="creation-site-internet-france">Création web en France</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>GioTech</h4><ul>
+        <li><a href="apropos">À propos</a></li><li><a href="contact">Contact & devis</a></li><li><a href="seo-agent">Agent SEO intégré</a></li><li><a href="mentions-legales">Mentions légales</a></li><li><a href="confidentialite">Confidentialité</a></li>
+      </ul></div>
+      <div class="footer-col"><h4>Contact</h4><ul>
+        <li><a href="mailto:contact@giotech-digital.fr">contact@giotech-digital.fr</a></li><li><a href="tel:+33753911502">07 53 91 15 02</a></li><li><a href="https://wa.me/33753911502" target="_blank" rel="noopener">WhatsApp</a></li><li><span>Martigues, France</span></li>
+      </ul></div>
+    </div>
+
+    <div class="footer-trust-row">
+      <span>✓ Démos testables</span><span>✓ Mobile-first</span><span>✓ HTML / CSS / JavaScript</span><span>✓ SEO technique</span><span>✓ Réponse sous 48h</span>
+    </div>
+    <div class="footer-bottom"><p>© <span data-year>2026</span> GioTech Digital. Tous droits réservés.</p><p>Création de sites internet à Martigues & Marseille · Services web en France</p></div>
+  </div>
+</footer>
+<script src="js/main.js"></script>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", () => navigator.serviceWorker.register("sw.js").catch(() => {}));
+  }
+
+  var pwaDeferredPrompt = null;
+  var pwaButtons = [document.getElementById("pwa-install-btn"), document.getElementById("pwa-install-btn-2")].filter(Boolean);
+
+  function isStandaloneAlready() {
+    return window.navigator.standalone === true || window.matchMedia("(display-mode: standalone)").matches;
+  }
+  function isIosDevice() {
+    return /iphone|ipad|ipod/i.test(navigator.userAgent) && !window.MSStream;
+  }
+
+  window.addEventListener("beforeinstallprompt", function (e) {
+    e.preventDefault();
+    pwaDeferredPrompt = e;
+    pwaButtons.forEach(function (btn) { btn.style.display = "inline-flex"; });
+  });
+
+  pwaButtons.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      if (!pwaDeferredPrompt) return;
+      pwaDeferredPrompt.prompt();
+      pwaDeferredPrompt.userChoice.finally(function () {
+        pwaDeferredPrompt = null;
+        pwaButtons.forEach(function (b) { b.style.display = "none"; });
+      });
+    });
+  });
+
+  window.addEventListener("appinstalled", function () {
+    pwaButtons.forEach(function (btn) { btn.style.display = "none"; });
+  });
+
+  // Filet de sécurité : sur certains navigateurs (ou lors d'une visite déjà
+  // "vue" par Chrome), l'événement "beforeinstallprompt" ne se déclenche
+  // jamais, même quand l'app est réellement installable. Plutôt que de
+  // laisser les boutons invisibles sans aucune explication, on affiche
+  // après quelques secondes une consigne manuelle (sauf sur iOS, qui a déjà
+  // son propre bandeau, et sauf si l'app est déjà installée).
+  setTimeout(function () {
+    if (pwaDeferredPrompt || isIosDevice() || isStandaloneAlready()) return;
+    pwaButtons.forEach(function (btn) {
+      btn.style.display = "inline-flex";
+      btn.querySelector("svg")?.remove();
+      btn.lastChild.textContent = " Installer : menu du navigateur → « Installer l'application »";
+      btn.disabled = true;
+      btn.style.cursor = "default";
+      btn.style.opacity = "0.85";
+    });
+  }, 2500);
+</script>
+<script src="outils/assets/ios-install.js"></script>
+</body>
+</html>

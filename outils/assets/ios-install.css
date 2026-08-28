@@ -1,0 +1,54 @@
+/* ---------- Bandeau d'installation iOS ---------- */
+
+.ios-install-banner {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  padding-top: calc(10px + env(safe-area-inset-top, 0px));
+  background: #10151f;
+  color: #fff;
+  transform: translateY(-100%);
+  transition: transform 0.35s ease;
+}
+.ios-install-banner.is-shown {
+  transform: translateY(0);
+}
+.ios-install-icon {
+  flex-shrink: 0;
+  width: 30px; height: 30px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  display: flex; align-items: center; justify-content: center;
+}
+.ios-install-icon svg {
+  width: 16px; height: 16px;
+}
+.ios-install-banner p {
+  flex: 1;
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.4;
+  color: #e4e7ec;
+}
+.ios-install-banner strong {
+  color: #fff;
+}
+.ios-install-close {
+  flex-shrink: 0;
+  width: 26px; height: 26px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 0.7rem;
+  cursor: pointer;
+}
+
+body.has-ios-banner {
+  margin-top: var(--ios-banner-offset, 52px) !important;
+  transition: margin-top 0.35s ease;
+}

@@ -1,0 +1,61 @@
+/* ==========================================================================
+   GioTools — barre de navigation inférieure (app mobile)
+   Partagée par les 5 outils. Visible uniquement sur mobile/tablette étroite :
+   sur desktop, la navigation du haut (toolsuite-header) suffit déjà.
+   ========================================================================== */
+
+.giotools-tabbar {
+  display: none;
+}
+
+@media (max-width: 760px) {
+  .giotools-tabbar {
+    display: flex;
+    position: fixed;
+    left: 0; right: 0; bottom: 0;
+    z-index: 9997;
+    background: #10151f;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+    box-shadow: 0 -8px 24px rgba(0, 0, 0, 0.18);
+  }
+
+  .giotools-tabbar a {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    padding: 6px 2px;
+    border-radius: 12px;
+    color: #8b93a3;
+    text-decoration: none;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  .giotools-tabbar a svg {
+    width: 21px;
+    height: 21px;
+  }
+
+  .giotools-tabbar a span {
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+  }
+
+  .giotools-tabbar a.is-active {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .giotools-tabbar a.is-active svg {
+    color: var(--tabbar-accent, #4f7dff);
+  }
+
+  /* Empêche le contenu de la page de rester caché sous la barre fixe */
+  body {
+    padding-bottom: calc(66px + env(safe-area-inset-bottom, 0px));
+  }
+}

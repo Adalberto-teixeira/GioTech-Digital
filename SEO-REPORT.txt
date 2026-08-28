@@ -1,0 +1,13 @@
+SEO audit after upgrade
+projets.html: title=61, desc=134, h1=1, missing-alt=0, canonical=True
+seo-agent.html: title=43, desc=127, h1=1, missing-alt=0, canonical=False
+creation-site-internet-martigues.html: title=50, desc=152, h1=1, missing-alt=0, canonical=True
+agence-web-bouches-du-rhone.html: title=45, desc=135, h1=1, missing-alt=0, canonical=True
+creation-site-internet-france.html: title=53, desc=137, h1=1, missing-alt=0, canonical=True
+mentions-legales.html: title=34, desc=108, h1=0, missing-alt=0, canonical=True
+templates.html: title=58, desc=152, h1=1, missing-alt=0, canonical=True
+creation-site-internet-marseille.html: title=50, desc=155, h1=1, missing-alt=0, canonical=True
+contact.html: title=59, desc=134, h1=1, missing-alt=0, canonical=True
+apropos.html: title=54, desc=128, h1=1, missing-alt=0, canonical=True
+confidentialite.html: title=46, desc=113, h1=0, missing-alt=0, canonical=True
+index.html: title=62, desc=167, h1=1, missing-alt=0, canonical=True

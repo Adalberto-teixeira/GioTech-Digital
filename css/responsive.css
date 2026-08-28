@@ -1,0 +1,110 @@
+/* ==========================================================================
+   GioTech Digital — responsive.css
+   ========================================================================== */
+
+/* ---------- Tablet (≤ 1024px) ---------- */
+@media (max-width: 1024px) {
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-mockups { height: 320px; margin-top: 1rem; }
+  .mockup-1 { right: 4%; }
+  .mockup-2 { right: 26%; }
+  .mockup-3 { right: -2%; }
+
+  .trust-strip { grid-template-columns: repeat(2, 1fr); }
+  .trust-item:nth-child(2) { border-right: none; }
+  .about-strip-stats { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.4rem 1rem; }
+  .about-strip-stats div:last-child { grid-column: 1 / -1; }
+
+  .template-scroller { grid-template-columns: repeat(2, 1fr); }
+
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .steps-grid { grid-template-columns: 1fr; }
+
+  .about-strip { flex-direction: column; align-items: flex-start; }
+
+  .cta-panel { grid-template-columns: 1fr; }
+
+  .footer-top { grid-template-columns: 1fr 1fr; row-gap: 2.6rem; }
+
+  .project-row { grid-template-columns: 60px 1fr auto; }
+  .project-desc { display: none; }
+}
+
+/* ---------- Nav → dock mobile (≤ 860px) ---------- */
+@media (max-width: 860px) {
+  .main-nav { display: none; }
+  .header-actions .btn-outline.header-cta { display: none; }
+
+  .mobile-dock { display: block; }
+
+  /* espace pour ne pas masquer le contenu derrière le dock flottant */
+  body { padding-bottom: 92px; }
+  .site-footer { padding-bottom: 2rem; }
+}
+
+/* ---------- Small tablet / large phone (≤ 700px) ---------- */
+@media (max-width: 700px) {
+  .trust-strip { grid-template-columns: repeat(2, 1fr); }
+  .trust-item { border-right: 1px solid var(--line) !important; border-bottom: 1px solid var(--line); }
+  .trust-item:nth-child(2n) { border-right: none !important; }
+  .trust-item:nth-last-child(-n+2) { border-bottom: none; }
+
+  .hero-strip { flex-direction: column; align-items: flex-start; }
+  .cta-panel { padding: 2.2rem 1.6rem; }
+
+  /* ---------- Hero de la home : version raccourcie pour mobile (le PC n'est pas touché) ---------- */
+  .hero-mockups { display: none; }
+  .hero-actions .btn-outline { display: none; }
+}
+
+/* ---------- Mobile (≤ 560px) ---------- */
+@media (max-width: 700px) {
+  .form-row { grid-template-columns: 1fr; }
+
+  /* ---------- Cabeçalho compacto en mobile (le PC reste inchangé) ---------- */
+  .site-header { padding: 0.75rem 0; }
+  .site-header.is-scrolled { padding: 0.6rem 0; }
+  .brand { font-size: 0.92rem; gap: 0.45rem; }
+  .brand img { width: 26px; height: 26px; }
+}
+
+@media (max-width: 560px) {
+  :root { --gutter: 1.25rem; }
+
+  .hero { padding-top: 5.2rem; }
+  .hero-mockups { height: 260px; }
+  .mockup-card { width: 190px; }
+  .mockup-2 { right: 18%; top: 26%; }
+  .mockup-3 { right: -4%; }
+
+  .hero-actions .btn { flex: 1 1 auto; justify-content: center; }
+  .hero-actions { width: 100%; }
+
+  .template-scroller { grid-template-columns: 1fr; }
+
+  .categories-grid { grid-template-columns: 1fr; }
+  .demo-chip { padding-block: 0.45rem; }
+
+  .footer-top { grid-template-columns: 1fr; row-gap: 2.4rem; }
+  .footer-bottom { flex-direction: column; align-items: flex-start; }
+
+  /* ---------- Rodapé compacto en mobile (le PC reste inchangé) ---------- */
+  .site-footer { padding: 2.4rem 0 5rem; }
+  .footer-col h4 { margin-bottom: 0.8rem; }
+  .footer-col ul { gap: 0.6rem; }
+  .footer-col a, .footer-col span { font-size: 0.86rem; }
+  .footer-social { margin-top: 1.1rem; gap: 0.6rem; }
+  .footer-bottom { margin-top: 1.8rem; padding-top: 1.3rem; gap: 0.6rem; }
+  .footer-bottom p, .footer-bottom a { font-size: 0.76rem; }
+  .footer-legal { gap: 1.1rem; flex-wrap: wrap; }
+
+  .project-row { grid-template-columns: 1fr auto; row-gap: 0.4rem; }
+  .project-index { display: none; }
+}
+
+/* ---------- Very small phones (≤ 380px) ---------- */
+@media (max-width: 380px) {
+  .mobile-dock a span.label { display: none; }
+  .mockup-card { width: 165px; }
+}

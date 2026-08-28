@@ -1,0 +1,13 @@
+GioCV Studio V1
+- 6 modèles sélectionnés et reconstruits en HTML/CSS
+- Galerie avec filtres
+- Hover : Voir / Choisir
+- Aperçu modal avant sélection
+- Formulaire dynamique
+- Upload photo
+- Expériences et formations multiples
+- Aperçu A4 complet réduit à côté
+- Aperçu A4 grand
+- Export PDF via impression du navigateur
+- Sauvegarde locale
+- Interface entièrement en français
