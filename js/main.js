@@ -98,6 +98,11 @@
             group.forEach((link) => {
               const match = link.getAttribute("href") === `#${id}`;
               link.classList.toggle("is-active", match);
+              if (match) {
+                link.setAttribute("aria-current", "page");
+              } else {
+                link.removeAttribute("aria-current");
+              }
             });
           });
         });
