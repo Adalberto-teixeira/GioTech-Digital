@@ -7,7 +7,7 @@
  * exactement comme avant, sans aucun effet de ce fichier.
  */
 
-const CACHE_NAME = "giotech-outils-v2";
+const CACHE_NAME = "giotech-outils-v3";
 
 const APP_SHELL = [
   "/outils",
@@ -29,6 +29,8 @@ const APP_SHELL = [
   "/manifest.json",
   "/assets/icons/icon-192.png",
   "/assets/icons/icon-512.png",
+  "/assets/icons/icon-maskable-192.png",
+  "/assets/icons/icon-maskable-512.png",
 ];
 
 self.addEventListener("install", (event) => {
@@ -73,8 +75,10 @@ self.addEventListener("fetch", (event) => {
   event.respondWith(
     fetch(req)
       .then((res) => {
-        const resClone = res.clone();
-        caches.open(CACHE_NAME).then((cache) => cache.put(req, resClone));
+        if (res.ok) {
+          const resClone = res.clone();
+          caches.open(CACHE_NAME).then((cache) => cache.put(req, resClone));
+        }
         return res;
       })
       .catch(() => caches.match(req).then((cached) => cached || caches.match("/outils")))
