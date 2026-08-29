@@ -15,6 +15,11 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
+  /* ---------- Page active : information sémantique ---------- */
+  document.querySelectorAll(".main-nav a.is-active, .mobile-dock a.is-active").forEach((link) => {
+    link.setAttribute("aria-current", "page");
+  });
+
   /* ---------- Navigation Outils : état accessible du sous-menu ---------- */
   document.querySelectorAll(".nav-dropdown").forEach((dropdown, index) => {
     const trigger = dropdown.querySelector(".nav-dropdown-trigger");
