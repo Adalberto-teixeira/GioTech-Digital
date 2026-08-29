@@ -15,6 +15,29 @@
     window.addEventListener("scroll", onScroll, { passive: true });
   }
 
+  /* ---------- Navigation Outils : état accessible du sous-menu ---------- */
+  document.querySelectorAll(".nav-dropdown").forEach((dropdown, index) => {
+    const trigger = dropdown.querySelector(".nav-dropdown-trigger");
+    const submenu = dropdown.querySelector(".nav-submenu");
+    if (!trigger || !submenu) return;
+
+    if (!submenu.id) submenu.id = `nav-submenu-${index + 1}`;
+    trigger.setAttribute("aria-haspopup", "true");
+    trigger.setAttribute("aria-controls", submenu.id);
+    trigger.setAttribute("aria-expanded", "false");
+
+    const setExpanded = (expanded) => {
+      trigger.setAttribute("aria-expanded", expanded ? "true" : "false");
+    };
+
+    dropdown.addEventListener("mouseenter", () => setExpanded(true));
+    dropdown.addEventListener("mouseleave", () => setExpanded(false));
+    dropdown.addEventListener("focusin", () => setExpanded(true));
+    dropdown.addEventListener("focusout", () => {
+      window.setTimeout(() => setExpanded(dropdown.contains(document.activeElement)), 0);
+    });
+  });
+
   /* ---------- Apparitions au scroll ---------- */
   const revealEls = document.querySelectorAll("[data-reveal]");
   if (revealEls.length && "IntersectionObserver" in window) {
