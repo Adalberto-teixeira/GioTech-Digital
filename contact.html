@@ -47,6 +47,8 @@
     .contact-quicklinks svg { width: 18px; height: 18px; }
     .contact-form-panel { border: 1px solid var(--line); border-radius: var(--radius-lg); padding: clamp(1.8rem, 4vw, 2.6rem); background: var(--surface); min-width: 0; }
     .contact-form-panel h2 { font-size: 1.4rem; margin-bottom: 1.6rem; }
+    .template-choice { display: none; margin: -0.5rem 0 1.4rem; padding: 0.85rem 1rem; border: 1px solid rgba(23,211,238,0.35); border-radius: 10px; background: rgba(23,211,238,0.08); color: var(--text-dim); font-size: 0.9rem; }
+    .template-choice strong { color: var(--text); }
     .whatsapp-banner { display: flex; align-items: center; justify-content: space-between; gap: 1rem; flex-wrap: wrap; background: #e9fbf3; border: 1px solid #b9ecd4; border-radius: var(--radius-md); padding: 1.1rem 1.4rem; margin-top: 1.6rem; }
     .whatsapp-banner p { color: #0f5132; font-size: 0.92rem; }
     .whatsapp-banner strong { color: #0f5132; }
@@ -159,7 +161,8 @@
           </div>
 
           <div class="contact-form-panel" data-reveal>
-            <h2>Demander un devis</h2>
+            <h2 id="contact-form-title">Demander un devis</h2>
+            <p class="template-choice" id="template-choice" role="status"></p>
             <form id="contact-form" novalidate>
               <div class="form-row">
                 <div class="form-field"><label for="c-nom">Nom</label><input id="c-nom" name="nom" type="text" placeholder="Votre nom" autocomplete="name" required /></div>
@@ -297,6 +300,27 @@
       if (!form) return;
       const feedback = document.getElementById("contact-form-feedback");
       const submitBtn = form.querySelector('button[type="submit"]');
+      const params = new URLSearchParams(window.location.search);
+      const templateSlug = params.get("template");
+
+      if (templateSlug && /^[a-z0-9-]{2,60}$/.test(templateSlug)) {
+        const templateName = templateSlug
+          .split("-")
+          .filter(Boolean)
+          .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(" ");
+        const typeField = form.querySelector('[name="type"]');
+        const messageField = form.querySelector('[name="message"]');
+        const choice = document.getElementById("template-choice");
+        const formTitle = document.getElementById("contact-form-title");
+
+        typeField.value = "Utiliser un template du catalogue";
+        messageField.value = "Bonjour, je souhaite adapter le template " + templateName + " à mon activité.\n\nMon projet : ";
+        choice.innerHTML = "Modèle sélectionné : <strong></strong>";
+        choice.querySelector("strong").textContent = templateName;
+        choice.style.display = "block";
+        formTitle.textContent = "Adapter le template " + templateName;
+      }
 
       function showFeedback(message, isError) {
         feedback.textContent = message;
