@@ -92,14 +92,23 @@
     const cards = grid.querySelectorAll("[data-category]");
 
     group.querySelectorAll(".pill").forEach((pill) => {
+      pill.setAttribute("aria-pressed", pill.classList.contains("is-active") ? "true" : "false");
       pill.addEventListener("click", () => {
-        group.querySelectorAll(".pill").forEach((p) => p.classList.remove("is-active"));
-        pill.classList.add("is-active");
+        group.querySelectorAll(".pill").forEach((p) => {
+          const active = p === pill;
+          p.classList.toggle("is-active", active);
+          p.setAttribute("aria-pressed", active ? "true" : "false");
+        });
         const filter = pill.dataset.filter;
         let visible = 0;
         cards.forEach((card) => {
           const cats = (card.dataset.category || "").split(" ");
           const show = filter === "tous" || cats.includes(filter);
+          if (show) {
+            delete card.dataset.filterHidden;
+          } else {
+            card.dataset.filterHidden = "true";
+          }
           card.style.display = show ? "" : "none";
           if (show) visible++;
         });
@@ -306,11 +315,18 @@
     if(count) count.textContent=n;
   };
   search?.addEventListener('input',apply);
-  licenseBtns.forEach(btn=>btn.addEventListener('click',()=>{
-    license=btn.dataset.license;
-    licenseBtns.forEach(b=>b.classList.toggle('active',b===btn));
-    apply();
-  }));
+  licenseBtns.forEach(btn => {
+    btn.setAttribute('aria-pressed', btn.classList.contains('active') ? 'true' : 'false');
+    btn.addEventListener('click',()=>{
+      license=btn.dataset.license;
+      licenseBtns.forEach(b=>{
+        const active=b===btn;
+        b.classList.toggle('active',active);
+        b.setAttribute('aria-pressed',active ? 'true' : 'false');
+      });
+      apply();
+    });
+  });
   // Observe class/style changes caused by existing category filter and refresh count.
   new MutationObserver(()=>apply()).observe(grid,{subtree:true,attributes:true,attributeFilter:['style']});
   apply();
